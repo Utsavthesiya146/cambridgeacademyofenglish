@@ -71,6 +71,9 @@ export default function Footer() {
               <div className="flex items-center gap-2"><span className="text-lg">🇹🇷</span> Turkey</div>
               <div className="flex items-center gap-2"><span className="text-lg">🇳🇬</span> Nigeria</div>
               <div className="flex items-center gap-2"><span className="text-lg">🇯🇴</span> Jordan</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇨🇮</span> Ivory Coast</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇮🇷</span> Iran</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇲🇳</span> Mongolia</div>
               <div className="flex items-center gap-2"><span className="text-lg">🇰🇷</span> Korea</div>
               <div className="flex items-center gap-2"><span className="text-lg">🇹🇭</span> Thailand</div>
             </div>
@@ -94,7 +97,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
-          <p className="text-slate-500">© 2024 Cambridgeacademyofenglish. All Rights Reserved</p>
+          <p className="text-slate-500">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
           <div className="flex gap-6 text-slate-500">
             <Link href="/sitemap" className="hover:text-white transition-colors">Site map</Link>
             <Link href="/blog/feed" className="hover:text-white transition-colors">RSS - Posts</Link>

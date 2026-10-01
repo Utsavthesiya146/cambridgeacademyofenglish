@@ -19,15 +19,15 @@ export default function Header() {
       {/* Top Bar - Ultra Minimal */}
       <div className="bg-primary text-slate-300 text-xs py-2 hidden lg:block border-b border-white/10">
         <div className="container-custom flex justify-between items-center">
-          <ul className="flex gap-6 font-medium tracking-wide">
+          <ul className="flex gap-4 font-medium tracking-wide">
             <li><Link href="/" className="hover:text-accent transition-colors">Cambridge Academy Group</Link></li>
-            <li><span className="text-white">Cambridge Academy of English</span></li>
+            <li><span className="text-white font-bold">Cambridge Academy of English</span></li>
             <li><Link href="/" className="hover:text-accent transition-colors">Cambridge Academy Online</Link></li>
+            <li><Link href="/" className="hover:text-accent transition-colors">The Cambridge Academy Communication</Link></li>
           </ul>
           <div className="flex gap-6 items-center">
-            <span className="flex items-center gap-2"><span className="text-accent">📞</span> 080-40943580</span>
-            <Link href="/login" className="flex items-center gap-2 hover:text-accent transition-colors font-medium">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+            <Link href="/login" className="flex items-center gap-2 hover:text-accent transition-colors font-medium bg-white/10 px-3 py-1 rounded-full">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
               Login
             </Link>
           </div>
@@ -35,54 +35,117 @@ export default function Header() {
       </div>
 
       {/* Main Glass Navbar */}
-      <header className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/85 backdrop-blur-xl shadow-lg py-2' : 'bg-white py-4'}`}>
-        <div className="container-custom flex justify-between items-center">
-          {/* Logo Area */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <img src="/images/logo.png" alt="Cambridge Academy" className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
-            <div className="flex flex-col hidden sm:flex border-l-2 border-slate-200 pl-3">
-              <span className="text-2xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors leading-tight">Cambridge Academy</span>
-              <span className="text-[0.65rem] text-accent font-bold tracking-[0.2em] uppercase">of English</span>
-            </div>
-          </Link>
+      <header className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg py-1' : 'bg-white py-3'}`}>
+        <div className="container-custom">
+          
+          {/* Secondary Header Details */}
+          <div className="hidden lg:flex justify-between items-center mb-4 pb-3 border-b border-slate-100">
+             <div className="text-xs text-slate-500">
+               <div id="google_translate_element">Select Language</div>
+             </div>
+             <div className="flex items-center gap-8">
+                <div className="text-sm text-slate-700 font-medium flex items-center gap-4">
+                  <span className="text-primary font-bold">Call us:</span>
+                  <a href="tel:080-40943580" className="hover:text-accent transition-colors font-bold">080-40943580</a>
+                  <a href="tel:8970506004" className="hover:text-accent transition-colors font-bold">8970506004</a>
+                  <a href="tel:9620806004" className="hover:text-accent transition-colors font-bold">9620806004</a>
+                </div>
+                <div className="relative">
+                  <input type="text" placeholder="Search..." className="text-xs px-4 py-2 border border-slate-200 rounded-full bg-slate-50 focus:outline-none focus:border-primary focus:bg-white transition-colors w-48" />
+                  <svg className="w-3 h-3 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+             </div>
+          </div>
+
+          <div className="flex justify-between items-center">
+            {/* Logo Area */}
+            <Link href="/" className="flex items-center gap-3 group">
+              <img src="/images/logo.png" alt="Cambridge Academy" className="h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+              <div className="flex flex-col hidden sm:flex border-l-2 border-slate-200 pl-3">
+                <span className="text-xl lg:text-2xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors leading-tight">Cambridge Academy</span>
+                <span className="text-[0.6rem] lg:text-[0.65rem] text-accent font-bold tracking-[0.2em] uppercase">Bringing Language to Life</span>
+              </div>
+            </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {['About', 'Courses', 'Admission', 'Extra', 'Contact', 'Certificate'].map((item) => (
-              <div key={item} className="relative group px-4 py-2 cursor-pointer">
-                <Link href={`/${item.toLowerCase()}`} className="text-sm font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1">
-                  {item}
-                  {['About', 'Courses', 'Admission', 'Extra'].includes(item) && (
-                    <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                  )}
-                </Link>
-                
-                {/* Mega Menu Dropdown Example for Courses */}
-                {item === 'Courses' && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-white rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-4 group-hover:translate-y-0 p-6 grid grid-cols-2 gap-6 z-50">
-                    <div>
-                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Popular Programs</h4>
-                      <ul className="space-y-3">
-                        <li><Link href="/courses/learn-english-speaking-course-online" className="block text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 p-2 rounded-lg transition-colors">Learn English Speaking Online</Link></li>
-                        <li><Link href="/courses/class-room-english-course" className="block text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 p-2 rounded-lg transition-colors">Spoken English Classes</Link></li>
-                        <li><Link href="/courses/exam-preparation-course" className="block text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 p-2 rounded-lg transition-colors">Exam Preparation (IELTS/PTE)</Link></li>
-                      </ul>
-                    </div>
-                    <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 flex flex-col justify-center items-center text-center">
-                      <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center text-accent mb-3">⭐</div>
-                      <h5 className="font-bold text-primary mb-1">Not sure which course?</h5>
-                      <p className="text-xs text-slate-500 mb-4">Take our free 20-minute assessment test.</p>
-                      <Link href="/test" className="text-xs font-bold text-accent hover:text-accent-hover uppercase tracking-wider">Start Test →</Link>
-                    </div>
-                  </div>
-                )}
+          <nav className="hidden lg:flex items-center gap-2">
+            
+            <div className="relative group px-3 py-2 cursor-pointer">
+              <Link href="/about" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+                About
+                <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </Link>
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl border-t-2 border-accent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+                <ul className="flex flex-col py-2">
+                  <li><Link href="/about/vision-mission" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Vision & Mission</Link></li>
+                  <li><Link href="/about/values-of-cambridge" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Values of Cambridge</Link></li>
+                </ul>
               </div>
-            ))}
+            </div>
+
+            <div className="relative group px-3 py-2 cursor-pointer">
+              <Link href="/courses" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+                Courses
+                <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </Link>
+              <div className="absolute top-full left-0 mt-0 w-80 bg-white shadow-xl border-t-2 border-accent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+                <ul className="flex flex-col py-2">
+                  <li><Link href="/courses/learn-english-speaking-course-online" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Learn English Speaking Course Online</Link></li>
+                  <li><Link href="/courses/class-room-english-course" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Spoken English Classes</Link></li>
+                  <li><Link href="/courses/exam-preparation-course" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Exam Preparation Course</Link></li>
+                  <li><Link href="/courses/foreign-language-courses" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Foreign Language Courses</Link></li>
+                  <li><Link href="/courses/teacher-training" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Teacher Training Course</Link></li>
+                  <li><Link href="/courses/cambridge-exam" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Cambridge Exam</Link></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="relative group px-3 py-2 cursor-pointer">
+              <Link href="/admission" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+                Admission
+                <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </Link>
+              <div className="absolute top-full left-0 mt-0 w-72 bg-white shadow-xl border-t-2 border-accent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+                <ul className="flex flex-col py-2">
+                  <li><Link href="/admission/foreign-students" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Admission Form For Foreign Students</Link></li>
+                  <li><Link href="/admission/indian-students" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Admission Form For Indian Students</Link></li>
+                  <li><Link href="/admission/terms-process" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Admission Terms and Process</Link></li>
+                  <li><Link href="/admission/academic-extracts" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Academic Extracts</Link></li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="relative group px-3 py-2 cursor-pointer">
+              <Link href="/extra" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+                Extra
+                <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </Link>
+              <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl border-t-2 border-accent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+                <ul className="flex flex-col py-2 max-h-96 overflow-y-auto">
+                  <li><Link href="/extra/general" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">General Information</Link></li>
+                  {['Thailand', 'Saudi Arabia', 'Iran', 'Iraq', 'Turkey', 'Korea', 'Yemen', 'Japan', 'Kuwait', 'Bahrain', 'Egypt'].map(country => (
+                    <li key={country}><Link href={`/extra/${country.toLowerCase().replace(' ', '-')}`} className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">{country}</Link></li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="px-3 py-2 cursor-pointer">
+              <Link href="/contact" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+                Contact
+              </Link>
+            </div>
+            
+            <div className="px-3 py-2 cursor-pointer">
+              <Link href="/certificate" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+                Certificate
+              </Link>
+            </div>
           </nav>
 
           {/* Action Area */}
           <div className="flex items-center gap-4">
-            <Link href="/book" className="hidden md:inline-flex btn-premium">
+            <Link href="/book" className="hidden md:inline-flex bg-accent text-primary font-bold uppercase tracking-wide text-xs px-6 py-3 rounded-md hover:bg-accent-hover transition-colors shadow-md">
               Book your course
             </Link>
             
@@ -99,6 +162,7 @@ export default function Header() {
                 )}
               </svg>
             </button>
+          </div>
           </div>
         </div>
       </header>

@@ -19,9 +19,9 @@ export default function Home() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
-              Bring your <br />
+              India's No.1 <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">English Language</span> <br />
-              to life.
+              Teaching Academy
             </h1>
             
             <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md">
@@ -227,17 +227,26 @@ export default function Home() {
                 We are an authorized partner for British Council, IDP & Cambridge ELT exam preparations with proven 8.5 band training methods.
               </p>
               
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
                 {[
-                  "Excellent Infrastructure & interactive classrooms",
-                  "Vast experience in corporate & teacher training",
-                  "Flexible timings & small group attention",
+                  "Excellent Infrastructure",
+                  "Proven 8.5 bands training methods",
+                  "Students from 18 different countries",
+                  "British Council IELTS Registration Centre",
                   "Highly qualified, certified & experienced faculties",
-                  "Students from 18 different countries"
+                  "Flexible timings & small group attention",
+                  "Vast experience in corporate & teacher training",
+                  "Interactive classrooms and modern teaching aids",
+                  "Customized courses for all age groups",
+                  "Specialized focus on speaking and listening",
+                  "Comprehensive study materials provided",
+                  "Regular mock tests and assessments",
+                  "Dedicated doubt-clearing sessions",
+                  "Lifetime support for alumni"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0">✓</div>
-                    <span className="font-medium text-primary">{item}</span>
+                  <div key={i} className="flex items-start gap-3 bg-white p-3 rounded-lg shadow-sm border border-slate-50 hover:border-accent/30 transition-colors">
+                    <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0 mt-0.5 text-xs">✓</div>
+                    <span className="font-medium text-slate-700 text-sm">{item}</span>
                   </div>
                 ))}
               </div>
@@ -251,7 +260,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8. Free Online Test Section - Immersive */}
+      {/* 8. Genuine Testimonials Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container-custom relative z-10">
+          <div className="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+            <h2 className="text-4xl font-extrabold text-primary mb-4">What Our Students Say</h2>
+            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full mb-6"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: 'Soo Jung', country: 'Korea', text: 'Cambridge Academy of English provided me with an excellent environment to improve my English. The teachers are incredibly supportive.' },
+              { name: 'Geunduk Jeon', country: 'Korea', text: 'The methodology and infrastructure are amazing. I highly recommend it to anyone looking to master the language.' },
+              { name: 'Hyoungmi Min', country: 'Korea', text: 'I had a wonderful experience. The interactive classes really helped boost my confidence in speaking English.' },
+              { name: 'Shin Bomsoo', country: 'Korea', text: 'The trainers are highly qualified and very patient. I achieved my target band score easily with their guidance.' },
+              { name: 'Tenzin Ngodup', country: 'Tibet', text: 'A great place to learn! Meeting students from 18 different countries gave me a truly international experience.' },
+              { name: 'Omar', country: 'Yemen', text: 'I am so grateful for the small group attention and the dedicated doubt-clearing sessions. It made a huge difference.' },
+              { name: 'Esmail', country: 'Iran', text: 'The flexible timings allowed me to study while managing my work. Best English academy in Bangalore without a doubt.' },
+              { name: 'Edris', country: 'Iran', text: 'Their proven training methods for IELTS are exceptional. I felt fully prepared on the day of my exam.' },
+              { name: 'Mohammed Farooq', country: 'Iran', text: 'Excellent study materials and regular mock tests helped me track my progress continuously. Highly recommended!' }
+            ].map((testimonial, idx) => (
+              <div key={idx} className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition-shadow relative">
+                <div className="text-accent text-4xl absolute top-6 right-6 opacity-30">"</div>
+                <div className="flex text-accent text-sm mb-4">★★★★★</div>
+                <p className="text-slate-600 mb-6 relative z-10 text-sm leading-relaxed italic">"{testimonial.text}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-primary text-sm">{testimonial.name}</h4>
+                    <span className="text-xs text-slate-500 font-medium">{testimonial.country}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Free Online Test Section - Immersive */}
       <section className="py-32 relative overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-primary z-0"></div>
         <div className="absolute inset-0 bg-[url('/images/slider2.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-0"></div>
