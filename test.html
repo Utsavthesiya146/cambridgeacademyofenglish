@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Take the Cambridge Academy of English Free 20-Minute Online English Level Test to assess your CEFR proficiency level (A1 to C2).">
+    <title>Free Online English Placement Test | Cambridge Academy of English</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-location-dot text-gold"></i>
+                    <span>No 87, 2nd Floor, Nehru Road, Kammanahalli, Bangalore</span>
+                </div>
+                <div class="top-bar-item">
+                    <i class="fa-solid fa-phone text-gold"></i>
+                    <a href="tel:08040943580">080-40943580</a> | <a href="tel:8970506004">8970506004</a>
+                </div>
+            </div>
+            <div class="top-bar-right">
+                <span class="top-bar-badge"><i class="fa-solid fa-award"></i> British Council & IDP Partner</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Cambridge Academy Logo" onerror="this.src='https://cambridgeacademyofenglish.com/assets/logo.png'">
+                <div class="brand-text">
+                    <span class="brand-title">Cambridge Academy</span>
+                    <span class="brand-subtitle">Bringing Language to Life</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="courses.html" class="nav-link">Courses</a>
+                <a href="test.html" class="nav-link active">Free English Test</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-navy btn-sm" data-modal="query-modal"><i class="fa-solid fa-paper-plane"></i> Drop Query</button>
+                <button class="btn btn-gold btn-sm" data-modal="enquiry-modal"><i class="fa-solid fa-calendar-check"></i> Book Course</button>
+                <button class="mobile-toggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO HEADER -->
+    <section class="hero-section" style="padding: 60px 0;">
+        <div class="container" style="text-align: center;">
+            <span class="hero-badge"><i class="fa-solid fa-vial-circle-check"></i> Interactive Assessment</span>
+            <h1 class="hero-title" style="font-size:2.8rem; margin-bottom:12px;">Free <span>Online English Test</span></h1>
+            <p style="color:#cbd5e1; max-width:650px; margin:0 auto; font-size:1.1rem;">
+                Evaluate your English grammar, vocabulary, and sentence construction level in just a few minutes. Receive instant placement feedback.
+            </p>
+        </div>
+    </section>
+
+    <!-- PLACEMENT TEST MODULE CONTAINER -->
+    <section class="section-padding" style="background-color:var(--bg-light);">
+        <div class="container" style="max-width:800px;">
+            <div id="placement-test-app">
+                <!-- Javascript will dynamically inject test questions here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none; padding-top:0;">
+                <span>© 2026 Cambridge Academy of English. All Rights Reserved.</span>
+                <a href="index.html" style="color:var(--accent-gold);">Return to Homepage</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL 1: DROP A QUERY -->
+    <div class="modal-overlay" id="query-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h4><i class="fa-solid fa-envelope"></i> Drop A Query</h4>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form class="interactive-form">
+                    <div class="form-group" style="margin-bottom:14px;">
+                        <label>Your Full Name *</label>
+                        <input type="text" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom:14px;">
+                        <label>Phone Number *</label>
+                        <input type="tel" class="form-control" placeholder="9876543210" required>
+                    </div>
+                    <button type="submit" class="btn btn-navy" style="width:100%;">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: BOOK COURSE ENQUIRY -->
+    <div class="modal-overlay" id="enquiry-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h4><i class="fa-solid fa-graduation-cap"></i> Course Enrollment Enquiry</h4>
+                <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form class="interactive-form">
+                    <div class="form-group" style="margin-bottom:14px;">
+                        <label>Full Name *</label>
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom:14px;">
+                        <label>Mobile Number *</label>
+                        <input type="tel" class="form-control" placeholder="Your Mobile Number" required>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width:100%;">Book Course Demo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
