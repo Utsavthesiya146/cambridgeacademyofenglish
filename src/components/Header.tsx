@@ -38,13 +38,11 @@ export default function Header() {
       <header className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/85 backdrop-blur-xl shadow-lg py-2' : 'bg-white py-4'}`}>
         <div className="container-custom flex justify-between items-center">
           {/* Logo Area */}
-          <Link href="/" className="flex items-center gap-4 group">
-            <div className="relative overflow-hidden rounded-xl bg-primary p-2 shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <img src="/images/logo.png" alt="Cambridge Academy" className="h-10 w-auto object-contain brightness-0 invert" />
-            </div>
-            <div className="flex flex-col hidden sm:flex">
-              <span className="text-xl font-bold text-primary tracking-tight group-hover:text-primary-light transition-colors">Cambridge Academy</span>
-              <span className="text-xs text-accent font-semibold tracking-widest uppercase">of English</span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <img src="/images/logo.png" alt="Cambridge Academy" className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+            <div className="flex flex-col hidden sm:flex border-l-2 border-slate-200 pl-3">
+              <span className="text-2xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors leading-tight">Cambridge Academy</span>
+              <span className="text-[0.65rem] text-accent font-bold tracking-[0.2em] uppercase">of English</span>
             </div>
           </Link>
 
