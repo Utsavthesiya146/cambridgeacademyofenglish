@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 export default function GeneralInformationPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -121,9 +120,9 @@ export default function GeneralInformationPage() {
                 >
                   <span className="text-lg">{block.title}</span>
                   {openIndex === index ? (
-                    <ChevronUpIcon className="w-5 h-5" />
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path></svg>
                   ) : (
-                    <ChevronDownIcon className="w-5 h-5" />
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   )}
                 </button>
                 
