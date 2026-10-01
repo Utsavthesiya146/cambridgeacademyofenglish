@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Best Teacher Training & Coaching Courses in Kammanahalli, Bangalore, India | Cambridge Academy Of English",
-  description: "Discover how these courses can empower you to excel in the field of education and take your skills to the next level.",
+  title: "Foreign Language Courses in Bangalore | Cambridge Academy of English",
+  description: "Best Foreign Language Online Courses in Bangalore India, Learn French, Spanish, German, Chinese, Japanese, Korean, Arabic.",
 };
 
-export default function TeacherTrainingPage() {
+export default function ForeignLanguageCoursesPage() {
   return (
     <div className="overflow-hidden bg-slate-50 min-h-screen">
       
@@ -21,7 +21,7 @@ export default function TeacherTrainingPage() {
             <li>
               <span className="text-slate-400">»</span>
             </li>
-            <li className="text-primary font-medium">Teacher Training Course in Bangalore</li>
+            <li className="text-primary font-medium">Foreign Language Courses in Bangalore</li>
           </ul>
         </div>
       </section>
@@ -33,25 +33,28 @@ export default function TeacherTrainingPage() {
           {/* Left Content Column */}
           <div className="lg:w-2/3">
             <h1 className="text-3xl md:text-4xl font-extrabold text-primary mb-8 pb-4 border-b-2 border-slate-200">
-              Teacher Training Course in Bangalore
+              Foreign Language Courses in Bangalore
             </h1>
 
             <div className="mb-8">
-              {/* Ensure next.config.mjs allows cambridgeacademyofenglish.com images if used, otherwise standard img tag */}
               <img 
-                src="https://cambridgeacademyofenglish.com/storage/media/teacher_training.jpg" 
-                alt="Teacher training courses in bangalore, best teacher training courses" 
+                src="https://cambridgeacademyofenglish.com/storage/media/Foreign_Language_123.jpg" 
+                alt="Foreign Language classes in Bangalore" 
                 className="w-full h-auto rounded-lg shadow-md mb-8"
               />
             </div>
 
             <div className="prose prose-slate max-w-none prose-headings:text-primary prose-headings:font-bold">
-              <h2 className="text-2xl font-bold mb-4">Teacher Training Courses in Bangalore | Best Teacher Training Courses in Bangalore:</h2>
               
-              <p className="text-lg text-slate-700 leading-relaxed mb-8">
-                Our <strong>teacher training courses in Bangalore</strong> are situated in a prime location of Bangalore and are also known as the <strong>Best teacher training institution in India.</strong> We moreover provide training for primary <strong>Teacher training courses in Bangalore | Best Teacher Training Courses in Bangalore</strong>, committed to producing future world educators who will no longer solely be geared up with modern educating strategies however will exhibit a deeper perception of educating <strong>Teacher Training courses in Bangalore</strong> methodologies that will assist the puts into an exercise in various school classrooms throughout the globe. Several types of modes depending on the candidate for pursuing these courses. Some of the most common ones have taken by college graduates are through webinar <strong>Teacher Training courses in Bangalore.</strong>
+              <h2 className="text-2xl font-bold mb-4">Foreign Language classes in Bangalore</h2>
+              
+              <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                We teach you the <strong>Best Foreign Language classes in Bangalore India | Online Foreign Language Courses in Bangalore</strong> and other cultures. Learn French, Spanish, German, Chinese, Japanese, Korean, Arabic with the best facilities and native speakers.
               </p>
 
+              <h2 className="text-2xl font-bold mb-4">Foreign Language Courses</h2>
+
+              {/* Course Table */}
               <div className="overflow-x-auto shadow-sm border border-slate-200 rounded-lg mb-10">
                 <table className="min-w-full divide-y divide-slate-200">
                   <thead>
@@ -61,51 +64,63 @@ export default function TeacherTrainingPage() {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-slate-200">
+                    
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong>Montessori Teacher Training in Bangalore</strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/French" className="text-primary hover:text-accent">French Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        <strong>Montessori Teacher Training</strong> is a brief and valuable training for aspiring teachers that teaches them how to identify children's needs, respond to them by designing classroom environments and combining appropriate teaching resources, and prepare themselves to be successful Montessori educators.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>French Courses, Online French Learning Language, French Language Institute, French Learning Classes</strong> for students of all ages from beginners’ level (A1) to advanced levels (C2)
                       </td>
                     </tr>
+
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong>Nursery Teacher Training Course</strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/LearnSpanishlanguage" className="text-primary hover:text-accent">Spanish Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        <strong>Nursery Teacher Training</strong> stresses comprehensive techniques and methods for educating young children, including physical, emotional, and social development, as well as the cognitive aspects of learning. Teaching young children is a difficult and practical task, with an emphasis on learning via play in an interactive learning environment.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>Spanish Course, Spanish Classes in Bangalore, Spanish Classes near me, Spanish Language</strong> for students of all ages from beginners’ level (A1) to advanced levels (C2)
                       </td>
                     </tr>
+
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong>Middle & Primary Teacher Training</strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/germanlanguageclasses" className="text-primary hover:text-accent">German Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        <strong>Pre and Primary Teacher Training</strong> is a concisely designed teacher training course for prospective teachers who want to become proficient in the methodologies to teach children aged 2 to 12 years. Pre-primary teaching is evolving with each passing day, and it allows for a smooth transition of children into formal education.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>German Courses, German Language Course in Bangalore, German Language Course Near me, german classes in Bangalore</strong> for students of all ages from beginners’ level (A1) to advanced levels (C2)
                       </td>
                     </tr>
+
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong><a href="/courses/microsoft365-for-education" className="text-primary hover:text-accent">Microsoft 365 for Education</a></strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/ChineseLanguage" className="text-primary hover:text-accent">Chinese Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        This course allows teachers to discover the enormous power of the <strong>Microsoft 365</strong> platform, revealing tools and techniques, which they can incorporate into their teaching.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>Chinese Courses, Chinese Language Classes, Chinese Language Courses</strong> for students of all ages from beginners’ level to advanced levels
                       </td>
                     </tr>
+
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong>TKT- Teacher Knowledge Test</strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/Japanese-language-in-bangalore" className="text-primary hover:text-accent">Japanese Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        <strong>TKT</strong> is a set of modular teaching certifications that assess your knowledge in key areas of English language teaching. Whether you're a rookie teacher or have years of experience, TKT is a great way to demonstrate your teaching skills with a globally recognized certificate.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>Japanese Courses, Japanese Learning Classes near me, Japanese Course Online, Chinese classes near me</strong> for students of all ages from beginners’ level (A1) to advanced levels (C2)
                       </td>
                     </tr>
+
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong>TEFL/ TESOL</strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/Korean-Language" className="text-primary hover:text-accent">Korean Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        This compact course is geared at teaching aspirants seeking to make a foray into the world of EFL/ESL teaching and has been structured considering the needs of <strong>TEFL</strong> professionals who look forward to learning the newest innovations in the field of teaching and training.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>Korean Courses, Korean Language Courses, Korean Learning Classes Near Me</strong> for students of all ages from beginners’ level (A1) to superior levels (C2)
                       </td>
                     </tr>
+
                     <tr className="hover:bg-slate-50 transition-colors">
-                      <td className="px-6 py-4"><strong>CELTA</strong></td>
+                      <td className="px-6 py-4"><strong><a href="/courses/Arabic-Language" className="text-primary hover:text-accent">Arabic Classes in Bangalore</a></strong></td>
                       <td className="px-6 py-4 text-slate-600 text-sm leading-relaxed">
-                        <strong>CELTA</strong> is a Cambridge qualification for teaching English as a foreign language. It focuses on practical strategies and includes face-to-face or online teaching practice with groups of learners, giving you the confidence to start teaching in as short as four weeks.
+                        Cambridge Academy of English Bangalore Provides a wide range of <strong>Arabic courses, Arabic Classes, Arabic Language Courses, Arabic Language Classes near me</strong> for students of all ages from beginners to advanced levels
                       </td>
                     </tr>
+
                   </tbody>
                 </table>
               </div>
+              
+              <p className="text-lg text-slate-700 leading-relaxed mb-8">
+                Our self-paced Classroom lessons can assist you to study for exams, developing your language comprehension, and advancing your foreign language classes grade for any specific purpose.
+              </p>
             </div>
           </div>
 
