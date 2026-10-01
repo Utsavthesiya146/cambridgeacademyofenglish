@@ -1,109 +1,126 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="w-full bg-white shadow-sm border-b border-slate-200 z-50 sticky top-0">
-      {/* Top Bar */}
-      <div className="bg-slate-100 border-b border-slate-200 hidden md:block">
-        <div className="container-custom flex justify-between items-center py-2 text-xs font-medium text-slate-600">
-          <ul className="flex gap-4">
-            <li><Link href="/" className="hover:text-navy">Cambridge Academy Group</Link></li>
-            <li><Link href="/" className="hover:text-navy font-bold text-navy">Cambridge Academy of English</Link></li>
-            <li><Link href="/" className="hover:text-navy">Cambridge Academy Online</Link></li>
-            <li><Link href="/" className="hover:text-navy">The Cambridge Academy Communication</Link></li>
+    <>
+      {/* Top Bar - Ultra Minimal */}
+      <div className="bg-primary text-slate-300 text-xs py-2 hidden lg:block border-b border-white/10">
+        <div className="container-custom flex justify-between items-center">
+          <ul className="flex gap-6 font-medium tracking-wide">
+            <li><Link href="/" className="hover:text-accent transition-colors">Cambridge Academy Group</Link></li>
+            <li><span className="text-white">Cambridge Academy of English</span></li>
+            <li><Link href="/" className="hover:text-accent transition-colors">Cambridge Academy Online</Link></li>
           </ul>
-          <Link href="/login" className="flex items-center gap-1 hover:text-navy">
-            <span>🚪</span> Login
-          </Link>
+          <div className="flex gap-6 items-center">
+            <span className="flex items-center gap-2"><span className="text-accent">📞</span> 080-40943580</span>
+            <Link href="/login" className="flex items-center gap-2 hover:text-accent transition-colors font-medium">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path></svg>
+              Login
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* Main Header Area */}
-      <div className="container-custom py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-        {/* Logo */}
-        <div className="flex flex-col">
-          <Link href="/">
-            <img src="/images/logo.png" alt="Cambridge Academy of English" className="h-16 object-contain" />
-          </Link>
-          <span className="text-sm font-semibold text-slate-600 mt-1">Bringing Language to Life</span>
-        </div>
-
-        {/* Contact & CTA */}
-        <div className="flex flex-col items-center md:items-end gap-2">
-          <p className="text-sm text-slate-700 font-medium hidden md:block">
-            <strong>Call us:</strong> <a href="tel:080-40943580" className="hover:text-navy ml-1">080-40943580</a> | <a href="tel:8970506004" className="hover:text-navy">8970506004</a> | <a href="tel:9620806004" className="hover:text-navy">9620806004</a>
-          </p>
-          <div className="flex gap-4 items-center">
-            <div className="relative hidden md:block">
-              <input type="text" placeholder="Search..." className="border border-slate-300 rounded px-3 py-1 text-sm outline-none focus:border-navy" />
+      {/* Main Glass Navbar */}
+      <header className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/85 backdrop-blur-xl shadow-lg py-2' : 'bg-white py-4'}`}>
+        <div className="container-custom flex justify-between items-center">
+          {/* Logo Area */}
+          <Link href="/" className="flex items-center gap-4 group">
+            <div className="relative overflow-hidden rounded-xl bg-primary p-2 shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <img src="/images/logo.png" alt="Cambridge Academy" className="h-10 w-auto object-contain brightness-0 invert" />
             </div>
-            <Link href="/book" className="bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-2 rounded shadow-md transition-colors text-sm">
+            <div className="flex flex-col hidden sm:flex">
+              <span className="text-xl font-bold text-primary tracking-tight group-hover:text-primary-light transition-colors">Cambridge Academy</span>
+              <span className="text-xs text-accent font-semibold tracking-widest uppercase">of English</span>
+            </div>
+          </Link>
+
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {['About', 'Courses', 'Admission', 'Extra', 'Contact', 'Certificate'].map((item) => (
+              <div key={item} className="relative group px-4 py-2 cursor-pointer">
+                <span className="text-sm font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1">
+                  {item}
+                  {['About', 'Courses', 'Admission', 'Extra'].includes(item) && (
+                    <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                  )}
+                </span>
+                
+                {/* Mega Menu Dropdown Example for Courses */}
+                {item === 'Courses' && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[600px] bg-white rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-4 group-hover:translate-y-0 p-6 grid grid-cols-2 gap-6 z-50">
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Popular Programs</h4>
+                      <ul className="space-y-3">
+                        <li><Link href="/courses/learn-english-speaking-course-online" className="block text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 p-2 rounded-lg transition-colors">Learn English Speaking Online</Link></li>
+                        <li><Link href="/courses/class-room-english-course" className="block text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 p-2 rounded-lg transition-colors">Spoken English Classes</Link></li>
+                        <li><Link href="/courses/exam-preparation-course" className="block text-sm font-medium text-slate-700 hover:text-primary hover:bg-slate-50 p-2 rounded-lg transition-colors">Exam Preparation (IELTS/PTE)</Link></li>
+                      </ul>
+                    </div>
+                    <div className="bg-slate-50 rounded-xl p-4 border border-slate-100 flex flex-col justify-center items-center text-center">
+                      <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center text-accent mb-3">⭐</div>
+                      <h5 className="font-bold text-primary mb-1">Not sure which course?</h5>
+                      <p className="text-xs text-slate-500 mb-4">Take our free 20-minute assessment test.</p>
+                      <Link href="/test" className="text-xs font-bold text-accent hover:text-accent-hover uppercase tracking-wider">Start Test →</Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Action Area */}
+          <div className="flex items-center gap-4">
+            <Link href="/book" className="hidden md:inline-flex btn-premium">
               Book your course
             </Link>
-            <button className="md:hidden text-navy" onClick={toggleMenu} aria-label="Toggle mobile menu">
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            
+            {/* Mobile Menu Toggle */}
+            <button 
+              className="lg:hidden p-2 rounded-xl bg-slate-50 text-primary hover:bg-slate-100 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 )}
               </svg>
             </button>
           </div>
         </div>
-      </div>
+      </header>
 
-      {/* Navigation Menu */}
-      <div className="bg-navy text-white hidden md:block">
-        <div className="container-custom">
-          <ul className="flex items-center text-sm font-medium">
-            <li className="relative group px-4 py-3 hover:bg-navy-light cursor-pointer">
-              <Link href="/about">About ▼</Link>
-              <div className="absolute top-full left-0 bg-white text-navy shadow-lg w-48 hidden group-hover:block border-t-2 border-gold z-50">
-                <Link href="/about" className="block px-4 py-2 hover:bg-slate-100">Vision & Mission</Link>
-                <Link href="/about" className="block px-4 py-2 hover:bg-slate-100">Values of Cambridge</Link>
-              </div>
-            </li>
-            <li className="relative group px-4 py-3 hover:bg-navy-light cursor-pointer">
-              <Link href="/courses">Courses ▼</Link>
-              <div className="absolute top-full left-0 bg-white text-navy shadow-lg w-72 hidden group-hover:block border-t-2 border-gold z-50">
-                <Link href="/courses/learn-english-speaking-course-online" className="block px-4 py-2 hover:bg-slate-100">Learn English Speaking Online</Link>
-                <Link href="/courses/class-room-english-course" className="block px-4 py-2 hover:bg-slate-100">Spoken English Classes</Link>
-                <Link href="/courses/exam-preparation-course" className="block px-4 py-2 hover:bg-slate-100">Exam Preparation Course</Link>
-                <Link href="/courses/foreign-language-courses-in-bangalore-india" className="block px-4 py-2 hover:bg-slate-100">Foreign Language Courses</Link>
-                <Link href="/courses/teacher-training-in-banglore" className="block px-4 py-2 hover:bg-slate-100">Teacher Training Course</Link>
-                <Link href="/courses/Cambridge-Exam" className="block px-4 py-2 hover:bg-slate-100">Cambridge Exam</Link>
-              </div>
-            </li>
-            <li className="relative group px-4 py-3 hover:bg-navy-light cursor-pointer">
-              <span>Admission ▼</span>
-            </li>
-            <li className="relative group px-4 py-3 hover:bg-navy-light cursor-pointer">
-              <span>Extra ▼</span>
-            </li>
-            <li className="px-4 py-3 hover:bg-navy-light cursor-pointer">
-              <Link href="/contact">Contact</Link>
-            </li>
-            <li className="px-4 py-3 hover:bg-navy-light cursor-pointer">
-              <Link href="/certificate">Certificate</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-navy text-white flex flex-col py-2 border-t border-navy-light">
-          <Link href="/about" onClick={toggleMenu} className="px-6 py-3 border-b border-navy-light">About</Link>
-          <Link href="/courses" onClick={toggleMenu} className="px-6 py-3 border-b border-navy-light">Courses</Link>
-          <Link href="/contact" onClick={toggleMenu} className="px-6 py-3 border-b border-navy-light">Contact</Link>
+        <div className="fixed inset-0 z-40 bg-primary/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
+          <div className="flex flex-col gap-6">
+            {['About', 'Courses', 'Admission', 'Extra', 'Contact', 'Certificate'].map((item) => (
+              <Link key={item} href={`/${item.toLowerCase()}`} className="text-2xl font-bold text-white hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                {item}
+              </Link>
+            ))}
+            <hr className="border-white/10 my-4" />
+            <Link href="/book" className="btn-premium w-full text-center" onClick={() => setIsMobileMenuOpen(false)}>
+              Book your course
+            </Link>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

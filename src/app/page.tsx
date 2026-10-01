@@ -2,101 +2,106 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
-      {/* 1. Hero Banner */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-navy/60 z-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center" 
-          style={{ backgroundImage: "url('/images/slider1.jpg')" }}
-        ></div>
-        <div className="container-custom relative z-20 text-center text-white pt-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-md">
-            Cambridge Academy of English
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-medium mb-8 text-gold drop-shadow-md">
-            India’s No.1 English Language Teaching Academy
-          </h2>
-          <Link href="/courses/learn-english-speaking-course-online" className="btn bg-red-600 hover:bg-red-700 text-white border-none px-8 py-3 text-lg rounded shadow-lg transition-transform hover:scale-105">
-            Book your course
-          </Link>
+    <div className="overflow-hidden">
+      {/* 1. Hero Banner - Cinematic & Premium */}
+      <section className="relative min-h-[90vh] flex items-center justify-center">
+        {/* Background Video/Image */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent z-10"></div>
+          <div className="absolute inset-0 bg-cover bg-center animate-[pulse_10s_ease-in-out_infinite]" style={{ backgroundImage: "url('/images/slider1.jpg')" }}></div>
         </div>
-      </section>
 
-      {/* 2. Benefits Bar */}
-      <section className="bg-white py-8 border-b border-slate-200 shadow-sm relative z-30 -mt-6 mx-4 md:mx-auto max-w-6xl rounded-lg">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center divide-x divide-slate-100">
-          <div className="px-2 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-gold">🏆</span>
-            <p className="text-sm font-semibold text-navy">Over 14+ Year’s of experience</p>
-          </div>
-          <div className="px-2 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-gold">⭐</span>
-            <p className="text-sm font-semibold text-navy">Rated Excellent based on 1000+ reviews</p>
-          </div>
-          <div className="px-2 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-gold">🎓</span>
-            <p className="text-sm font-semibold text-navy">All our faculties are highly qualified</p>
-          </div>
-          <div className="px-2 flex flex-col items-center">
-            <span className="text-3xl mb-2 text-gold">🎯</span>
-            <p className="text-sm font-semibold text-navy">Intensive teaching method</p>
-          </div>
-          <div className="px-2 flex flex-col items-center col-span-2 md:col-span-1">
-            <span className="text-3xl mb-2 text-gold">📍</span>
-            <p className="text-sm font-semibold text-navy">Bangalore Location</p>
+        <div className="container-custom relative z-20 w-full pt-32 pb-20 fade-in-up">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
+              <span className="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+              <span className="text-xs font-bold tracking-wider text-slate-800 uppercase">14+ Years of Excellence</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
+              Bring your <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">English Language</span> <br />
+              to life.
+            </h1>
+            
+            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md">
+              India&apos;s No.1 teaching academy. Master spoken fluency, score 8.5+ bands on IELTS/PTE/TOEFL, or learn foreign languages with certified experts in Bangalore.
+            </p>
+            
+            <div className="flex flex-wrap gap-4 items-center">
+              <Link href="/book" className="btn-premium">
+                Book your course
+              </Link>
+              <Link href="/test" className="text-white hover:text-accent font-semibold transition-colors flex items-center gap-2">
+                Take Placement Test <span className="text-xl">→</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Course Finder */}
-      <section className="py-12 bg-slate-50">
-        <div className="container-custom">
-          <h2 className="text-2xl font-bold text-navy mb-6">Find the right course for you....</h2>
-          <div className="bg-navy p-6 rounded-lg shadow-md">
-            <form className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+      {/* 2. Overlapping Benefits Bar - Glassmorphic */}
+      <section className="relative z-30 -mt-16 container-custom fade-in-up stagger-1">
+        <div className="glass-card bg-white/90 p-8 grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-x divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+          {[
+            { icon: '🏆', text: 'Over 14+ Years of experience' },
+            { icon: '⭐', text: 'Rated Excellent on 1000+ reviews' },
+            { icon: '🎓', text: 'Highly qualified certified faculties' },
+            { icon: '🎯', text: 'Intensive teaching methodology' },
+            { icon: '📍', text: 'Premium Bangalore Location' }
+          ].map((item, idx) => (
+            <div key={idx} className="px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300">
+              <span className="text-4xl mb-3">{item.icon}</span>
+              <p className="text-sm font-bold text-primary">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 3. Course Finder - Minimal & Modern */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3"></div>
+        <div className="container-custom relative z-10 fade-in-up stagger-2">
+          <div className="max-w-4xl mx-auto glass-dark p-10 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            
+            <h2 className="text-3xl font-bold text-white mb-8">Find the right course for you</h2>
+            
+            <form className="grid grid-cols-1 md:grid-cols-5 gap-6 items-end">
               <div className="flex flex-col gap-2">
-                <label className="text-white text-sm">I would like to join</label>
-                <select className="p-2 rounded text-slate-800 outline-none border-none">
-                  <option value="">choose your goal</option>
-                  <option value="3">Learn English Speaking Course Online</option>
-                  <option value="4">Spoken English Classes</option>
-                  <option value="5">Exam Preparation Course</option>
-                  <option value="6">Foreign Language Courses</option>
-                  <option value="29">Teacher Training Course</option>
-                  <option value="32">Cambridge Exam</option>
+                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">I would like to join</label>
+                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+                  <option value="" className="text-primary">choose your goal</option>
+                  <option value="3" className="text-primary">Learn English Speaking Course Online</option>
+                  <option value="4" className="text-primary">Spoken English Classes</option>
                 </select>
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-white text-sm">My English level is</label>
-                <select className="p-2 rounded text-slate-800 outline-none border-none">
-                  <option value="">choose your level</option>
-                  <option value="beginner">beginner</option>
-                  <option value="intermediate">intermediate</option>
-                  <option value="advanced">advanced</option>
+                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">My English level is</label>
+                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+                  <option value="" className="text-primary">choose your level</option>
+                  <option value="beginner" className="text-primary">beginner</option>
+                  <option value="intermediate" className="text-primary">intermediate</option>
                 </select>
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-white text-sm">I prefer to study</label>
-                <select className="p-2 rounded text-slate-800 outline-none border-none">
-                  <option value="">choose location</option>
-                  <option value="location_online">online</option>
-                  <option value="location_classroom">classroom</option>
+                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">I prefer to study</label>
+                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+                  <option value="" className="text-primary">choose location</option>
+                  <option value="online" className="text-primary">online</option>
+                  <option value="classroom" className="text-primary">classroom</option>
                 </select>
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-white text-sm">My age is</label>
-                <select className="p-2 rounded text-slate-800 outline-none border-none">
-                  <option value="">tell us your age</option>
-                  <option value="age_7_13">7-13</option>
-                  <option value="age_18_19">18-19</option>
-                  <option value="age_20_29">20-29</option>
-                  <option value="age_31_plus">over 30</option>
+                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">My age is</label>
+                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+                  <option value="" className="text-primary">tell us your age</option>
+                  <option value="adult" className="text-primary">18+</option>
                 </select>
               </div>
               <div>
-                <button type="button" className="bg-green-600 hover:bg-green-700 text-white p-2 rounded w-full font-medium transition-colors">
-                  View courses
+                <button type="button" className="w-full bg-accent hover:bg-accent-hover text-primary font-bold py-3 rounded shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all">
+                  Search
                 </button>
               </div>
             </form>
@@ -104,111 +109,108 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Trustpilot / Google Reviews Bar */}
-      <section className="bg-white py-6 border-y border-slate-200">
-        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-700 text-sm md:text-base">
-            98% of our students rate their experience and teaching as 'Great' or 'Excellent'. 
-            <a href="#" className="font-bold text-navy hover:underline ml-1">Read the latest reviews on Google.</a>
-          </p>
-          <div className="flex items-center gap-2">
-            <div className="flex text-orange-500">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <span className="font-medium text-slate-800">Google ratings</span>
+      {/* 4. Trustpilot / Google Reviews */}
+      <section className="bg-slate-50 py-8 border-y border-slate-200">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-center gap-6 text-center">
+          <div className="flex items-center gap-1 text-accent text-2xl">
+            ★★★★★
           </div>
+          <p className="text-slate-700 font-medium text-lg">
+            98% of our students rate their experience as &apos;Excellent&apos;. 
+            <a href="#" className="font-bold text-primary hover:text-accent ml-2 underline decoration-accent decoration-2 underline-offset-4 transition-colors">Read Google Reviews</a>
+          </p>
         </div>
       </section>
 
-      {/* 5. Course Categories */}
-      <section className="py-16 relative">
-        <div className="absolute inset-0 bg-navy/90 z-0"></div>
-        <div className="container-custom relative z-10">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Course categories</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mt-4"></div>
+      {/* 5. Course Categories - Bento Grid */}
+      <section className="py-24 bg-white relative">
+        <div className="container-custom">
+          <div className="text-center max-w-2xl mx-auto mb-16 fade-in-up">
+            <h2 className="text-4xl font-extrabold text-primary mb-4">Course Categories</h2>
+            <div className="w-20 h-1.5 bg-accent mx-auto rounded-full mb-6"></div>
+            <p className="text-slate-500 text-lg">Master the language with our diverse, expertly crafted training programs.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Learn English Speaking Course Online in Bangalore',
-                desc: 'Cambridge Academy of English offers a certified English Speaking Course in Kammanahalli, Bangalore, India.',
+                title: 'Learn English Speaking Online',
+                desc: 'Certified English Speaking Course via live interactive sessions.',
                 img: '/images/course-online.jpg',
                 link: '/courses/learn-english-speaking-course-online'
               },
               {
-                title: 'Spoken English Classes in Bangalore',
-                desc: 'We can assist you with spoken English training if you lack fluency in English and feel weak in spoken communication.',
+                title: 'Spoken English Classes',
+                desc: 'Assist you with spoken English training if you lack fluency and confidence.',
                 img: '/images/course-spoken.jpg',
                 link: '/courses/class-room-english-course'
               },
               {
-                title: 'Exam Preparation Course in Bangalore',
-                desc: 'Exam Preparation Training in Bangalore | Best IELTS Coaching In Bangalore to improve your listening, reading, and speaking skills.',
+                title: 'Exam Preparation (IELTS/PTE)',
+                desc: 'Best coaching to improve your listening, reading, and speaking skills for 8.5+ bands.',
                 img: '/images/course-exam.jpg',
                 link: '/courses/exam-preparation-course'
               },
               {
-                title: 'Foreign Language Courses in Bangalore',
-                desc: 'Learn Spanish, German, French, Italian, Japanese, Chinese and Arabic Courses with Best Faculties and Native Speakers.',
+                title: 'Foreign Language Courses',
+                desc: 'Learn Spanish, German, French, Italian, Japanese, Chinese and Arabic.',
                 img: '/images/course-foreign.jpg',
                 link: '/courses/foreign-language-courses-in-bangalore-india'
               },
               {
-                title: 'Teacher Training Course in Bangalore',
-                desc: 'Discover how these courses can empower you to excel in the field of education and take your skills to the next level.',
+                title: 'Teacher Training',
+                desc: 'Empower yourself to excel in the field of education.',
                 img: '/images/course-teacher.jpg',
                 link: '/courses/teacher-training-in-banglore'
               },
               {
                 title: 'Cambridge Exam',
-                desc: 'English exam training in Bangalore | Cambridge English',
+                desc: 'Specialized English exam training for Cambridge English certifications.',
                 img: '/images/course-cambridge.jpg',
                 link: '/courses/Cambridge-Exam'
               }
             ].map((course, idx) => (
-              <div key={idx} className="bg-white rounded-lg overflow-hidden shadow-lg group">
-                <Link href={course.link} className="block relative h-56 overflow-hidden">
-                  <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: `url(${course.img})` }}></div>
-                  <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors"></div>
-                </Link>
-                <div className="p-6 flex flex-col h-full">
-                  <h3 className="text-xl font-bold text-navy mb-3 line-clamp-2 hover:text-red-600 transition-colors">
-                    <Link href={course.link}>{course.title}</Link>
-                  </h3>
-                  <p className="text-slate-600 text-sm mb-6 line-clamp-3">{course.desc}</p>
-                  <div className="mt-auto">
-                    <Link href={course.link} className="inline-block border-2 border-navy text-navy font-medium px-4 py-2 rounded hover:bg-navy hover:text-white transition-colors">
-                      View courses
-                    </Link>
+              <Link key={idx} href={course.link} className="group block relative h-[400px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700 ease-out" style={{ backgroundImage: `url(${course.img})` }}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{course.title}</h3>
+                    <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{course.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-accent font-bold text-sm uppercase tracking-wider">
+                      Explore Course <span className="group-hover:translate-x-2 transition-transform">→</span>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
       {/* 6. Upcoming Courses & Events */}
-      <section className="py-16 bg-slate-50">
-        <div className="container-custom">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-navy">Upcoming courses and events</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mt-4"></div>
+      <section className="py-24 bg-primary text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
+        <div className="container-custom relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+              <h2 className="text-4xl font-extrabold mb-4">Upcoming Events</h2>
+              <div className="w-20 h-1.5 bg-accent rounded-full"></div>
+            </div>
+            <Link href="/courses" className="hidden md:inline-block text-accent hover:text-white font-bold transition-colors">View full calendar →</Link>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              { date: 'Starting every Monday', name: 'General English 30+' },
-              { date: 'Starting every Monday', name: 'Intensive General English' },
-              { date: 'Starting every Monday', name: 'Business & Professional English' },
-              { date: '26th September', name: 'Managing Virtual Teams' },
-              { date: '9th October', name: 'Professional Writing Skills' },
-              { date: '4 and 5 November', name: 'Developing Intercultural Competence' },
+              { date: 'Every Monday', name: 'Intensive General English', type: 'Weekly' },
+              { date: '26th Sept', name: 'Managing Virtual Teams', type: 'Workshop' },
+              { date: '4-5 Nov', name: 'Intercultural Competence', type: 'Seminar' },
             ].map((evt, idx) => (
-              <div key={idx} className="bg-white border-l-4 border-gold p-6 shadow-sm hover:shadow-md transition-shadow">
-                <p className="text-sm font-semibold text-red-600 mb-2">{evt.date}</p>
-                <p className="font-bold text-navy">{evt.name}</p>
+              <div key={idx} className="glass-dark p-6 border-l-4 border-l-accent hover:-translate-y-1 transition-transform cursor-pointer group">
+                <span className="inline-block px-2 py-1 bg-white/10 rounded text-xs font-bold uppercase tracking-wider mb-4 text-slate-300">{evt.type}</span>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-accent transition-colors">{evt.name}</h3>
+                <p className="text-slate-400 flex items-center gap-2"><span>🗓</span> {evt.date}</p>
               </div>
             ))}
           </div>
@@ -216,132 +218,79 @@ export default function Home() {
       </section>
 
       {/* 7. Checklist / Why Cambridge */}
-      <section className="py-16 bg-white">
+      <section className="py-24 bg-slate-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-navy text-center mb-10">Why Cambridge Academy of English?</h2>
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto">
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Excellent Infrastructure and interactive classrooms</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Authorized partner from British council, IDP & Cambridge ELT exam preparations</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Proven 8.5 bands training methods</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Vast experience in conducting corporate training & Teachers workshop</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Flexible class timings and Professional teaching environment</span>
-              </li>
-            </ul>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Training in smaller groups with intensive attention</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Students from 18 different countries</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Unique and exclusive tips and techniques for better results</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Regular and weekend batches for students and working employees</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-500 mt-1">✓</span>
-                <span className="text-slate-700">Highly qualified, certified and experienced faculties</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Free Online Test Section */}
-      <section className="py-16 bg-navy text-white relative">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gold">Free online English test</h2>
-              <p className="font-bold text-xl mb-2">What is your level of English?</p>
-              <p className="font-bold text-xl mb-6">Find out your English level in just 20 minutes.</p>
-              <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-200">
-                <li>Questions get easier or harder according to how well you do. If your English is very good you will answer more difficult questions.</li>
-                <li>You will be able to see the correct answers to the questions after you answer them.</li>
-              </ul>
-              <Link href="/test" className="inline-block border-2 border-white text-white hover:bg-white hover:text-navy font-bold px-8 py-3 rounded transition-colors">
-                Online English Test
-              </Link>
+              <h2 className="text-4xl font-extrabold text-primary mb-6">Why choose <br/><span className="text-accent">Cambridge Academy?</span></h2>
+              <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                We are an authorized partner for British Council, IDP & Cambridge ELT exam preparations with proven 8.5 band training methods.
+              </p>
+              
+              <div className="space-y-4">
+                {[
+                  "Excellent Infrastructure & interactive classrooms",
+                  "Vast experience in corporate & teacher training",
+                  "Flexible timings & small group attention",
+                  "Highly qualified, certified & experienced faculties",
+                  "Students from 18 different countries"
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent shrink-0">✓</div>
+                    <span className="font-medium text-primary">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="hidden md:block">
-              <img src="/images/slider2.jpg" alt="Online Test" className="rounded-lg shadow-xl" />
+            
+            <div className="relative">
+              <div className="absolute inset-0 bg-accent rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
+              <img src="/images/slider3.jpg" alt="Students" className="rounded-3xl shadow-2xl w-full h-[600px] object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 9. From the Blog */}
-      <section className="py-16 bg-slate-50">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-navy text-center mb-10">From the blog</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-10">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden group">
-              <div className="h-48 bg-slate-200"></div>
-              <div className="p-6">
-                <h3 className="font-bold text-lg text-navy group-hover:text-red-600 transition-colors">Mastering the IELTS Exam: Your Comprehensive Guide</h3>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden group">
-              <div className="h-48 bg-slate-200"></div>
-              <div className="p-6">
-                <h3 className="font-bold text-lg text-navy group-hover:text-red-600 transition-colors">Mastering the TOEFL Test: Your Ultimate Guide</h3>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden group">
-              <div className="h-48 bg-slate-200"></div>
-              <div className="p-6">
-                <h3 className="font-bold text-lg text-navy group-hover:text-red-600 transition-colors">Excelling in NEET: Medical Coaching Institute</h3>
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <button className="border-2 border-navy text-navy font-bold px-8 py-2 rounded hover:bg-navy hover:text-white transition-colors">All Blogs</button>
-          </div>
+      {/* 8. Free Online Test Section - Immersive */}
+      <section className="py-32 relative overflow-hidden flex items-center">
+        <div className="absolute inset-0 bg-primary z-0"></div>
+        <div className="absolute inset-0 bg-[url('/images/slider2.jpg')] bg-cover bg-center opacity-30 mix-blend-overlay z-0"></div>
+        
+        <div className="container-custom relative z-10 text-center max-w-3xl mx-auto">
+          <span className="inline-block px-4 py-1 bg-accent text-primary font-bold rounded-full text-sm uppercase tracking-wider mb-6">Free Assessment</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">What is your level of English?</h2>
+          <p className="text-xl text-slate-300 mb-10 font-light">
+            Find out your English level in just 20 minutes with our adaptive online test. Get instant results and personalized course recommendations.
+          </p>
+          <Link href="/test" className="btn-premium text-lg px-10 py-4 shadow-[0_0_30px_rgba(212,175,55,0.6)]">
+            Start Online Test Now
+          </Link>
         </div>
       </section>
 
       {/* 10. Summary Stats */}
-      <section className="py-12 bg-navy-dark text-white text-center">
-        <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div>
-            <div className="text-4xl font-bold text-gold mb-2">75+</div>
-            <div className="text-sm uppercase tracking-wider text-slate-300">Best courses</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-gold mb-2">100+</div>
-            <div className="text-sm uppercase tracking-wider text-slate-300">Best teachers</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-gold mb-2">18</div>
-            <div className="text-sm uppercase tracking-wider text-slate-300">Countries</div>
-          </div>
-          <div>
-            <div className="text-4xl font-bold text-gold mb-2">185,625</div>
-            <div className="text-sm uppercase tracking-wider text-slate-300">Learners</div>
+      <section className="py-16 bg-white border-b border-slate-100">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2">75+</div>
+              <div className="text-sm uppercase tracking-widest text-slate-400 font-bold">Best Courses</div>
+            </div>
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2">100+</div>
+              <div className="text-sm uppercase tracking-widest text-slate-400 font-bold">Best Teachers</div>
+            </div>
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2">18</div>
+              <div className="text-sm uppercase tracking-widest text-slate-400 font-bold">Countries</div>
+            </div>
+            <div className="text-center px-4">
+              <div className="text-4xl md:text-5xl font-extrabold text-primary mb-2">185k</div>
+              <div className="text-sm uppercase tracking-widest text-slate-400 font-bold">Learners</div>
+            </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

@@ -2,82 +2,107 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#233766] text-slate-300 py-12 border-t-4 border-gold text-sm relative">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-primary text-slate-400 py-16 border-t-[6px] border-accent text-sm relative mt-20">
+      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
+      
+      <div className="container-custom relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
           
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-4 uppercase">CONNECT</h4>
+          <div className="lg:col-span-4 pr-8">
+            <Link href="/" className="flex items-center gap-4 group mb-6 inline-flex">
+              <div className="relative overflow-hidden rounded-xl bg-white p-2 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300">
+                <img src="/images/logo.png" alt="Cambridge Academy" className="h-10 w-auto object-contain" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white tracking-tight group-hover:text-slate-200 transition-colors">Cambridge Academy</span>
+                <span className="text-xs text-accent font-semibold tracking-widest uppercase">of English</span>
+              </div>
+            </Link>
+            <p className="text-slate-400 leading-relaxed mb-8">
+              India's premier English Language & Foreign Language Training Institute in Kammanahalli, Bangalore. Empowering global communication since 2010.
+            </p>
+            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-xs">CONNECT WITH US</h4>
             <ul className="flex gap-4">
-              <li><a href="https://www.facebook.com/cambridgeacademyofenglish/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">FB</a></li>
-              <li><a href="https://twitter.com/CAEIndia" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">TW</a></li>
-              <li><a href="https://www.instagram.com/cambridge_academy_of_english/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">IG</a></li>
-              <li><a href="https://www.linkedin.com/in/cambridge-academy-of-english-384611105/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">LI</a></li>
-              <li><a href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">YT</a></li>
+              {['FB', 'TW', 'IG', 'LI', 'YT'].map(social => (
+                <li key={social}>
+                  <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-accent hover:border-accent hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    {social}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-4 uppercase">Request for PO/Invoice</h4>
-            <a href="#" className="inline-block p-4 bg-white/10 rounded hover:bg-white/20 transition-colors">📄 Invoice</a>
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">Quick Links</h4>
+            <ul className="space-y-3">
+              <li><a href="#" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Request for PO/Invoice</a></li>
+              <li><Link href="/terms-conditions" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Terms & Conditions</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Privacy Policy</Link></li>
+              <li><Link href="/refund-policy" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Refund Policy</Link></li>
+              <li><Link href="/info" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Course Info&apos;s</Link></li>
+            </ul>
           </div>
 
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-4 uppercase">WEEKLY NEWSLETTER</h4>
-            <form className="flex">
-              <input type="email" placeholder="Email Address" className="px-3 py-2 w-full text-navy outline-none" />
-              <button className="bg-gold text-navy font-bold px-3 py-2">Go</button>
+          <div className="lg:col-span-3">
+            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">Global Presence</h4>
+            <div className="grid grid-cols-2 gap-y-3 gap-x-2 text-xs">
+              <div className="flex items-center gap-2"><span className="text-lg">🇮🇳</span> INDIA</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇸🇦</span> Saudi Arabia</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇾🇪</span> Yemen</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇹🇷</span> Turkey</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇳🇬</span> Nigeria</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇯🇴</span> Jordan</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇰🇷</span> Korea</div>
+              <div className="flex items-center gap-2"><span className="text-lg">🇹🇭</span> Thailand</div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-3">
+            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">WEEKLY NEWSLETTER</h4>
+            <p className="text-xs mb-4">Subscribe to receive English learning tips and updates.</p>
+            <form className="flex mb-8">
+              <input type="email" placeholder="Email Address" className="px-4 py-3 w-full bg-white/5 border border-white/10 rounded-l-lg text-white outline-none focus:border-accent transition-colors" />
+              <button className="bg-accent text-primary font-bold px-6 py-3 rounded-r-lg hover:bg-accent-hover transition-colors">Go</button>
             </form>
-          </div>
 
-          <div className="col-span-1">
-            <h4 className="text-white font-bold mb-4 uppercase">WE ACCEPT</h4>
-            <div className="flex flex-wrap gap-2 text-white">
-              <span>Paypal</span> | <span>Amex</span> | <span>Maestro</span> | <span>Mastercard</span> | <span>Visa</span>
+            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-xs">WE ACCEPT</h4>
+            <div className="flex flex-wrap gap-3 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+              <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">Visa</span>
+              <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">Mastercard</span>
+              <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">PayPal</span>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8 text-center text-slate-400">
-          <div><span className="mr-2">🇮🇳</span> INDIA</div>
-          <div><span className="mr-2">🇸🇦</span> Saudi Arabia</div>
-          <div><span className="mr-2">🇾🇪</span> Yemen</div>
-          <div><span className="mr-2">🇹🇷</span> Turkey</div>
-          <div><span className="mr-2">🇳🇬</span> Nigeria</div>
-          <div><span className="mr-2">🇯🇴</span> Jordan</div>
-          <div><span className="mr-2">🇨🇮</span> Ivory Coast</div>
-          <div><span className="mr-2">🇮🇷</span> Iran</div>
-          <div><span className="mr-2">🇲🇳</span> Mongolia</div>
-          <div><span className="mr-2">🇰🇷</span> Korea</div>
-          <div><span className="mr-2">🇹🇭</span> Thailand</div>
-        </div>
-
-        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <ul className="flex flex-wrap gap-4 text-slate-400">
-            <li><Link href="/terms-conditions" className="hover:text-white">Terms & Conditions</Link></li>
-            <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy & Disclaimer</Link></li>
-            <li><Link href="/refund-policy" className="hover:text-white">Cancellation & Refund Policy</Link></li>
-            <li><Link href="/sitemap" className="hover:text-white">Site map</Link></li>
-            <li><Link href="/info" className="hover:text-white">Course Info's</Link></li>
-            <li><Link href="/blog/feed" className="hover:text-white">RSS - Posts</Link></li>
-          </ul>
-          <p className="text-slate-400">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
+          <p className="text-slate-500">© 2024 Cambridgeacademyofenglish. All Rights Reserved</p>
+          <div className="flex gap-6 text-slate-500">
+            <Link href="/sitemap" className="hover:text-white transition-colors">Site map</Link>
+            <Link href="/blog/feed" className="hover:text-white transition-colors">RSS - Posts</Link>
+          </div>
         </div>
       </div>
 
       {/* Floating Bottom Bar (Fixed) */}
-      <div className="fixed bottom-0 left-0 w-full bg-navy border-t border-navy-light py-3 px-4 hidden md:block z-40">
-        <div className="container-custom flex justify-center gap-8">
-          <button className="bg-navy text-white hover:text-gold flex items-center gap-2">
-            <span>✉️</span> Drop A Query
+      <div className="fixed bottom-0 left-0 w-full bg-primary-light/90 backdrop-blur-lg border-t border-white/10 py-3 px-4 hidden md:block z-40 translate-y-full hover:translate-y-0 transition-transform duration-300">
+        <div className="container-custom flex justify-center gap-12">
+          <button className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
+            <span className="text-lg">✉️</span> Drop A Query
           </button>
-          <button className="text-white hover:text-gold flex items-center gap-2">
-            <span>📞</span> Request A Call Back
+          <button className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
+            <span className="text-lg">📞</span> Request A Call Back
           </button>
-          <a href="mailto:info@cambridgeacademyofenglish.com" className="text-white hover:text-gold flex items-center gap-2">
-            <span>📧</span> info@cambridgeacademyofenglish.com
+          <a href="mailto:info@cambridgeacademyofenglish.com" className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
+            <span className="text-lg">📧</span> info@cambridgeacademyofenglish.com
           </a>
         </div>
+      </div>
+      
+      {/* Decorative Tab to show bottom bar on hover */}
+      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 bg-primary-light text-white px-6 py-1 rounded-t-xl text-xs font-bold tracking-widest cursor-pointer hidden md:flex items-center gap-2 hover:bg-accent hover:text-primary transition-colors z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
+        <span>CONTACT US</span>
+        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 15l7-7 7 7"></path></svg>
       </div>
     </footer>
   );
