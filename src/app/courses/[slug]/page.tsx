@@ -58,8 +58,15 @@ const courses = {
   }
 };
 
-export default function CoursePage({ params }: { params: { slug: string } }) {
-  const course = courses[params.slug as keyof typeof courses];
+export async function generateStaticParams() {
+  return Object.keys(courses).map((slug) => ({
+    slug,
+  }));
+}
+
+export default async function CoursePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const course = courses[slug as keyof typeof courses];
 
   if (!course) {
     notFound();
