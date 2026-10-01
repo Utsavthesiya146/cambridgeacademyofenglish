@@ -77,7 +77,7 @@ export default function Header() {
               </Link>
               <div className="absolute top-full left-0 mt-0 w-64 bg-white shadow-xl border-t-2 border-accent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
                 <ul className="flex flex-col py-2">
-                  <li><Link href="/about/vision-mission" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Vision & Mission</Link></li>
+                  <li><Link href="/about/vision-mision" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Vision & Mission</Link></li>
                   <li><Link href="/about/values-of-cambridge" className="block px-6 py-2.5 text-sm text-slate-600 hover:text-primary hover:bg-slate-50 transition-colors font-medium border-b border-slate-50 last:border-0">Values of Cambridge</Link></li>
                 </ul>
               </div>
