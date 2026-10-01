@@ -7,46 +7,85 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-white">
-      <div className="bg-slate-50 py-16 md:py-24 border-b border-slate-200">
-        <div className="container-custom text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy mb-6">About Cambridge Academy</h1>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            Since 2010, we have been Bangalore&apos;s premier institute for English language acquisition, exam preparation, and foreign language training.
+    <div className="overflow-hidden bg-slate-50">
+      
+      {/* Hero Section */}
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center">
+        <div className="absolute inset-0 bg-primary/85 z-10"></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero.jpg')" }}></div>
+        <div className="container-custom relative z-20 pt-20 text-center fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
+            <span className="w-2 h-2 rounded-full bg-accent"></span>
+            <span className="text-xs font-bold tracking-wider text-slate-800 uppercase">Est. 2010</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-2xl">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">Cambridge Academy</span>
+          </h1>
+          <p className="text-xl text-slate-300 font-light drop-shadow-md max-w-2xl mx-auto">
+            Bangalore&apos;s premier institute for English language acquisition, exam preparation, and foreign language training.
           </p>
         </div>
-      </div>
+      </section>
 
-      <section className="section-padding">
-        <div className="container-custom max-w-4xl mx-auto">
-          <div className="prose prose-lg prose-slate max-w-none">
-            <h2 className="text-3xl font-bold text-navy mb-6">Our Mission & Vision</h2>
-            <p className="text-slate-700 mb-8 leading-relaxed">
+      {/* Mission & Vision */}
+      <section className="relative -mt-20 z-30 container-custom fade-in-up stagger-1">
+        <div className="glass-card bg-white/95 p-10 md:p-14 shadow-2xl flex flex-col md:flex-row gap-12 items-center">
+          <div className="md:w-1/3">
+            <h2 className="text-3xl font-extrabold text-primary mb-4">Our Mission & Vision</h2>
+            <div className="w-16 h-1 bg-accent rounded-full"></div>
+          </div>
+          <div className="md:w-2/3">
+            <p className="text-lg text-slate-600 leading-relaxed font-light">
               We combine world-class infrastructure, personalized attention, and proven communicative methodologies to help students achieve linguistic excellence. Whether you are aiming for a band 8.5 in IELTS or learning a new foreign language, our certified faculty ensures you reach your goals.
             </p>
-
-            <h2 className="text-3xl font-bold text-navy mb-6 mt-12">Institutional Highlights</h2>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <h4 className="font-bold text-navy text-xl mb-3">Authorized Partner</h4>
-                <p className="text-slate-600">Official registration partner for British Council, IDP, and Cambridge ELT exam preparations.</p>
-              </div>
-              <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <h4 className="font-bold text-navy text-xl mb-3">Proven Methods</h4>
-                <p className="text-slate-600">Time-tested tips and techniques to help candidates achieve top scores on IELTS and PTE.</p>
-              </div>
-              <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <h4 className="font-bold text-navy text-xl mb-3">Intensive Small Batches</h4>
-                <p className="text-slate-600">Focused instruction in smaller group sizes guaranteeing personalized attention.</p>
-              </div>
-              <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                <h4 className="font-bold text-navy text-xl mb-3">Global Community</h4>
-                <p className="text-slate-600">A diverse, multicultural learning ecosystem with students from 18+ countries.</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
+      {/* Highlights - Bento Grid */}
+      <section className="py-24 container-custom">
+        <div className="text-center mb-16 fade-in-up stagger-2">
+          <h2 className="text-4xl font-extrabold text-primary mb-4">Institutional Highlights</h2>
+          <p className="text-slate-500 text-lg">Why thousands of students trust us with their future.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in-up stagger-3">
+          
+          <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+            <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <span className="text-2xl">🤝</span>
+            </div>
+            <h4 className="font-bold text-primary text-xl mb-3">Authorized Partner</h4>
+            <p className="text-slate-500 text-sm leading-relaxed">Official registration partner for British Council, IDP, and Cambridge ELT exam preparations.</p>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+            <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <span className="text-2xl">📈</span>
+            </div>
+            <h4 className="font-bold text-primary text-xl mb-3">Proven Methods</h4>
+            <p className="text-slate-500 text-sm leading-relaxed">Time-tested tips and techniques to help candidates achieve top scores on IELTS and PTE.</p>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+            <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <span className="text-2xl">🎯</span>
+            </div>
+            <h4 className="font-bold text-primary text-xl mb-3">Small Batches</h4>
+            <p className="text-slate-500 text-sm leading-relaxed">Focused instruction in smaller group sizes guaranteeing personalized attention and feedback.</p>
+          </div>
+
+          <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+            <div className="w-14 h-14 bg-primary/5 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <span className="text-2xl">🌍</span>
+            </div>
+            <h4 className="font-bold text-primary text-xl mb-3">Global Community</h4>
+            <p className="text-slate-500 text-sm leading-relaxed">A diverse, multicultural learning ecosystem with students from 18+ different countries.</p>
+          </div>
+
+        </div>
+      </section>
+      
     </div>
   );
 }
