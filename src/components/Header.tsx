@@ -52,12 +52,12 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-1">
             {['About', 'Courses', 'Admission', 'Extra', 'Contact', 'Certificate'].map((item) => (
               <div key={item} className="relative group px-4 py-2 cursor-pointer">
-                <span className="text-sm font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1">
+                <Link href={`/${item.toLowerCase()}`} className="text-sm font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1">
                   {item}
                   {['About', 'Courses', 'Admission', 'Extra'].includes(item) && (
                     <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                   )}
-                </span>
+                </Link>
                 
                 {/* Mega Menu Dropdown Example for Courses */}
                 {item === 'Courses' && (
