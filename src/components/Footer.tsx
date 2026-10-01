@@ -2,72 +2,81 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-dark text-slate-300 py-16 border-t-4 border-gold">
+    <footer className="bg-[#233766] text-slate-300 py-12 border-t-4 border-gold text-sm relative">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           
-          <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-navy font-bold text-xl">
-                C
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-white leading-tight">Cambridge Academy</span>
-                <span className="text-xs text-gold font-semibold tracking-wider uppercase">of English</span>
-              </div>
-            </Link>
-            <p className="text-sm leading-relaxed mb-6">
-              India&apos;s premier English Language & Foreign Language Training Institute in Kammanahalli, Bangalore. Empowering students since 2010.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
-            <ul className="space-y-3">
-              <li><Link href="/" className="text-sm hover:text-gold transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-sm hover:text-gold transition-colors">About Us</Link></li>
-              <li><Link href="/courses" className="text-sm hover:text-gold transition-colors">Courses</Link></li>
-              <li><Link href="/test" className="text-sm hover:text-gold transition-colors">Placement Test</Link></li>
-              <li><Link href="/contact" className="text-sm hover:text-gold transition-colors">Contact</Link></li>
+          <div className="col-span-1">
+            <h4 className="text-white font-bold mb-4 uppercase">CONNECT</h4>
+            <ul className="flex gap-4">
+              <li><a href="https://www.facebook.com/cambridgeacademyofenglish/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">FB</a></li>
+              <li><a href="https://twitter.com/CAEIndia" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">TW</a></li>
+              <li><a href="https://www.instagram.com/cambridge_academy_of_english/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">IG</a></li>
+              <li><a href="https://www.linkedin.com/in/cambridge-academy-of-english-384611105/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">LI</a></li>
+              <li><a href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gold text-lg">YT</a></li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Programs</h4>
-            <ul className="space-y-3">
-              <li><Link href="/courses" className="text-sm hover:text-gold transition-colors">Spoken English</Link></li>
-              <li><Link href="/courses" className="text-sm hover:text-gold transition-colors">IELTS & PTE Coaching</Link></li>
-              <li><Link href="/courses" className="text-sm hover:text-gold transition-colors">Foreign Languages</Link></li>
-              <li><Link href="/courses" className="text-sm hover:text-gold transition-colors">Corporate Training</Link></li>
-            </ul>
+          <div className="col-span-1">
+            <h4 className="text-white font-bold mb-4 uppercase">Request for PO/Invoice</h4>
+            <a href="#" className="inline-block p-4 bg-white/10 rounded hover:bg-white/20 transition-colors">📄 Invoice</a>
           </div>
 
-          <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Info</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span className="text-sm">No 87, 2nd Floor, Nehru Road, Kammanahalli, Bangalore - 560084</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                <span className="text-sm">080-40943580<br/>8970506004</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-gold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span className="text-sm">Mon - Sat: 9:00 AM - 9:00 PM</span>
-              </li>
-            </ul>
+          <div className="col-span-1">
+            <h4 className="text-white font-bold mb-4 uppercase">WEEKLY NEWSLETTER</h4>
+            <form className="flex">
+              <input type="email" placeholder="Email Address" className="px-3 py-2 w-full text-navy outline-none" />
+              <button className="bg-gold text-navy font-bold px-3 py-2">Go</button>
+            </form>
           </div>
 
+          <div className="col-span-1">
+            <h4 className="text-white font-bold mb-4 uppercase">WE ACCEPT</h4>
+            <div className="flex flex-wrap gap-2 text-white">
+              <span>Paypal</span> | <span>Amex</span> | <span>Maestro</span> | <span>Mastercard</span> | <span>Visa</span>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-400">© {new Date().getFullYear()} Cambridge Academy of English. All Rights Reserved. (Demo Site)</p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
-            <Link href="#" className="text-slate-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 mb-8 text-center text-slate-400">
+          <div><span className="mr-2">🇮🇳</span> INDIA</div>
+          <div><span className="mr-2">🇸🇦</span> Saudi Arabia</div>
+          <div><span className="mr-2">🇾🇪</span> Yemen</div>
+          <div><span className="mr-2">🇹🇷</span> Turkey</div>
+          <div><span className="mr-2">🇳🇬</span> Nigeria</div>
+          <div><span className="mr-2">🇯🇴</span> Jordan</div>
+          <div><span className="mr-2">🇨🇮</span> Ivory Coast</div>
+          <div><span className="mr-2">🇮🇷</span> Iran</div>
+          <div><span className="mr-2">🇲🇳</span> Mongolia</div>
+          <div><span className="mr-2">🇰🇷</span> Korea</div>
+          <div><span className="mr-2">🇹🇭</span> Thailand</div>
+        </div>
+
+        <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+          <ul className="flex flex-wrap gap-4 text-slate-400">
+            <li><Link href="/terms-conditions" className="hover:text-white">Terms & Conditions</Link></li>
+            <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy & Disclaimer</Link></li>
+            <li><Link href="/refund-policy" className="hover:text-white">Cancellation & Refund Policy</Link></li>
+            <li><Link href="/sitemap" className="hover:text-white">Site map</Link></li>
+            <li><Link href="/info" className="hover:text-white">Course Info's</Link></li>
+            <li><Link href="/blog/feed" className="hover:text-white">RSS - Posts</Link></li>
+          </ul>
+          <p className="text-slate-400">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
+        </div>
+      </div>
+
+      {/* Floating Bottom Bar (Fixed) */}
+      <div className="fixed bottom-0 left-0 w-full bg-navy border-t border-navy-light py-3 px-4 hidden md:block z-40">
+        <div className="container-custom flex justify-center gap-8">
+          <button className="bg-navy text-white hover:text-gold flex items-center gap-2">
+            <span>✉️</span> Drop A Query
+          </button>
+          <button className="text-white hover:text-gold flex items-center gap-2">
+            <span>📞</span> Request A Call Back
+          </button>
+          <a href="mailto:info@cambridgeacademyofenglish.com" className="text-white hover:text-gold flex items-center gap-2">
+            <span>📧</span> info@cambridgeacademyofenglish.com
+          </a>
         </div>
       </div>
     </footer>

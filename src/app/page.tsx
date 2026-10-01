@@ -3,116 +3,343 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      <section className="bg-gradient-to-br from-navy-dark via-navy to-[#173b75] text-white py-24 md:py-32 relative overflow-hidden">
-        <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="container-custom relative z-10 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-gold font-medium mb-6">
-              <span className="text-sm">Over 14+ Years of Language Excellence in Bangalore</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              India&apos;s No.1 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gold">English Language</span> Teaching Academy
-            </h1>
-            <p className="text-lg text-slate-200 mb-8 max-w-lg leading-relaxed">
-              Master spoken English fluency, score 8.5+ bands on IELTS/PTE/TOEFL exams, or learn foreign languages with certified expert faculties in Kammanahalli, Bangalore.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/courses" className="btn btn-secondary">Find Your Course</Link>
-              <Link href="/test" className="btn btn-outline border-white/40 text-white hover:bg-white hover:text-navy">Take Free Placement Test</Link>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
-              <div>
-                <div className="text-3xl font-bold text-gold">14+</div>
-                <div className="text-xs text-slate-300 mt-1 uppercase tracking-wider">Years Exp.</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gold">185k+</div>
-                <div className="text-xs text-slate-300 mt-1 uppercase tracking-wider">Students</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-gold">4.8 ★</div>
-                <div className="text-xs text-slate-300 mt-1 uppercase tracking-wider">Reviews</div>
-              </div>
-            </div>
+      {/* 1. Hero Banner */}
+      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-navy/60 z-10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center" 
+          style={{ backgroundImage: "url('/images/slider1.jpg')" }}
+        ></div>
+        <div className="container-custom relative z-20 text-center text-white pt-20">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-md">
+            Cambridge Academy of English
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-medium mb-8 text-gold drop-shadow-md">
+            India’s No.1 English Language Teaching Academy
+          </h2>
+          <Link href="/courses/learn-english-speaking-course-online" className="btn bg-red-600 hover:bg-red-700 text-white border-none px-8 py-3 text-lg rounded shadow-lg transition-transform hover:scale-105">
+            Book your course
+          </Link>
+        </div>
+      </section>
+
+      {/* 2. Benefits Bar */}
+      <section className="bg-white py-8 border-b border-slate-200 shadow-sm relative z-30 -mt-6 mx-4 md:mx-auto max-w-6xl rounded-lg">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center divide-x divide-slate-100">
+          <div className="px-2 flex flex-col items-center">
+            <span className="text-3xl mb-2 text-gold">🏆</span>
+            <p className="text-sm font-semibold text-navy">Over 14+ Year’s of experience</p>
           </div>
-          <div className="hidden md:block relative">
-            <div className="aspect-[4/5] bg-navy-light rounded-2xl overflow-hidden border-4 border-white/10 shadow-2xl relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/90 to-transparent flex flex-col justify-end p-8">
-                 <h4 className="text-xl font-bold text-white mb-2">Authorized ELT Partner</h4>
-                 <p className="text-slate-300 text-sm">British Council, IDP & Cambridge Assessment Preparation</p>
-              </div>
-            </div>
+          <div className="px-2 flex flex-col items-center">
+            <span className="text-3xl mb-2 text-gold">⭐</span>
+            <p className="text-sm font-semibold text-navy">Rated Excellent based on 1000+ reviews</p>
+          </div>
+          <div className="px-2 flex flex-col items-center">
+            <span className="text-3xl mb-2 text-gold">🎓</span>
+            <p className="text-sm font-semibold text-navy">All our faculties are highly qualified</p>
+          </div>
+          <div className="px-2 flex flex-col items-center">
+            <span className="text-3xl mb-2 text-gold">🎯</span>
+            <p className="text-sm font-semibold text-navy">Intensive teaching method</p>
+          </div>
+          <div className="px-2 flex flex-col items-center col-span-2 md:col-span-1">
+            <span className="text-3xl mb-2 text-gold">📍</span>
+            <p className="text-sm font-semibold text-navy">Bangalore Location</p>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-12 border-b border-slate-100 shadow-sm">
+      {/* 3. Course Finder */}
+      <section className="py-12 bg-slate-50">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-slate-100">
-            <div className="px-4">
-              <h4 className="font-bold text-navy mb-1">14+ Years Legacy</h4>
-              <p className="text-sm text-slate-500">Proven excellence in Bangalore</p>
-            </div>
-            <div className="px-4">
-              <h4 className="font-bold text-navy mb-1">Rated Excellent</h4>
-              <p className="text-sm text-slate-500">1000+ verified student reviews</p>
-            </div>
-            <div className="px-4">
-              <h4 className="font-bold text-navy mb-1">Certified Faculties</h4>
-              <p className="text-sm text-slate-500">Highly qualified practitioners</p>
-            </div>
-            <div className="px-4">
-              <h4 className="font-bold text-navy mb-1">Global Community</h4>
-              <p className="text-sm text-slate-500">Students from 18+ countries</p>
-            </div>
+          <h2 className="text-2xl font-bold text-navy mb-6">Find the right course for you....</h2>
+          <div className="bg-navy p-6 rounded-lg shadow-md">
+            <form className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+              <div className="flex flex-col gap-2">
+                <label className="text-white text-sm">I would like to join</label>
+                <select className="p-2 rounded text-slate-800 outline-none border-none">
+                  <option value="">choose your goal</option>
+                  <option value="3">Learn English Speaking Course Online</option>
+                  <option value="4">Spoken English Classes</option>
+                  <option value="5">Exam Preparation Course</option>
+                  <option value="6">Foreign Language Courses</option>
+                  <option value="29">Teacher Training Course</option>
+                  <option value="32">Cambridge Exam</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-white text-sm">My English level is</label>
+                <select className="p-2 rounded text-slate-800 outline-none border-none">
+                  <option value="">choose your level</option>
+                  <option value="beginner">beginner</option>
+                  <option value="intermediate">intermediate</option>
+                  <option value="advanced">advanced</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-white text-sm">I prefer to study</label>
+                <select className="p-2 rounded text-slate-800 outline-none border-none">
+                  <option value="">choose location</option>
+                  <option value="location_online">online</option>
+                  <option value="location_classroom">classroom</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label className="text-white text-sm">My age is</label>
+                <select className="p-2 rounded text-slate-800 outline-none border-none">
+                  <option value="">tell us your age</option>
+                  <option value="age_7_13">7-13</option>
+                  <option value="age_18_19">18-19</option>
+                  <option value="age_20_29">20-29</option>
+                  <option value="age_31_plus">over 30</option>
+                </select>
+              </div>
+              <div>
+                <button type="button" className="bg-green-600 hover:bg-green-700 text-white p-2 rounded w-full font-medium transition-colors">
+                  View courses
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
 
-      <section className="section-padding bg-slate-50">
-        <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-gold font-semibold tracking-wider uppercase text-sm mb-2 block">Featured Programs</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Explore Our Premier Courses</h2>
-            <p className="text-slate-600">Tailored curriculum designed to accelerate your communicative fluency and exam excellence.</p>
+      {/* 4. Trustpilot / Google Reviews Bar */}
+      <section className="bg-white py-6 border-y border-slate-200">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-slate-700 text-sm md:text-base">
+            98% of our students rate their experience and teaching as 'Great' or 'Excellent'. 
+            <a href="#" className="font-bold text-navy hover:underline ml-1">Read the latest reviews on Google.</a>
+          </p>
+          <div className="flex items-center gap-2">
+            <div className="flex text-orange-500">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span className="font-medium text-slate-800">Google ratings</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Course Categories */}
+      <section className="py-16 relative">
+        <div className="absolute inset-0 bg-navy/90 z-0"></div>
+        <div className="container-custom relative z-10">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Course categories</h2>
+            <div className="w-16 h-1 bg-gold mx-auto mt-4"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Learn English Speaking Online', badge: 'Online Live', target: 'Spoken English' },
-              { title: 'Spoken English Classes (Campus)', badge: 'Classroom', target: 'Spoken English' },
-              { title: 'Exam Prep (IELTS/PTE/TOEFL)', badge: '8.5 Band Target', target: 'Exam Prep' }
+              {
+                title: 'Learn English Speaking Course Online in Bangalore',
+                desc: 'Cambridge Academy of English offers a certified English Speaking Course in Kammanahalli, Bangalore, India.',
+                img: '/images/course-online.jpg',
+                link: '/courses/learn-english-speaking-course-online'
+              },
+              {
+                title: 'Spoken English Classes in Bangalore',
+                desc: 'We can assist you with spoken English training if you lack fluency in English and feel weak in spoken communication.',
+                img: '/images/course-spoken.jpg',
+                link: '/courses/class-room-english-course'
+              },
+              {
+                title: 'Exam Preparation Course in Bangalore',
+                desc: 'Exam Preparation Training in Bangalore | Best IELTS Coaching In Bangalore to improve your listening, reading, and speaking skills.',
+                img: '/images/course-exam.jpg',
+                link: '/courses/exam-preparation-course'
+              },
+              {
+                title: 'Foreign Language Courses in Bangalore',
+                desc: 'Learn Spanish, German, French, Italian, Japanese, Chinese and Arabic Courses with Best Faculties and Native Speakers.',
+                img: '/images/course-foreign.jpg',
+                link: '/courses/foreign-language-courses-in-bangalore-india'
+              },
+              {
+                title: 'Teacher Training Course in Bangalore',
+                desc: 'Discover how these courses can empower you to excel in the field of education and take your skills to the next level.',
+                img: '/images/course-teacher.jpg',
+                link: '/courses/teacher-training-in-banglore'
+              },
+              {
+                title: 'Cambridge Exam',
+                desc: 'English exam training in Bangalore | Cambridge English',
+                img: '/images/course-cambridge.jpg',
+                link: '/courses/Cambridge-Exam'
+              }
             ].map((course, idx) => (
-              <div key={idx} className="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-lg transition-all group">
-                <div className="h-48 bg-slate-200 relative overflow-hidden">
-                   <div className="absolute top-4 left-4 bg-navy text-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm z-10">{course.badge}</div>
-                   <div className="absolute inset-0 bg-navy/10 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy mb-3 group-hover:text-blue-600 transition-colors">{course.title}</h3>
-                  <p className="text-slate-600 text-sm mb-6 line-clamp-3">
-                    Cambridge Academy of English offers certified {course.target.toLowerCase()} training in Bangalore. Elevate speaking skills with expert mentors.
-                  </p>
-                  <div className="flex gap-3">
-                    <Link href="/contact" className="btn btn-outline flex-1 text-sm py-2">Enquire Now</Link>
-                    <Link href="/courses" className="btn btn-secondary flex-1 text-sm py-2 text-center">Details</Link>
+              <div key={idx} className="bg-white rounded-lg overflow-hidden shadow-lg group">
+                <Link href={course.link} className="block relative h-56 overflow-hidden">
+                  <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style={{ backgroundImage: `url(${course.img})` }}></div>
+                  <div className="absolute inset-0 bg-navy/20 group-hover:bg-transparent transition-colors"></div>
+                </Link>
+                <div className="p-6 flex flex-col h-full">
+                  <h3 className="text-xl font-bold text-navy mb-3 line-clamp-2 hover:text-red-600 transition-colors">
+                    <Link href={course.link}>{course.title}</Link>
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-6 line-clamp-3">{course.desc}</p>
+                  <div className="mt-auto">
+                    <Link href={course.link} className="inline-block border-2 border-navy text-navy font-medium px-4 py-2 rounded hover:bg-navy hover:text-white transition-colors">
+                      View courses
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Link href="/courses" className="btn btn-primary">View All Courses</Link>
+        </div>
+      </section>
+
+      {/* 6. Upcoming Courses & Events */}
+      <section className="py-16 bg-slate-50">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-navy">Upcoming courses and events</h2>
+            <div className="w-16 h-1 bg-gold mx-auto mt-4"></div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { date: 'Starting every Monday', name: 'General English 30+' },
+              { date: 'Starting every Monday', name: 'Intensive General English' },
+              { date: 'Starting every Monday', name: 'Business & Professional English' },
+              { date: '26th September', name: 'Managing Virtual Teams' },
+              { date: '9th October', name: 'Professional Writing Skills' },
+              { date: '4 and 5 November', name: 'Developing Intercultural Competence' },
+            ].map((evt, idx) => (
+              <div key={idx} className="bg-white border-l-4 border-gold p-6 shadow-sm hover:shadow-md transition-shadow">
+                <p className="text-sm font-semibold text-red-600 mb-2">{evt.date}</p>
+                <p className="font-bold text-navy">{evt.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      
-      <section className="section-padding bg-navy text-white text-center">
-        <div className="container-custom max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">Determine your current English proficiency level in just 20 minutes.</h2>
-          <p className="text-slate-300 mb-8 text-lg">Take our free adaptive assessment test and get immediate CEFR grade results with tailored course advice.</p>
-          <Link href="/test" className="btn btn-secondary text-lg px-8 py-3">Start Assessment Test Now</Link>
+
+      {/* 7. Checklist / Why Cambridge */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-navy text-center mb-10">Why Cambridge Academy of English?</h2>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto">
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Excellent Infrastructure and interactive classrooms</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Authorized partner from British council, IDP & Cambridge ELT exam preparations</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Proven 8.5 bands training methods</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Vast experience in conducting corporate training & Teachers workshop</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Flexible class timings and Professional teaching environment</span>
+              </li>
+            </ul>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Training in smaller groups with intensive attention</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Students from 18 different countries</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Unique and exclusive tips and techniques for better results</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Regular and weekend batches for students and working employees</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-green-500 mt-1">✓</span>
+                <span className="text-slate-700">Highly qualified, certified and experienced faculties</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Free Online Test Section */}
+      <section className="py-16 bg-navy text-white relative">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-gold">Free online English test</h2>
+              <p className="font-bold text-xl mb-2">What is your level of English?</p>
+              <p className="font-bold text-xl mb-6">Find out your English level in just 20 minutes.</p>
+              <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-200">
+                <li>Questions get easier or harder according to how well you do. If your English is very good you will answer more difficult questions.</li>
+                <li>You will be able to see the correct answers to the questions after you answer them.</li>
+              </ul>
+              <Link href="/test" className="inline-block border-2 border-white text-white hover:bg-white hover:text-navy font-bold px-8 py-3 rounded transition-colors">
+                Online English Test
+              </Link>
+            </div>
+            <div className="hidden md:block">
+              <img src="/images/slider2.jpg" alt="Online Test" className="rounded-lg shadow-xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. From the Blog */}
+      <section className="py-16 bg-slate-50">
+        <div className="container-custom">
+          <h2 className="text-3xl font-bold text-navy text-center mb-10">From the blog</h2>
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden group">
+              <div className="h-48 bg-slate-200"></div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-navy group-hover:text-red-600 transition-colors">Mastering the IELTS Exam: Your Comprehensive Guide</h3>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden group">
+              <div className="h-48 bg-slate-200"></div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-navy group-hover:text-red-600 transition-colors">Mastering the TOEFL Test: Your Ultimate Guide</h3>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden group">
+              <div className="h-48 bg-slate-200"></div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-navy group-hover:text-red-600 transition-colors">Excelling in NEET: Medical Coaching Institute</h3>
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <button className="border-2 border-navy text-navy font-bold px-8 py-2 rounded hover:bg-navy hover:text-white transition-colors">All Blogs</button>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. Summary Stats */}
+      <section className="py-12 bg-navy-dark text-white text-center">
+        <div className="container-custom grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <div className="text-4xl font-bold text-gold mb-2">75+</div>
+            <div className="text-sm uppercase tracking-wider text-slate-300">Best courses</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-gold mb-2">100+</div>
+            <div className="text-sm uppercase tracking-wider text-slate-300">Best teachers</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-gold mb-2">18</div>
+            <div className="text-sm uppercase tracking-wider text-slate-300">Countries</div>
+          </div>
+          <div>
+            <div className="text-4xl font-bold text-gold mb-2">185,625</div>
+            <div className="text-sm uppercase tracking-wider text-slate-300">Learners</div>
+          </div>
         </div>
       </section>
     </>
