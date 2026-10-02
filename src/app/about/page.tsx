@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-primary/85 z-10"></div>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero.jpg')" }}></div>
-        <div className="container-custom relative z-20 pt-20 pb-16 md:pb-0 text-center fade-in-up">
+        <div className="container-custom relative z-20 pt-20 pb-32 md:pb-24 text-center fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
             <span className="w-2 h-2 rounded-full bg-accent"></span>
             <span className="text-xs font-bold tracking-wider text-slate-800 uppercase">Est. 2010</span>
