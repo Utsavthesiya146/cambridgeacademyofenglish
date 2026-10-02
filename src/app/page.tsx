@@ -18,9 +18,9 @@ export default function Home() {
               <span className="text-xs font-bold tracking-widest text-white uppercase">14+ Years of Excellence</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1] tracking-tight drop-shadow-2xl">
-              Master <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#FFE066] to-white">English Fluency</span> <br />
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight drop-shadow-2xl">
+              Master <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#FFE066] to-white">English Fluency</span> <br className="hidden sm:block" />
               With Experts
             </h1>
             
@@ -30,7 +30,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-start">
               <Link href="/book" className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-white text-primary font-bold rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(212,175,55,0.4)] hover:shadow-[0_8px_30px_rgba(255,255,255,0.4)] hover:-translate-y-1 text-center text-lg">
-                Book your course
+                Book Your Course
               </Link>
               <Link href="/test" className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 backdrop-blur-md border border-white/20 hover:border-white/40 text-center text-lg hover:-translate-y-1">
                 Take Placement Test
