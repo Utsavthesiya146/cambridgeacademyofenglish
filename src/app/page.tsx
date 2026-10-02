@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Banner - Cinematic & Premium */}
-      <section className="relative min-h-[90vh] flex items-center justify-center">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent z-10"></div>

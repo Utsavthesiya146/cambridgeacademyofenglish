@@ -45,7 +45,7 @@ export default function CertificatePage() {
             
             <div className="mt-8 pt-8 border-t border-slate-100 text-center">
               <p className="text-sm text-slate-500">
-                Facing issues? Contact support at <a href="mailto:info@cambridgeacademyofenglish.com" className="text-primary font-bold hover:text-accent">info@cambridgeacademyofenglish.com</a>
+                Facing issues? Contact support at <a href="mailto:info@cambridgeacademyofenglish.com" className="text-primary font-bold hover:text-accent break-all">info@cambridgeacademyofenglish.com</a>
               </p>
             </div>
           </div>

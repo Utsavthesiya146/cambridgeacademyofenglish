@@ -14,7 +14,7 @@ export default function ClassRoomEnglishCoursePage() {
       {/* Breadcrumb Section */}
       <section className="bg-slate-100 py-4 border-b border-slate-200">
         <div className="container-custom">
-          <ul className="flex items-center gap-2 text-sm text-slate-500">
+          <ul className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
             <li>
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             </li>

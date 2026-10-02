@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -33,19 +33,19 @@ export default function Page() {
                 <h3 className="text-xl font-bold text-primary mb-4">Dedicated Support</h3>
                 <ul className="space-y-3 text-slate-700">
                   <li className="flex items-center gap-3">
-                    <span className="text-accent text-xl">âœ“</span>
+                    <span className="text-accent text-xl">✓</span>
                     <span>Visa assistance and documentation</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-accent text-xl">âœ“</span>
+                    <span className="text-accent text-xl">✓</span>
                     <span>Accommodation finding support</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-accent text-xl">âœ“</span>
+                    <span className="text-accent text-xl">✓</span>
                     <span>Cultural integration activities</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-accent text-xl">âœ“</span>
+                    <span className="text-accent text-xl">✓</span>
                     <span>Dedicated student counselor</span>
                   </li>
                 </ul>
