@@ -56,6 +56,12 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-2">
             
+            <div className="px-3 py-2 cursor-pointer">
+              <Link href="/" className="text-[15px] font-semibold text-slate-700 hover:text-primary transition-colors flex items-center gap-1.5">
+                Home
+              </Link>
+            </div>
+
             <div className="relative group px-3 py-2 cursor-pointer">
               <Link href="/about" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 About
@@ -155,8 +161,8 @@ export default function Header() {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-primary/95 backdrop-blur-xl pt-24 px-6 overflow-y-auto">
           <div className="flex flex-col gap-6">
-            {['About', 'Courses', 'Admission', 'Extra', 'Contact', 'Certificate'].map((item) => (
-              <Link key={item} href={`/${item.toLowerCase()}`} className="text-2xl font-bold text-white hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+            {['Home', 'About', 'Courses', 'Admission', 'Extra', 'Contact', 'Certificate'].map((item) => (
+              <Link key={item} href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-2xl font-bold text-white hover:text-accent transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                 {item}
               </Link>
             ))}
