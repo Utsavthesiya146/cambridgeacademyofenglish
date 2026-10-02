@@ -106,11 +106,14 @@ export default function Footer() {
           </div>
 
           <div className="flex justify-center pb-8 md:pb-4">
-            <div className="flex items-center gap-2 text-slate-300 text-[13px] font-medium tracking-wide">
-              Designed & Developed with <span className="text-red-500 animate-pulse text-base drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">♥️</span> by 
-              <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="ml-1 hover:scale-105 transition-transform flex items-center rounded-sm">
-                <img src="/images/hosting-baba-logo.png" alt="Hosting Baba" className="h-7 w-auto object-contain rounded-sm shadow-[0_0_10px_rgba(0,0,0,0.5)] border border-white/5" />
-              </a>
+            <div className="flex flex-wrap justify-center items-center gap-x-2 gap-y-2 text-slate-300 text-[13px] font-medium tracking-wide text-center">
+              <span>Designed & Developed with</span>
+              <span className="flex items-center gap-2">
+                <span className="text-red-500 animate-pulse text-base drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">♥️</span> by 
+                <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform flex items-center rounded-sm">
+                  <img src="/images/hosting-baba-logo.png" alt="Hosting Baba" className="h-7 w-auto object-contain rounded-sm shadow-[0_0_10px_rgba(0,0,0,0.5)] border border-white/5" />
+                </a>
+              </span>
             </div>
           </div>
         </div>
