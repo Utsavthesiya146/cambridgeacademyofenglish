@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* 2 & 3. Benefits Bar & Course Finder Section */}
-      <section className="bg-white relative overflow-hidden pb-24 pt-8 md:pt-0">
+      <section className="bg-white relative pb-24 pt-8 md:pt-0">
         
         {/* Overlapping Benefits Bar - Inside the white section to prevent background gaps */}
         <div className="relative z-30 mb-16 md:-mt-16 md:mb-24 container-custom fade-in-up stagger-1">
@@ -75,7 +75,9 @@ export default function Home() {
         </div>
 
         {/* Course Finder Background Decoration */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3"></div>
+        </div>
         
         <div className="container-custom relative z-10 fade-in-up stagger-2">
           <div className="max-w-4xl mx-auto glass-dark p-10 shadow-2xl relative overflow-hidden rounded-3xl">
