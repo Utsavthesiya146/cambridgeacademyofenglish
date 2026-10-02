@@ -27,7 +27,7 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <div className="container-custom relative -mt-10 z-20 fade-in-up stagger-1">
+      <div className="container-custom relative mt-8 z-20 fade-in-up stagger-1">
         <div className="glass-card bg-white p-4 sm:p-8 md:p-16 shadow-2xl flex flex-col lg:flex-row gap-8 lg:gap-16">
           
           {/* Form */}
