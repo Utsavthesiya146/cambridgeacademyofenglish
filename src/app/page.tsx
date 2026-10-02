@@ -8,7 +8,7 @@ export default function Home() {
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-primary/80 to-slate-900 z-10"></div>
-          <div className="absolute inset-0 bg-cover bg-center opacity-40 animate-[pulse_10s_ease-in-out_infinite]" style={{ backgroundImage: "url('/images/slider1.jpg')" }}></div>
+          <div className="absolute inset-0 bg-cover bg-[60%_center] md:bg-center scale-105 md:scale-100 opacity-40 animate-[pulse_10s_ease-in-out_infinite]" style={{ backgroundImage: "url('/images/slider1.jpg')" }}></div>
         </div>
 
         <div className="container-custom relative z-20 w-full pt-32 pb-20 md:pb-40 text-center md:text-left flex flex-col md:flex-row items-center gap-12 fade-in-up">
@@ -66,7 +66,7 @@ export default function Home() {
               { icon: '🎯', text: 'Intensive teaching methodology' },
               { icon: '📍', text: 'Premium Bangalore Location' }
             ].map((item, idx) => (
-              <div key={idx} className={`px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300 ${idx === 4 ? 'col-span-2 md:col-span-1' : ''}`}>
+              <div key={idx} className="px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300">
                 <span className="text-4xl mb-3">{item.icon}</span>
                 <p className="text-sm font-bold text-primary">{item.text}</p>
               </div>
