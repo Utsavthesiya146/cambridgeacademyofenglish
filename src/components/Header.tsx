@@ -146,8 +146,6 @@ export default function Header() {
           {/* Action Area */}
           <div className="flex items-center gap-4">
             <Link href="/book" className="hidden md:inline-flex bg-primary text-white font-bold tracking-wide text-sm px-8 py-3.5 rounded-full hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">Book Your Course</Link>
-              Book your course
-            </Link>
             
             {/* Mobile Menu Toggle */}
             <button 
