@@ -66,7 +66,7 @@ export default function Home() {
               { icon: '🎯', text: 'Intensive teaching methodology' },
               { icon: '📍', text: 'Premium Bangalore Location' }
             ].map((item, idx) => (
-              <div key={idx} className="px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300">
+              <div key={idx} className={`px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300 ${idx === 4 ? 'col-span-2 md:col-span-1' : ''}`}>
                 <span className="text-4xl mb-3">{item.icon}</span>
                 <p className="text-sm font-bold text-primary">{item.text}</p>
               </div>
