@@ -19,7 +19,7 @@ export default function SitemapPage() {
         </div>
       </div>
 
-      <div className="container-custom relative -mt-8 z-20 fade-in-up stagger-1">
+      <div className="container-custom relative mt-8 z-20 fade-in-up stagger-1">
         <div className="glass-card bg-white p-8 md:p-12 shadow-2xl rounded-3xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
