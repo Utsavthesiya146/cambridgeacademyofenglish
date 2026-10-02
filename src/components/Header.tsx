@@ -35,7 +35,7 @@ export default function Header() {
       </div>
 
       {/* Main Glass Navbar */}
-      <header className={`sticky top-0 z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg py-1' : 'bg-white py-3'}`}>
+      <header className={`sticky top-0 z-50 transition-all duration-500 border-b border-slate-100 ${isScrolled ? "bg-white/90 backdrop-blur-2xl shadow-sm py-2" : "bg-white py-4"}`}>
         <div className="container-custom">
           
           {/* Secondary Header Details */}
@@ -71,7 +71,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-2">
             
             <div className="relative group px-3 py-2 cursor-pointer">
-              <Link href="/about" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+              <Link href="/about" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 About
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
@@ -84,7 +84,7 @@ export default function Header() {
             </div>
 
             <div className="relative group px-3 py-2 cursor-pointer">
-              <Link href="/courses" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+              <Link href="/courses" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 Courses
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
@@ -101,7 +101,7 @@ export default function Header() {
             </div>
 
             <div className="relative group px-3 py-2 cursor-pointer">
-              <Link href="/admission" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+              <Link href="/admission" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 Admission
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
@@ -116,7 +116,7 @@ export default function Header() {
             </div>
 
             <div className="relative group px-3 py-2 cursor-pointer">
-              <Link href="/extra" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+              <Link href="/extra" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 Extra
                 <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
               </Link>
@@ -131,13 +131,13 @@ export default function Header() {
             </div>
 
             <div className="px-3 py-2 cursor-pointer">
-              <Link href="/contact" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+              <Link href="/contact" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 Contact
               </Link>
             </div>
             
             <div className="px-3 py-2 cursor-pointer">
-              <Link href="/certificate" className="text-sm font-bold text-slate-800 group-hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-wide">
+              <Link href="/certificate" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 Certificate
               </Link>
             </div>
@@ -145,7 +145,7 @@ export default function Header() {
 
           {/* Action Area */}
           <div className="flex items-center gap-4">
-            <Link href="/book" className="hidden md:inline-flex bg-accent text-primary font-bold uppercase tracking-wide text-xs px-6 py-3 rounded-md hover:bg-accent-hover transition-colors shadow-md">
+            <Link href="/book" className="hidden md:inline-flex bg-primary text-white font-bold tracking-wide text-sm px-8 py-3.5 rounded-full hover:bg-primary/90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300">Book Your Course</Link>
               Book your course
             </Link>
             
@@ -186,3 +186,4 @@ export default function Header() {
     </>
   );
 }
+

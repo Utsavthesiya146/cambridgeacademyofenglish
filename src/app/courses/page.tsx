@@ -99,8 +99,8 @@ export default function CoursesPage() {
       <div className="container-custom">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCourses.map((course, idx) => (
-            <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col group fade-in-up stagger-2">
-              <Link href={course.link} className="relative h-56 block overflow-hidden">
+            <div key={idx} className="glass-card p-3 flex flex-col group fade-in-up stagger-2">
+              <Link href={course.link} className="relative h-64 block overflow-hidden rounded-[1.25rem]">
                 <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: `url(${course.img})` }}></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 left-4 bg-accent text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-md">
@@ -108,9 +108,9 @@ export default function CoursesPage() {
                 </div>
               </Link>
               
-              <div className="p-8 flex flex-col flex-grow">
+              <div className="px-6 py-8 flex flex-col flex-grow">
                 <Link href={course.link}>
-                  <h3 className="text-2xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">{course.title}</h3>
+                  <h3 className="text-2xl font-extrabold text-slate-800 mb-3 tracking-tight group-hover:text-accent transition-colors">{course.title}</h3>
                 </Link>
                 <p className="text-slate-500 text-sm mb-8 flex-grow leading-relaxed">{course.desc}</p>
                 <Link href={course.link} className="btn-premium-outline w-full group-hover:bg-primary group-hover:text-white">
@@ -130,3 +130,4 @@ export default function CoursesPage() {
     </div>
   );
 }
+

@@ -4,37 +4,50 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Banner - Cinematic & Premium */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-slate-900">
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent z-10"></div>
-          <div className="absolute inset-0 bg-cover bg-center animate-[pulse_10s_ease-in-out_infinite]" style={{ backgroundImage: "url('/images/slider1.jpg')" }}></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-primary/80 to-slate-900 z-10"></div>
+          <div className="absolute inset-0 bg-cover bg-center opacity-40 animate-[pulse_10s_ease-in-out_infinite]" style={{ backgroundImage: "url('/images/slider1.jpg')" }}></div>
         </div>
 
-        <div className="container-custom relative z-20 w-full pt-32 pb-20 fade-in-up">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8">
-              <span className="w-2 h-2 rounded-full bg-accent animate-ping"></span>
-              <span className="text-xs font-bold tracking-wider text-slate-800 uppercase">14+ Years of Excellence</span>
+        <div className="container-custom relative z-20 w-full pt-32 pb-24 md:pb-32 text-center md:text-left flex flex-col md:flex-row items-center gap-12 fade-in-up">
+          <div className="max-w-3xl flex-1">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 shadow-lg">
+              <span className="w-2.5 h-2.5 rounded-full bg-accent animate-ping relative"><span className="absolute inset-0 bg-accent rounded-full animate-none"></span></span>
+              <span className="text-xs font-bold tracking-widest text-white uppercase">14+ Years of Excellence</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-2xl">
-              India's No.1 <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">English Language</span> <br />
-              Teaching Academy
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1] tracking-tight drop-shadow-2xl">
+              Master <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#FFE066] to-white">English Fluency</span> <br />
+              With Experts
             </h1>
             
-            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md">
-              India&apos;s No.1 teaching academy. Master spoken fluency, score 8.5+ bands on IELTS/PTE/TOEFL, or learn foreign languages with certified experts in Bangalore.
+            <p className="text-lg md:text-2xl text-slate-300 mb-10 max-w-2xl font-normal leading-relaxed drop-shadow-md">
+              India's premier academy for spoken English, IELTS, PTE, and foreign language training. Certified trainers based in Bangalore.
             </p>
             
-            <div className="flex flex-wrap gap-4 items-center">
-              <Link href="/book" className="btn-premium">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-start">
+              <Link href="/book" className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-white text-primary font-bold rounded-full transition-all duration-300 shadow-[0_8px_30px_rgba(212,175,55,0.4)] hover:shadow-[0_8px_30px_rgba(255,255,255,0.4)] hover:-translate-y-1 text-center text-lg">
                 Book your course
               </Link>
-              <Link href="/test" className="text-white hover:text-accent font-semibold transition-colors flex items-center gap-2">
-                Take Placement Test <span className="text-xl">→</span>
+              <Link href="/test" className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 backdrop-blur-md border border-white/20 hover:border-white/40 text-center text-lg hover:-translate-y-1">
+                Take Placement Test
               </Link>
+            </div>
+          </div>
+          
+          <div className="hidden lg:block flex-1 relative w-full h-[500px]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-primary/20 rounded-[3rem] transform rotate-3 scale-105 blur-lg"></div>
+            <img src="/images/slider3.jpg" alt="Students Learning" className="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl border-4 border-white/10" />
+            
+            <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-2xl border border-slate-100 flex items-center gap-4 animate-bounce" style={{animationDuration: '3s'}}>
+               <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-3xl">⭐</div>
+               <div>
+                 <p className="font-bold text-slate-800 text-lg">4.9/5 Rating</p>
+                 <p className="text-sm text-slate-500 font-medium">From 1000+ Students</p>
+               </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-slate-400 py-16 border-t-[6px] border-accent text-sm relative mt-20">
+    <footer className="bg-slate-900 text-slate-300 py-24 border-t-[6px] border-accent text-sm relative mt-20">
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
       
       <div className="container-custom relative z-10">
@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="text-slate-400 leading-relaxed mb-8">
               India's premier English Language & Foreign Language Training Institute in Kammanahalli, Bangalore. Empowering global communication since 2010.
             </p>
-            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-xs">CONNECT WITH US</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-[0.2em] text-xs">CONNECT WITH US</h4>
             <ul className="flex gap-4">
               <li>
                 <a href="https://www.facebook.com/cambridgeacademyofenglish/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-primary hover:border-accent hover:-translate-y-1 transition-all duration-300 shadow-lg" aria-label="Facebook">
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">Quick Links</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-[0.2em] text-xs">Quick Links</h4>
             <ul className="space-y-3">
               <li><a href="#" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Request for PO/Invoice</a></li>
               <li><Link href="/terms-conditions" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Terms & Conditions</Link></li>
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">Global Presence</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-[0.2em] text-xs">Global Presence</h4>
             <div className="grid grid-cols-2 gap-y-3 gap-x-2 text-xs">
               <div className="flex items-center gap-2"><span className="text-lg">🇮🇳</span> INDIA</div>
               <div className="flex items-center gap-2"><span className="text-lg">🇸🇦</span> Saudi Arabia</div>
@@ -80,14 +80,14 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-xs">WEEKLY NEWSLETTER</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-[0.2em] text-xs">WEEKLY NEWSLETTER</h4>
             <p className="text-xs mb-4">Subscribe to receive English learning tips and updates.</p>
             <form action="/contact" method="GET" className="flex mb-8">
               <input type="email" placeholder="Email Address" className="px-4 py-3 w-full bg-white/5 border border-white/10 rounded-l-lg text-white outline-none focus:border-accent transition-colors" />
               <button className="bg-accent text-primary font-bold px-6 py-3 rounded-r-lg hover:bg-accent-hover transition-colors">Go</button>
             </form>
 
-            <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-xs">WE ACCEPT</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-[0.2em] text-xs">WE ACCEPT</h4>
             <div className="flex flex-wrap gap-3 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
               <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">Visa</span>
               <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">Mastercard</span>
@@ -128,5 +128,6 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 
