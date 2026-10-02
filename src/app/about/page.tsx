@@ -28,7 +28,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative z-30 mt-8 md:mt-0 container-custom fade-in-up stagger-1">
+      <section className="relative z-30 mt-12 md:mt-16 container-custom fade-in-up stagger-1">
         <div className="glass-card bg-white/95 p-4 sm:p-6 md:p-14 shadow-2xl flex flex-col md:flex-row gap-6 md:gap-12 items-center text-center md:text-left">
           <div className="md:w-1/3 flex flex-col items-center md:items-start">
             <h2 className="text-3xl font-extrabold text-primary mb-4">Our Mission & Vision</h2>
