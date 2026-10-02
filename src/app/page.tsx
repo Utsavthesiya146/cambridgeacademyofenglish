@@ -53,29 +53,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Overlapping Benefits Bar - Glassmorphic */}
-      <section className="relative z-30 mt-8 md:-mt-16 container-custom fade-in-up stagger-1">
-        <div className="glass-card bg-white/90 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-6 text-center md:divide-x md:divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
-          {[
-            { icon: '🏆', text: 'Over 14+ Years of experience' },
-            { icon: '⭐', text: 'Rated Excellent on 1000+ reviews' },
-            { icon: '🎓', text: 'Highly qualified certified faculties' },
-            { icon: '🎯', text: 'Intensive teaching methodology' },
-            { icon: '📍', text: 'Premium Bangalore Location' }
-          ].map((item, idx) => (
-            <div key={idx} className="px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300">
-              <span className="text-4xl mb-3">{item.icon}</span>
-              <p className="text-sm font-bold text-primary">{item.text}</p>
-            </div>
-          ))}
+      {/* 2 & 3. Benefits Bar & Course Finder Section */}
+      <section className="bg-white relative overflow-hidden pb-24 pt-8 md:pt-0">
+        
+        {/* Overlapping Benefits Bar - Inside the white section to prevent background gaps */}
+        <div className="relative z-30 mb-16 md:-mt-16 md:mb-24 container-custom fade-in-up stagger-1">
+          <div className="glass-card bg-white/90 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-6 text-center md:divide-x md:divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100/50">
+            {[
+              { icon: '🏆', text: 'Over 14+ Years of experience' },
+              { icon: '⭐', text: 'Rated Excellent on 1000+ reviews' },
+              { icon: '🎓', text: 'Highly qualified certified faculties' },
+              { icon: '🎯', text: 'Intensive teaching methodology' },
+              { icon: '📍', text: 'Premium Bangalore Location' }
+            ].map((item, idx) => (
+              <div key={idx} className="px-4 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300">
+                <span className="text-4xl mb-3">{item.icon}</span>
+                <p className="text-sm font-bold text-primary">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </section>
 
-      {/* 3. Course Finder - Minimal & Modern */}
-      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Course Finder Background Decoration */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3"></div>
+        
         <div className="container-custom relative z-10 fade-in-up stagger-2">
-          <div className="max-w-4xl mx-auto glass-dark p-10 shadow-2xl relative overflow-hidden">
+          <div className="max-w-4xl mx-auto glass-dark p-10 shadow-2xl relative overflow-hidden rounded-3xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             
             <h2 className="text-3xl font-bold text-white mb-8">Find the right course for you</h2>
