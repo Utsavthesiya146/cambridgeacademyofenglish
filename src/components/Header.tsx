@@ -60,7 +60,7 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo Area */}
             <Link href="/" className="flex items-center gap-3 group">
-              <img src="/images/logo.png" alt="Cambridge Academy" className="h-10 lg:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+              <img src="/images/logo.png" alt="Cambridge Academy" className="h-auto w-44 sm:w-52 lg:w-60 object-contain transition-transform duration-300 group-hover:scale-105" />
               <div className="hidden sm:flex flex-col border-l-2 border-slate-200 pl-3">
                 <span className="text-xl lg:text-2xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors leading-tight">Cambridge Academy</span>
                 <span className="text-[0.6rem] lg:text-[0.65rem] text-accent font-bold tracking-[0.2em] uppercase">Bringing Language to Life</span>
