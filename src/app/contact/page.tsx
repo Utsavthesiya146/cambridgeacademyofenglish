@@ -101,11 +101,11 @@ export default function ContactPage() {
 
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 text-xl">📞</div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-2">Phone & Email</h4>
                     <p className="text-lg text-slate-700 font-medium hover:text-accent transition-colors"><a href="tel:080-40943580">080-40943580</a></p>
                     <p className="text-lg text-slate-700 font-medium hover:text-accent transition-colors"><a href="tel:8970506004">8970506004</a></p>
-                    <p className="text-lg text-primary font-bold mt-2 hover:text-accent transition-colors"><a href="mailto:info@cambridgeacademyofenglish.com">info@cambridgeacademyofenglish.com</a></p>
+                    <p className="text-base md:text-lg text-primary font-bold mt-2 hover:text-accent transition-colors break-all"><a href="mailto:info@cambridgeacademyofenglish.com">info@cambridgeacademyofenglish.com</a></p>
                   </div>
                 </div>
 

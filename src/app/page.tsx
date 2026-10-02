@@ -190,15 +190,15 @@ export default function Home() {
       </section>
 
       {/* 6. Upcoming Courses & Events */}
-      <section className="py-24 bg-primary text-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
         <div className="container-custom relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6 md:gap-4 text-center md:text-left">
+            <div className="flex flex-col items-center md:items-start">
               <h2 className="text-4xl font-extrabold mb-4">Upcoming Events</h2>
               <div className="w-20 h-1.5 bg-accent rounded-full"></div>
             </div>
-            <Link href="/courses" className="hidden md:inline-block text-accent hover:text-white font-bold transition-colors">View full calendar →</Link>
+            <Link href="/courses" className="inline-block text-accent hover:text-white font-bold transition-colors">View full calendar →</Link>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
