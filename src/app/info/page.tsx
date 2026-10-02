@@ -15,8 +15,11 @@ export default function CourseInfo() {
         </div>
         
         <div className="prose prose-slate max-w-none space-y-6 text-slate-600 leading-relaxed">
-          <p className="text-lg text-center">
-            Detailed information about our course structure, timings, and batches will be updated here soon.
+          <p className="text-lg">
+            Cambridge Academy of English offers a wide range of specialized language programs tailored to your specific goals. Our courses are structured with flexible timings, ranging from morning to evening batches, to accommodate students, working professionals, and homemakers.
+          </p>
+          <p className="text-lg">
+            Each batch is intentionally kept small to ensure personalized attention, interactive learning, and practical speaking opportunities. We provide comprehensive study materials, regular mock tests for exam preparations (like IELTS and PTE), and continuous performance feedback from our certified trainers.
           </p>
           <div className="bg-primary/5 p-8 rounded-xl border border-primary/10 shadow-sm mt-10 text-center">
              <p className="text-slate-700 font-medium mb-6 text-lg">In the meantime, you can explore our courses directly:</p>

@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-6 uppercase tracking-[0.2em] text-xs">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Request for PO/Invoice</a></li>
+              <li><Link href="/contact" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Request for PO/Invoice</Link></li>
               <li><Link href="/terms-conditions" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Terms & Conditions</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Privacy Policy</Link></li>
               <li><Link href="/refund-policy" className="hover:text-accent transition-colors flex items-center gap-2"><span className="text-accent/50 text-xs">▹</span> Refund Policy</Link></li>
