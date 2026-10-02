@@ -96,8 +96,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
+        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-xs font-medium">
           <p className="text-slate-500">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
+          
+          <div className="flex items-center gap-2 text-slate-400 text-[13px] bg-white/5 px-5 py-2.5 rounded-full border border-white/10 shadow-md">
+            Designed & Developed with <span className="text-red-500 animate-pulse text-sm">♥️</span> by 
+            <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="ml-1 hover:scale-105 transition-transform flex items-center">
+              <img src="/images/hosting-baba-logo.png" alt="Hosting Baba" className="h-6 w-auto object-contain rounded-sm" />
+            </a>
+          </div>
+
           <div className="flex gap-6 text-slate-500">
             <Link href="/sitemap" className="hover:text-white transition-colors">Site map</Link>
             <Link href="/blog/feed" className="hover:text-white transition-colors">RSS - Posts</Link>
