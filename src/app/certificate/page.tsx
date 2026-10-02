@@ -18,7 +18,7 @@ export default function CertificatePage() {
       {/* Verification Form */}
       <section className="py-24 bg-slate-50 relative -mt-20 z-30">
         <div className="container-custom max-w-3xl">
-          <div className="glass-card bg-white p-10 md:p-14 shadow-2xl fade-in-up stagger-1">
+          <div className="glass-card bg-white p-6 md:p-14 shadow-2xl fade-in-up stagger-1">
             <div className="text-center mb-10">
               <div className="w-16 h-16 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

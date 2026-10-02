@@ -107,7 +107,7 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
                 {course.content}
               </p>
 
-              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 mb-10">
+              <div className="bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100 mb-10">
                 <h3 className="text-xl font-bold text-primary mb-6">What you will learn</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {['Advanced vocabulary building', 'Grammar mastery & application', 'Confidence in public speaking', 'Fluency in real-world scenarios'].map((item, idx) => (
@@ -122,7 +122,7 @@ export default async function CoursePage({ params }: { params: Promise<{ slug: s
 
             {/* Sidebar details */}
             <div className="lg:col-span-1 fade-in-up stagger-2">
-              <div className="glass-card p-8 bg-slate-50 sticky top-32">
+              <div className="glass-card p-6 md:p-8 bg-slate-50 sticky top-32">
                 <h3 className="text-xl font-bold text-primary mb-6">Course Details</h3>
                 
                 <div className="space-y-6 mb-8">

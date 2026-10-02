@@ -23,7 +23,7 @@ export default function Page() {
       <section className="py-24 container-custom">
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="lg:w-2/3">
-            <div className="bg-white p-10 rounded-2xl shadow-lg border border-slate-100">
+            <div className="bg-white p-6 md:p-10 rounded-2xl shadow-lg border border-slate-100">
               <div className="mb-10 rounded-xl overflow-hidden shadow-md">
                 <img 
                   src="https://cambridgeacademyofenglish.com/storage/media/Foreign_Language_123.jpg" 
@@ -99,7 +99,7 @@ export default function Page() {
           </div>
           
           <div className="lg:w-1/3">
-            <div className="bg-primary p-8 rounded-2xl shadow-xl text-white sticky top-24">
+            <div className="bg-primary p-6 md:p-8 rounded-2xl shadow-xl text-white sticky top-24">
               <h3 className="text-2xl font-bold mb-6">Why study at Cambridge Academy of English?</h3>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">

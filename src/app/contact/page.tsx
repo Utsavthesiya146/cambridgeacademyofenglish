@@ -28,7 +28,7 @@ export default function ContactPage() {
       </div>
 
       <div className="container-custom relative -mt-10 z-20 fade-in-up stagger-1">
-        <div className="glass-card bg-white p-8 md:p-16 shadow-2xl flex flex-col lg:flex-row gap-16">
+        <div className="glass-card bg-white p-4 sm:p-8 md:p-16 shadow-2xl flex flex-col lg:flex-row gap-8 lg:gap-16">
           
           {/* Form */}
           <div className="lg:w-3/5">
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
           {/* Contact Details */}
           <div className="lg:w-2/5">
-            <div className="bg-slate-50 p-10 rounded-3xl h-full border border-slate-100 flex flex-col justify-center">
+            <div className="bg-slate-50 p-6 md:p-10 rounded-3xl h-full border border-slate-100 flex flex-col justify-center">
               <h2 className="text-3xl font-extrabold text-primary mb-2">Visit Our Campus</h2>
               <div className="w-12 h-1 bg-primary rounded-full mb-10"></div>
               
