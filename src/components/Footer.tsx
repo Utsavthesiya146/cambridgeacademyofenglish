@@ -105,25 +105,30 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating Bottom Bar (Fixed) */}
-      <div className="fixed bottom-0 left-0 w-full bg-primary-light/90 backdrop-blur-lg border-t border-white/10 py-3 px-4 hidden md:block z-40 translate-y-full hover:translate-y-0 transition-transform duration-300">
-        <div className="container-custom flex justify-center gap-12">
-          <button className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
-            <span className="text-lg">✉️</span> Drop A Query
-          </button>
-          <button className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
-            <span className="text-lg">📞</span> Request A Call Back
-          </button>
-          <a href="mailto:info@cambridgeacademyofenglish.com" className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
-            <span className="text-lg">📧</span> info@cambridgeacademyofenglish.com
-          </a>
+      {/* Floating Bottom Contact Section */}
+      <div className="fixed bottom-0 left-0 w-full z-50 hidden md:flex flex-col items-center group">
+        {/* Decorative Tab */}
+        <div className="bg-primary-light text-white px-6 py-1.5 rounded-t-xl text-xs font-bold tracking-widest cursor-pointer flex items-center gap-2 group-hover:bg-accent group-hover:text-primary transition-all duration-300 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
+          <span>CONTACT US</span>
+          <svg className="w-3 h-3 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 15l7-7 7 7"></path></svg>
         </div>
-      </div>
-      
-      {/* Decorative Tab to show bottom bar on hover */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 bg-primary-light text-white px-6 py-1 rounded-t-xl text-xs font-bold tracking-widest cursor-pointer hidden md:flex items-center gap-2 hover:bg-accent hover:text-primary transition-colors z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.2)]">
-        <span>CONTACT US</span>
-        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 15l7-7 7 7"></path></svg>
+
+        {/* Expanding Content */}
+        <div className="w-full max-h-0 group-hover:max-h-24 overflow-hidden transition-all duration-500 ease-in-out">
+          <div className="w-full bg-primary-light/95 backdrop-blur-lg border-t border-accent py-3 px-4 shadow-[0_-10px_30px_rgba(0,0,0,0.3)]">
+            <div className="container-custom flex justify-center gap-12">
+              <Link href="/contact" className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
+                <span className="text-lg">✉️</span> Drop A Query
+              </Link>
+              <a href="tel:080-40943580" className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
+                <span className="text-lg">📞</span> Request A Call Back
+              </a>
+              <a href="mailto:info@cambridgeacademyofenglish.com" className="text-white hover:text-accent flex items-center gap-2 font-medium text-sm transition-colors">
+                <span className="text-lg">📧</span> info@cambridgeacademyofenglish.com
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
