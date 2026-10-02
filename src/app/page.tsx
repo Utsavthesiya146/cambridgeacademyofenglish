@@ -80,44 +80,44 @@ export default function Home() {
         </div>
         
         <div className="container-custom relative z-10 fade-in-up stagger-2">
-          <div className="max-w-4xl mx-auto glass-dark p-10 shadow-2xl relative overflow-hidden rounded-3xl">
+          <div className="max-w-[1100px] w-full mx-auto glass-dark p-6 lg:p-10 shadow-2xl relative overflow-hidden rounded-3xl">
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             
-            <h2 className="text-3xl font-bold text-white mb-8">Find the right course for you</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 lg:mb-8">Find the right course for you</h2>
             
-            <form action="/courses" method="GET" className="grid grid-cols-1 md:grid-cols-5 gap-6 items-end">
-              <div className="flex flex-col gap-2">
-                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">I would like to join</label>
-                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+            <form action="/courses" method="GET" className="flex flex-col lg:flex-row gap-4 lg:gap-5 items-end w-full">
+              <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
+                <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">I would like to join</label>
+                <select className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-accent transition-colors appearance-none text-sm truncate">
                   <option value="" className="text-primary">choose your goal</option>
                   <option value="3" className="text-primary">Learn English Speaking Course Online</option>
                   <option value="4" className="text-primary">Spoken English Classes</option>
                 </select>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">My English level is</label>
-                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+              <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
+                <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">My English level is</label>
+                <select className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-accent transition-colors appearance-none text-sm truncate">
                   <option value="" className="text-primary">choose your level</option>
                   <option value="beginner" className="text-primary">beginner</option>
                   <option value="intermediate" className="text-primary">intermediate</option>
                 </select>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">I prefer to study</label>
-                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+              <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
+                <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">I prefer to study</label>
+                <select className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-accent transition-colors appearance-none text-sm truncate">
                   <option value="" className="text-primary">choose location</option>
                   <option value="online" className="text-primary">online</option>
                   <option value="classroom" className="text-primary">classroom</option>
                 </select>
               </div>
-              <div className="flex flex-col gap-2">
-                <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">My age is</label>
-                <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
+              <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
+                <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">My age is</label>
+                <select className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-accent transition-colors appearance-none text-sm truncate">
                   <option value="" className="text-primary">tell us your age</option>
                   <option value="adult" className="text-primary">18+</option>
                 </select>
               </div>
-              <div>
+              <div className="w-full lg:w-32 shrink-0 pt-4 lg:pt-0">
                 <button type="submit" className="w-full bg-accent hover:bg-accent-hover text-primary font-bold py-3 rounded shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all">
                   Search
                 </button>
