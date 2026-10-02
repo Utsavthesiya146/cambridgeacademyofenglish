@@ -13,7 +13,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-primary/85 z-10"></div>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero.jpg')" }}></div>
-        <div className="container-custom relative z-20 pt-20 text-center fade-in-up">
+        <div className="container-custom relative z-20 pt-20 pb-16 md:pb-0 text-center fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-6">
             <span className="w-2 h-2 rounded-full bg-accent"></span>
             <span className="text-xs font-bold tracking-wider text-slate-800 uppercase">Est. 2010</span>
@@ -28,7 +28,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative -mt-20 z-30 container-custom fade-in-up stagger-1">
+      <section className="relative -mt-8 md:-mt-20 z-30 container-custom fade-in-up stagger-1">
         <div className="glass-card bg-white/95 p-4 sm:p-6 md:p-14 shadow-2xl flex flex-col md:flex-row gap-6 md:gap-12 items-center text-center md:text-left">
           <div className="md:w-1/3 flex flex-col items-center md:items-start">
             <h2 className="text-3xl font-extrabold text-primary mb-4">Our Mission & Vision</h2>

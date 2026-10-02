@@ -5,7 +5,7 @@ export default function CertificatePage() {
       <section className="relative min-h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-primary/90 z-10"></div>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/slider3.jpg')" }}></div>
-        <div className="container-custom relative z-20 pt-20 text-center fade-in-up">
+        <div className="container-custom relative z-20 pt-20 pb-16 md:pb-0 text-center fade-in-up">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-2xl">
             Verify Your Certificate
           </h1>
@@ -16,7 +16,7 @@ export default function CertificatePage() {
       </section>
 
       {/* Verification Form */}
-      <section className="py-24 bg-slate-50 relative -mt-20 z-30">
+      <section className="py-24 bg-slate-50 relative -mt-8 md:-mt-20 z-30">
         <div className="container-custom max-w-3xl">
           <div className="glass-card bg-white p-6 md:p-14 shadow-2xl fade-in-up stagger-1">
             <div className="text-center mb-10">
