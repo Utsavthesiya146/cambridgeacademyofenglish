@@ -50,7 +50,7 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo Area */}
             <Link href="/" className="flex items-center gap-2 group">
-              <img src="/images/logo.png" alt="Cambridge Academy" className="h-auto w-36 sm:w-44 lg:w-52 object-contain transition-transform duration-300 group-hover:scale-105" />
+              <img src="/images/logo.png" alt="Cambridge Academy" className="h-auto w-48 sm:w-56 lg:w-64 object-contain transition-transform duration-300 group-hover:scale-105" />
             </Link>
 
           {/* Desktop Nav */}
