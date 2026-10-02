@@ -254,7 +254,7 @@ export default function Home() {
             
             <div className="relative">
               <div className="absolute inset-0 bg-accent rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
-              <img src="/images/slider3.jpg" alt="Students" className="rounded-3xl shadow-2xl w-full h-[600px] object-cover" />
+              <img src="/images/slider3.jpg" alt="Students" className="rounded-3xl shadow-2xl w-full h-[400px] md:h-[600px] object-cover" />
             </div>
           </div>
         </div>
