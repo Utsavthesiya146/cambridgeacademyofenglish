@@ -161,7 +161,7 @@ export default function AdvancedDiplomaPage() {
 
             <section className="bg-red-50 p-6 rounded-lg border border-red-100">
               <h3 className="text-xl font-bold text-red-800 mb-4">Book this Course</h3>
-              <form className="space-y-4">
+              <form action="/contact" method="GET" className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Choose the mode of Class</label>
                   <select className="w-full border border-gray-300 p-2 rounded focus:ring-red-500 focus:border-red-500">
@@ -174,12 +174,12 @@ export default function AdvancedDiplomaPage() {
                   <input type="date" className="w-full border border-gray-300 p-2 rounded focus:ring-red-500 focus:border-red-500" />
                 </div>
                 <div className="pt-4">
-                  <button type="button" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded transition duration-300">
+                  <button type="submit" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded transition duration-300">
                     Proceed With Payment
                   </button>
                 </div>
                 <div className="text-center mt-2">
-                  <Link href="/contact-us" className="text-blue-600 hover:underline font-medium">
+                  <Link href="/contact" className="text-blue-600 hover:underline font-medium">
                     Contact Us
                   </Link>
                 </div>
@@ -191,3 +191,5 @@ export default function AdvancedDiplomaPage() {
     </>
   );
 }
+
+

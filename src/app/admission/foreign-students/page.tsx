@@ -20,7 +20,7 @@ export default function Page() {
 
       <div className="container-custom max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 md:p-12">
-          <form className="space-y-8">
+          <form action="/contact" method="GET" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-slate-700">Course Selected *</label>
@@ -130,7 +130,7 @@ export default function Page() {
             </div>
 
             <div className="pt-4 flex justify-end">
-              <button type="button" className="py-4 px-10 bg-primary text-white rounded-xl font-bold text-lg hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button type="submit" className="py-4 px-10 bg-primary text-white rounded-xl font-bold text-lg hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-xl">
                 Submit Application
               </button>
             </div>
@@ -140,3 +140,4 @@ export default function Page() {
     </div>
   );
 }
+

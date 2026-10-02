@@ -22,7 +22,7 @@ export default function IELTSCoachingPage() {
               <span className="text-slate-400">»</span>
             </li>
             <li>
-              <Link href="#" className="hover:text-primary transition-colors">Courses</Link>
+              <Link href="/courses" className="hover:text-primary transition-colors">Courses</Link>
             </li>
             <li>
               <span className="text-slate-400">»</span>
@@ -176,3 +176,4 @@ export default function IELTSCoachingPage() {
     </div>
   );
 }
+

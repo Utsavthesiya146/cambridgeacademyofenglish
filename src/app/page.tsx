@@ -67,7 +67,7 @@ export default function Home() {
             
             <h2 className="text-3xl font-bold text-white mb-8">Find the right course for you</h2>
             
-            <form className="grid grid-cols-1 md:grid-cols-5 gap-6 items-end">
+            <form action="/courses" method="GET" className="grid grid-cols-1 md:grid-cols-5 gap-6 items-end">
               <div className="flex flex-col gap-2">
                 <label className="text-slate-300 text-xs uppercase tracking-wider font-semibold">I would like to join</label>
                 <select className="bg-white/10 border-b-2 border-white/20 text-white p-3 outline-none focus:border-accent transition-colors appearance-none">
@@ -100,7 +100,7 @@ export default function Home() {
                 </select>
               </div>
               <div>
-                <button type="button" className="w-full bg-accent hover:bg-accent-hover text-primary font-bold py-3 rounded shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all">
+                <button type="submit" className="w-full bg-accent hover:bg-accent-hover text-primary font-bold py-3 rounded shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all">
                   Search
                 </button>
               </div>
@@ -117,7 +117,7 @@ export default function Home() {
           </div>
           <p className="text-slate-700 font-medium text-lg">
             98% of our students rate their experience as &apos;Excellent&apos;. 
-            <a href="#" className="font-bold text-primary hover:text-accent ml-2 underline decoration-accent decoration-2 underline-offset-4 transition-colors">Read Google Reviews</a>
+            <a href="https://www.google.com/search?q=cambridge+academy+of+english+bangalore#lrd=0x3bae16790a383d47:0xe2a381ef8d6cc865,1,,," target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:text-accent ml-2 underline decoration-accent decoration-2 underline-offset-4 transition-colors">Read Google Reviews</a>
           </p>
         </div>
       </section>
@@ -342,3 +342,5 @@ export default function Home() {
     </div>
   );
 }
+
+

@@ -29,7 +29,7 @@ export default function CertificatePage() {
               <p className="text-slate-500">Ensure the validity of your awarded certificate</p>
             </div>
             
-            <form className="flex flex-col gap-6">
+            <form action="/contact" method="GET" className="flex flex-col gap-6">
               <div>
                 <label className="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Certificate Registration No.</label>
                 <input 
@@ -38,7 +38,7 @@ export default function CertificatePage() {
                   className="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all font-medium text-slate-800"
                 />
               </div>
-              <button type="button" className="btn-premium w-full shadow-[0_4px_15px_rgba(212,175,55,0.3)]">
+              <button type="submit" className="btn-premium w-full shadow-[0_4px_15px_rgba(212,175,55,0.3)]">
                 Verify Now
               </button>
             </form>
@@ -54,3 +54,5 @@ export default function CertificatePage() {
     </div>
   );
 }
+
+
