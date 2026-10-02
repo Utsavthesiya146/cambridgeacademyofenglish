@@ -58,7 +58,7 @@ export default function Home() {
         
         {/* Overlapping Benefits Bar - Inside the white section to prevent background gaps */}
         <div className="relative z-30 mb-16 md:-mt-16 md:mb-24 container-custom fade-in-up stagger-1">
-          <div className="glass-card bg-white/90 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-6 text-center md:divide-x md:divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100/50">
+          <div className="glass-card bg-white/90 p-8 grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6 text-center md:divide-x md:divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100/50">
             {[
               { icon: '🏆', text: 'Over 14+ Years of experience' },
               { icon: '⭐', text: 'Rated Excellent on 1000+ reviews' },
