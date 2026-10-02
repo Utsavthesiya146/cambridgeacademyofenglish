@@ -4,14 +4,14 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Banner - Cinematic & Premium */}
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-slate-900">
+      <section className="relative min-h-[auto] md:min-h-[95vh] flex items-center justify-center overflow-hidden bg-slate-900">
         {/* Background Video/Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-primary/80 to-slate-900 z-10"></div>
           <div className="absolute inset-0 bg-cover bg-center opacity-40 animate-[pulse_10s_ease-in-out_infinite]" style={{ backgroundImage: "url('/images/slider1.jpg')" }}></div>
         </div>
 
-        <div className="container-custom relative z-20 w-full pt-32 pb-36 md:pb-40 text-center md:text-left flex flex-col md:flex-row items-center gap-12 fade-in-up">
+        <div className="container-custom relative z-20 w-full pt-32 pb-20 md:pb-40 text-center md:text-left flex flex-col md:flex-row items-center gap-12 fade-in-up">
           <div className="max-w-3xl flex-1">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-8 shadow-lg">
               <span className="w-2.5 h-2.5 rounded-full bg-accent animate-ping relative"><span className="absolute inset-0 bg-accent rounded-full animate-none"></span></span>
@@ -54,8 +54,8 @@ export default function Home() {
       </section>
 
       {/* 2. Overlapping Benefits Bar - Glassmorphic */}
-      <section className="relative z-30 -mt-8 container-custom fade-in-up stagger-1">
-        <div className="glass-card bg-white/90 p-8 grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-x divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
+      <section className="relative z-30 mt-8 md:-mt-16 container-custom fade-in-up stagger-1">
+        <div className="glass-card bg-white/90 p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 md:gap-6 text-center md:divide-x md:divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
           {[
             { icon: '🏆', text: 'Over 14+ Years of experience' },
             { icon: '⭐', text: 'Rated Excellent on 1000+ reviews' },
