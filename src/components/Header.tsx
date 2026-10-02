@@ -35,11 +35,11 @@ export default function Header() {
       </div>
 
       {/* Main Glass Navbar */}
-      <header className={`sticky top-0 z-50 transition-all duration-500 border-b border-slate-100 ${isScrolled ? "bg-white/90 backdrop-blur-2xl shadow-sm py-2" : "bg-white py-4"}`}>
+      <header className={`sticky top-0 z-50 transition-all duration-500 border-b border-slate-100 ${isScrolled ? "bg-white/90 backdrop-blur-2xl shadow-sm py-1" : "bg-white py-2"}`}>
         <div className="container-custom">
           
           {/* Secondary Header Details */}
-          <div className="hidden lg:flex justify-between items-center mb-4 pb-3 border-b border-slate-100">
+          <div className="hidden lg:flex justify-between items-center mb-2 pb-2 border-b border-slate-100">
              <div className="text-xs text-slate-500">
                <div id="google_translate_element">Select Language</div>
              </div>
@@ -60,7 +60,7 @@ export default function Header() {
           <div className="flex justify-between items-center">
             {/* Logo Area */}
             <Link href="/" className="flex items-center gap-3 group">
-              <img src="/images/logo.png" alt="Cambridge Academy" className="h-12 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+              <img src="/images/logo.png" alt="Cambridge Academy" className="h-10 lg:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
               <div className="hidden sm:flex flex-col border-l-2 border-slate-200 pl-3">
                 <span className="text-xl lg:text-2xl font-black text-primary tracking-tight group-hover:text-primary/80 transition-colors leading-tight">Cambridge Academy</span>
                 <span className="text-[0.6rem] lg:text-[0.65rem] text-accent font-bold tracking-[0.2em] uppercase">Bringing Language to Life</span>
