@@ -39,10 +39,10 @@ export default function SitemapPage() {
             <div>
               <h3 className="text-xl font-bold text-primary mb-4 border-b border-slate-100 pb-2">Top Courses</h3>
               <ul className="space-y-2 text-slate-600 font-medium">
-                <li><Link href="/courses/spoken-english" className="hover:text-accent transition-colors">Spoken English</Link></li>
-                <li><Link href="/courses/ielts-pte" className="hover:text-accent transition-colors">IELTS & PTE Preparation</Link></li>
-                <li><Link href="/courses/foreign-languages" className="hover:text-accent transition-colors">Foreign Languages</Link></li>
-                <li><Link href="/courses/corporate-training" className="hover:text-accent transition-colors">Corporate Training</Link></li>
+                <li><Link href="/courses/learn-english-speaking-course-online" className="hover:text-accent transition-colors">Spoken English</Link></li>
+                <li><Link href="/courses/ielts-coaching-in-bangalore" className="hover:text-accent transition-colors">IELTS & PTE Preparation</Link></li>
+                <li><Link href="/courses/foreign-language-courses" className="hover:text-accent transition-colors">Foreign Languages</Link></li>
+                <li><Link href="/courses/Diploma-in-English-Language" className="hover:text-accent transition-colors">Diploma in English Language</Link></li>
                 <li><Link href="/courses/teacher-training" className="hover:text-accent transition-colors">Teacher Training</Link></li>
               </ul>
             </div>
