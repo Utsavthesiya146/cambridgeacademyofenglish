@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* 2. Overlapping Benefits Bar - Glassmorphic */}
-      <section className="relative z-30 -mt-16 container-custom fade-in-up stagger-1">
+      <section className="relative z-30 -mt-8 container-custom fade-in-up stagger-1">
         <div className="glass-card bg-white/90 p-8 grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-x divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)]">
           {[
             { icon: '🏆', text: 'Over 14+ Years of experience' },
