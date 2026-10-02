@@ -96,19 +96,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6 text-xs font-medium">
-          <p className="text-slate-500">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
-          
-          <div className="flex items-center gap-2 text-slate-400 text-[13px] bg-white/5 px-5 py-2.5 rounded-full border border-white/10 shadow-md">
-            Designed & Developed with <span className="text-red-500 animate-pulse text-sm">♥️</span> by 
-            <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="ml-1 hover:scale-105 transition-transform flex items-center">
-              <img src="/images/hosting-baba-logo.png" alt="Hosting Baba" className="h-6 w-auto object-contain rounded-sm" />
-            </a>
+        <div className="flex flex-col gap-6">
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
+            <p className="text-slate-500">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
+            <div className="flex gap-6 text-slate-500">
+              <Link href="/sitemap" className="hover:text-white transition-colors">Site map</Link>
+              <Link href="/blog/feed" className="hover:text-white transition-colors">RSS - Posts</Link>
+            </div>
           </div>
 
-          <div className="flex gap-6 text-slate-500">
-            <Link href="/sitemap" className="hover:text-white transition-colors">Site map</Link>
-            <Link href="/blog/feed" className="hover:text-white transition-colors">RSS - Posts</Link>
+          <div className="flex justify-center pb-8 md:pb-4">
+            <div className="flex items-center gap-2 text-slate-300 text-[13px] font-medium tracking-wide">
+              Designed & Developed with <span className="text-red-500 animate-pulse text-base drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">♥️</span> by 
+              <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="ml-1 hover:scale-105 transition-transform flex items-center rounded-sm">
+                <img src="/images/hosting-baba-logo.png" alt="Hosting Baba" className="h-7 w-auto object-contain rounded-sm shadow-[0_0_10px_rgba(0,0,0,0.5)] border border-white/5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
