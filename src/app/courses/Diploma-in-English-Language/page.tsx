@@ -107,7 +107,7 @@ export default function DiplomaEnglishPage() {
 
               <p className="mb-6 text-base text-justify">
                 This certificate can be validated by scanning the barcode or you can also visit<br />
-                <Link href="/search-certificate" className="text-red-600 hover:underline">http://cambridgeacademyofenglish.com/search-certificate/</Link>
+                <Link href="/certificate" className="text-red-600 hover:underline">Certificate Verification</Link>
               </p>
 
               <h3 className="text-xl font-bold mt-8 mb-4">Diploma in English Language Teaching Course Module:</h3>
