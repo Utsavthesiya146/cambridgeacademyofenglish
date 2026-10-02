@@ -56,6 +56,12 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-2">
             
+            <div className="px-3 py-2 cursor-pointer">
+              <Link href="/" className="text-[15px] font-semibold text-slate-700 hover:text-primary transition-colors flex items-center gap-1.5">
+                Home
+              </Link>
+            </div>
+
             <div className="relative group px-3 py-2 cursor-pointer">
               <Link href="/about" className="text-[15px] font-semibold text-slate-700 group-hover:text-primary transition-colors flex items-center gap-1.5">
                 About
