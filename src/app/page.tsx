@@ -358,17 +358,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 11. SEO Targeted Content */}
-      <section className="py-12 bg-slate-50 border-t border-slate-200">
-        <div className="container-custom">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-primary mb-6">Premier Language Training in Bangalore</h2>
-            <div className="text-slate-600 text-sm leading-relaxed space-y-4">
-              <p>
-                Cambridge Academy of English is widely recognized for offering the best <strong>English speaking classes in Bangalore</strong>. Whether you want to gain fluency and confidence through our interactive <strong>Spoken English classes in Bangalore</strong>, or you need expert guidance to achieve a high band score with our specialized <strong>IELTS coaching in Bangalore</strong>, we have the right program for you.
+      {/* 11. SEO Targeted Content - Premium Redesign */}
+      <section className="py-24 relative overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+        
+        <div className="container-custom relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
+              <span className="w-2 h-2 rounded-full bg-accent"></span>
+              <span className="text-xs font-bold tracking-widest text-white uppercase">Top Rated in India</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+              Premier <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#FFE066] to-white">Language Training</span> in Bangalore
+            </h2>
+            <p className="text-slate-300 text-lg">
+              Empowering students and professionals with world-class education, exceptional infrastructure, and expert guidance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors"></div>
+              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 relative z-10">🗣️</div>
+              <h3 className="text-xl font-bold text-white mb-4 relative z-10">English speaking classes in Bangalore</h3>
+              <p className="text-slate-400 text-sm leading-relaxed relative z-10">
+                Gain absolute fluency and confidence with interactive and structured learning tailored for your ultimate success.
               </p>
-              <p>
-                Beyond English, we provide top-tier <strong>Foreign language courses in Bangalore</strong> covering Spanish, German, French, and more. We are also a trusted name for professional <strong>English training in Bangalore</strong> aimed at corporate communication, as well as comprehensive <strong>Teacher training courses in Bangalore</strong> designed to empower educators with modern teaching methodologies.
+            </div>
+
+            <div className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors"></div>
+              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 relative z-10">💬</div>
+              <h3 className="text-xl font-bold text-white mb-4 relative z-10">Spoken English classes in Bangalore</h3>
+              <p className="text-slate-400 text-sm leading-relaxed relative z-10">
+                Overcome hesitation and master the art of conversation with our highly engaging and practical spoken modules.
+              </p>
+            </div>
+
+            <div className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors"></div>
+              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 relative z-10">🎯</div>
+              <h3 className="text-xl font-bold text-white mb-4 relative z-10">IELTS coaching in Bangalore</h3>
+              <p className="text-slate-400 text-sm leading-relaxed relative z-10">
+                Achieve your dream 8.5+ band score with our specialized, result-oriented IELTS preparation strategies.
+              </p>
+            </div>
+
+            <div className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors"></div>
+              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 relative z-10">🌍</div>
+              <h3 className="text-xl font-bold text-white mb-4 relative z-10">Foreign language courses in Bangalore</h3>
+              <p className="text-slate-400 text-sm leading-relaxed relative z-10">
+                Expand your global reach by learning top international languages like Spanish, German, French, and more.
+              </p>
+            </div>
+
+            <div className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors"></div>
+              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 relative z-10">🏢</div>
+              <h3 className="text-xl font-bold text-white mb-4 relative z-10">English training in Bangalore</h3>
+              <p className="text-slate-400 text-sm leading-relaxed relative z-10">
+                Enhance corporate communication and professional English skills to thrive in modern business environments.
+              </p>
+            </div>
+
+            <div className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-accent/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-accent/20 transition-colors"></div>
+              <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300 relative z-10">👨‍🏫</div>
+              <h3 className="text-xl font-bold text-white mb-4 relative z-10">Teacher training courses in Bangalore</h3>
+              <p className="text-slate-400 text-sm leading-relaxed relative z-10">
+                Empower yourself with advanced teaching methodologies to shape and inspire the next generation of learners.
               </p>
             </div>
           </div>
