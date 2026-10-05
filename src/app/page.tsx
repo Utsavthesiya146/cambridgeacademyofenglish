@@ -357,6 +357,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 11. SEO Targeted Content */}
+      <section className="py-12 bg-slate-50 border-t border-slate-200">
+        <div className="container-custom">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-2xl font-bold text-primary mb-6">Premier Language Training in Bangalore</h2>
+            <div className="text-slate-600 text-sm leading-relaxed space-y-4">
+              <p>
+                Cambridge Academy of English is widely recognized for offering the best <strong>English speaking classes in Bangalore</strong>. Whether you want to gain fluency and confidence through our interactive <strong>Spoken English classes in Bangalore</strong>, or you need expert guidance to achieve a high band score with our specialized <strong>IELTS coaching in Bangalore</strong>, we have the right program for you.
+              </p>
+              <p>
+                Beyond English, we provide top-tier <strong>Foreign language courses in Bangalore</strong> covering Spanish, German, French, and more. We are also a trusted name for professional <strong>English training in Bangalore</strong> aimed at corporate communication, as well as comprehensive <strong>Teacher training courses in Bangalore</strong> designed to empower educators with modern teaching methodologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
