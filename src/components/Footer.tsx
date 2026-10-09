@@ -92,13 +92,14 @@ export default function Footer() {
               <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">Visa</span>
               <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">Mastercard</span>
               <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">PayPal</span>
+              <span className="px-3 py-1 bg-white rounded text-primary font-bold text-xs">UPI</span>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-6">
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium">
-            <p className="text-slate-500">© 2020 Cambridgeacademyofenglish. All Rights Reserved</p>
+            <p className="text-slate-500">© 2026 Cambridgeacademyofenglish. All Rights Reserved</p>
             <div className="flex gap-6 text-slate-500">
               <Link href="/sitemap" className="hover:text-white transition-colors">Site map</Link>
               <Link href="/blog/feed" className="hover:text-white transition-colors">RSS - Posts</Link>
