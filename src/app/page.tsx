@@ -140,31 +140,35 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Hero Image Showcase Card - Restored Rich Layout */}
+              {/* Right Hero Image Showcase Card */}
               <div className="lg:col-span-5 hidden lg:block">
-                <div className="relative w-full h-[480px]">
-                  {/* Decorative Ambient Backdrop Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#d4af37]/30 to-[#0a192f]/50 rounded-[3rem] transform rotate-3 scale-105 blur-lg"></div>
+                <div className="relative">
+                  {/* Decorative Glow */}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-[#d4af37] to-[#1e3a8a] rounded-3xl blur-xl opacity-30"></div>
 
-                  {/* Main Image Frame with 3rem Radius */}
-                  <img
-                    src="/images/hero-classroom.jpg"
-                    alt="Students in a modern interactive English language classroom at Cambridge Academy of English"
-                    className="absolute inset-0 w-full h-full object-cover rounded-[3rem] shadow-2xl border-4 border-white/10"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f]/70 via-transparent to-transparent rounded-[3rem]"></div>
+                  {/* Main Image Frame */}
+                  <div className="relative rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl bg-[#0a192f]">
+                    <img
+                      src="/images/hero-classroom.jpg"
+                      alt="Students in a modern interactive English language classroom at Cambridge Academy of English"
+                      className="w-full h-[460px] object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent"></div>
 
-                  {/* Floating Rating Badge with Animated Bounce */}
-                  <div
-                    className="absolute -bottom-6 -left-6 bg-white p-5 rounded-3xl shadow-2xl border border-slate-100 flex items-center gap-4 animate-bounce z-20"
-                    style={{ animationDuration: '3.5s' }}
-                  >
-                    <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-3xl text-amber-500 font-black">
-                      ⭐
-                    </div>
-                    <div>
-                      <p className="font-extrabold text-slate-800 text-lg">4.9/5 Rating</p>
-                      <p className="text-xs text-slate-500 font-semibold">From 1,000+ Students</p>
+                    {/* Floating Rating Badge */}
+                    <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-100 flex items-center justify-between shadow-xl text-slate-800">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl text-amber-500 font-black">
+                          ★
+                        </div>
+                        <div>
+                          <p className="font-extrabold text-slate-900 text-sm">4.9/5 Rating</p>
+                          <p className="text-[11px] text-slate-500 font-medium">1,000+ Google Reviews</p>
+                        </div>
+                      </div>
+                      <span className="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">
+                        Verified Academy
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -172,135 +176,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* 1B. RESTORED OVERLAPPING BENEFITS BAR */}
-        <div className="relative z-30 -mt-12 md:-mt-16 mb-16 container-custom fade-in-up stagger-1">
-          <div className="glass-card bg-white/95 p-6 sm:p-8 grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:divide-x md:divide-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100/60 rounded-3xl">
-            {[
-              { icon: '🏆', title: 'Over 21 Years of Heritage', desc: 'Pioneers in English training' },
-              { icon: '⭐', title: 'Rated 4.9/5 on 1000+ Reviews', desc: 'From verified students' },
-              { icon: '🎓', title: 'Highly Qualified Certified Faculties', desc: 'Cambridge & CELTA mentors' },
-              { icon: '🎯', title: 'Intensive Teaching Methodology', desc: 'Speaking & debate focus' },
-              { icon: '📍', title: 'Premium Bangalore Campus & Online', desc: 'Kammanahalli & live batches' },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="px-3 flex flex-col items-center justify-center hover:-translate-y-1 transition-transform duration-300"
-              >
-                <span className="text-3xl sm:text-4xl mb-2">{item.icon}</span>
-                <p className="text-xs sm:text-sm font-extrabold text-[#0a192f]">{item.title}</p>
-                <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 1C. RESTORED INTERACTIVE COURSE FINDER SECTION */}
-        <div className="container-custom relative z-20 mb-16 fade-in-up stagger-2">
-          <div className="max-w-[1100px] w-full mx-auto glass-dark p-6 lg:p-10 shadow-2xl relative overflow-hidden rounded-3xl">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-
-            <div className="relative z-10">
-              <span className="inline-block px-3 py-1 bg-white/10 text-[#d4af37] text-[11px] font-bold uppercase tracking-wider rounded-full mb-3">
-                ⚡ Course Selector
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-6 lg:mb-8">
-                Find the right course for you
-              </h2>
-
-              <form action="/courses" method="GET" className="flex flex-col lg:flex-row gap-4 lg:gap-5 items-end w-full">
-                <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
-                  <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">
-                    I would like to join
-                  </label>
-                  <select
-                    name="goal"
-                    className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-[#d4af37] transition-colors appearance-none text-sm truncate rounded-lg"
-                  >
-                    <option value="" className="text-slate-900">Choose your goal</option>
-                    <option value="spoken-english-online" className="text-slate-900">Learn English Speaking Online</option>
-                    <option value="spoken-english-offline" className="text-slate-900">Spoken English Classes (Campus)</option>
-                    <option value="ielts-preparation" className="text-slate-900">IELTS Exam Preparation</option>
-                    <option value="pte-preparation" className="text-slate-900">PTE Academic Preparation</option>
-                    <option value="oet-preparation" className="text-slate-900">OET for Healthcare</option>
-                    <option value="german-language" className="text-slate-900">German Language Course</option>
-                    <option value="french-language" className="text-slate-900">French Language Course</option>
-                    <option value="spanish-language" className="text-slate-900">Spanish Language Course</option>
-                  </select>
-                </div>
-                <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
-                  <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">
-                    My English level is
-                  </label>
-                  <select
-                    name="level"
-                    className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-[#d4af37] transition-colors appearance-none text-sm truncate rounded-lg"
-                  >
-                    <option value="" className="text-slate-900">Choose your level</option>
-                    <option value="beginner" className="text-slate-900">Beginner (A1-A2)</option>
-                    <option value="intermediate" className="text-slate-900">Intermediate (B1-B2)</option>
-                    <option value="advanced" className="text-slate-900">Advanced (C1-C2)</option>
-                  </select>
-                </div>
-                <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
-                  <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">
-                    I prefer to study
-                  </label>
-                  <select
-                    name="mode"
-                    className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-[#d4af37] transition-colors appearance-none text-sm truncate rounded-lg"
-                  >
-                    <option value="" className="text-slate-900">Choose location</option>
-                    <option value="offline" className="text-slate-900">🏫 Campus (Kammanahalli)</option>
-                    <option value="online" className="text-slate-900">💻 Online Live Classes</option>
-                  </select>
-                </div>
-                <div className="flex flex-col gap-2 w-full lg:flex-1 min-w-0">
-                  <label className="text-slate-300 text-[10px] sm:text-xs uppercase tracking-wider font-semibold truncate">
-                    Batch Timing
-                  </label>
-                  <select
-                    name="batch"
-                    className="w-full bg-white/10 border-b-2 border-white/20 text-white px-2 sm:px-3 py-3 outline-none focus:border-[#d4af37] transition-colors appearance-none text-sm truncate rounded-lg"
-                  >
-                    <option value="" className="text-slate-900">Choose timing</option>
-                    <option value="weekday" className="text-slate-900">Weekday Batches</option>
-                    <option value="weekend" className="text-slate-900">Weekend Batches</option>
-                    <option value="evening" className="text-slate-900">Evening Fast-Track</option>
-                  </select>
-                </div>
-                <div className="w-full lg:w-36 shrink-0 pt-4 lg:pt-0">
-                  <button
-                    type="submit"
-                    className="w-full bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black py-3 rounded-xl shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all uppercase tracking-wider text-xs"
-                  >
-                    Search Courses
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        {/* 1D. RESTORED GOOGLE REVIEWS TRUST STRIP */}
-        <div className="bg-slate-50 py-6 border-y border-slate-200 mb-8">
-          <div className="container-custom flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-            <div className="flex items-center gap-1 text-[#d4af37] text-2xl font-bold">
-              ★★★★★
-            </div>
-            <p className="text-slate-700 font-semibold text-sm sm:text-base">
-              98% of our students rate their experience as &apos;Excellent&apos; (4.9 / 5).
-              <a
-                href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[#0a192f] hover:text-[#d4af37] ml-2 underline decoration-[#d4af37] decoration-2 underline-offset-4 transition-colors"
-              >
-                Read 1,000+ Google Reviews →
-              </a>
-            </p>
-          </div>
-        </div>
 
         {/* 2. ABOUT CAMBRIDGE ACADEMY OF ENGLISH */}
         <section id="about" className="py-20 md:py-28 bg-white relative">
@@ -479,63 +354,6 @@ export default function Home() {
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
-            </div>
-
-            {/* Restored 14-Point Institutional Checklist with Photo Collage */}
-            <div className="mt-16 pt-16 border-t border-slate-200">
-              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1 rounded-full text-white inline-block mb-3">
-                    Institutional Checklist
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f] mb-4">
-                    The 14 Pillars of Our Academy
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-600 mb-8 leading-relaxed">
-                    We are an authorized partner for British Council, IDP &amp; Cambridge ELT exam preparations with proven 8.5 band training methods and dedicated mentors.
-                  </p>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {[
-                      "Excellent Infrastructure & Speech Labs",
-                      "Proven 8.5 bands training methods",
-                      "Students from 18+ different countries",
-                      "British Council IELTS Registration Centre",
-                      "Highly qualified, certified faculties",
-                      "Flexible timings & small group attention",
-                      "Vast experience in corporate training",
-                      "Interactive classrooms & modern aids",
-                      "Customized courses for all age groups",
-                      "Specialized focus on speaking & listening",
-                      "Comprehensive study materials provided",
-                      "Regular mock tests and assessments",
-                      "Dedicated doubt-clearing sessions",
-                      "Lifetime support for alumni"
-                    ].map((checkItem, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-2.5 bg-white p-3 rounded-2xl shadow-sm border border-slate-200/80 hover:border-[#d4af37] transition-colors"
-                      >
-                        <div className="w-5 h-5 rounded-full bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37] shrink-0 mt-0.5 text-xs font-black">
-                          ✓
-                        </div>
-                        <span className="font-semibold text-slate-700 text-xs sm:text-[13px]">
-                          {checkItem}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="absolute inset-0 bg-[#d4af37] rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
-                  <img
-                    src="/images/slider3.jpg"
-                    alt="Cambridge Academy of English Students"
-                    className="rounded-3xl shadow-2xl w-full h-[400px] md:h-[520px] object-cover"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -1337,135 +1155,6 @@ export default function Home() {
                   Leave a Google Review ★
                 </a>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 15B. RESTORED FREE ONLINE ASSESSMENT BANNER */}
-        <section className="py-24 sm:py-32 relative overflow-hidden flex items-center bg-[#0a192f] text-white">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-overlay"
-            style={{ backgroundImage: "url('/images/slider2.jpg')" }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/90 to-[#0a192f]/70 z-10"></div>
-
-          <div className="container-custom relative z-20 text-center max-w-3xl mx-auto">
-            <span className="inline-block px-4 py-1.5 bg-[#d4af37] text-[#0a192f] font-black rounded-full text-xs uppercase tracking-wider mb-6 shadow-lg">
-              Free English Diagnostic Assessment
-            </span>
-            <h2 className="text-3xl sm:text-5xl font-black text-white mb-6 tracking-tight drop-shadow-xl">
-              What is your current level of English?
-            </h2>
-            <p className="text-base sm:text-xl text-slate-300 mb-10 font-light leading-relaxed">
-              Find out your CEFR proficiency level (A1 to C2) in just 10 minutes with our adaptive online diagnostic test. Receive instant feedback and personalized course recommendations.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/test"
-                className="w-full sm:w-auto px-9 py-4 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black rounded-full text-sm uppercase tracking-wider shadow-[0_0_30px_rgba(212,175,55,0.6)] hover:-translate-y-1 transition-all"
-              >
-                Start Online Test Now →
-              </Link>
-              <button
-                onClick={() => openCounsellingModal('Free English Assessment Counselling')}
-                className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-sm backdrop-blur-md border border-white/20 transition-all hover:-translate-y-1"
-              >
-                Book Free Counselling Session
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* 15C. RESTORED INSTITUTIONAL SUMMARY NUMBERS STRIP */}
-        <section className="py-16 bg-white border-b border-slate-100">
-          <div className="container-custom">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
-              <div className="text-center px-4">
-                <div className="text-4xl md:text-5xl font-black text-[#0a192f] mb-2">21+</div>
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Years Heritage</div>
-              </div>
-              <div className="text-center px-4">
-                <div className="text-4xl md:text-5xl font-black text-[#0a192f] mb-2">25+</div>
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Specialized Programmes</div>
-              </div>
-              <div className="text-center px-4">
-                <div className="text-4xl md:text-5xl font-black text-[#0a192f] mb-2">18+</div>
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Countries Represented</div>
-              </div>
-              <div className="text-center px-4">
-                <div className="text-4xl md:text-5xl font-black text-[#0a192f] mb-2">25,000+</div>
-                <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">Successful Learners</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 15D. RESTORED SEO TARGETED CONTENT - PREMIUM BENTO GRID */}
-        <section className="py-24 relative overflow-hidden bg-[#0a192f] text-white">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#d4af37]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#d4af37]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
-
-          <div className="container-custom relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#d4af37]"></span>
-                <span className="text-xs font-bold tracking-widest text-white uppercase">Top Rated in India</span>
-              </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                Premier <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#ffe066] to-white">Language Training</span> in Bangalore
-              </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                Empowering students and professionals with world-class education, exceptional infrastructure, and expert guidance.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: '🗣️',
-                  title: 'English speaking classes in Bangalore',
-                  desc: 'Gain absolute fluency and confidence with interactive and structured learning tailored for your ultimate success.',
-                },
-                {
-                  icon: '💬',
-                  title: 'Spoken English classes in Bangalore',
-                  desc: 'Overcome hesitation and master the art of conversation with our highly engaging and practical spoken modules.',
-                },
-                {
-                  icon: '🎯',
-                  title: 'IELTS coaching in Bangalore',
-                  desc: 'Achieve your dream 8.5+ band score with our specialized, result-oriented IELTS preparation strategies.',
-                },
-                {
-                  icon: '🌍',
-                  title: 'Foreign language courses in Bangalore',
-                  desc: 'Expand your global reach by learning top international languages like Spanish, German, French, and more.',
-                },
-                {
-                  icon: '🏢',
-                  title: 'English training in Bangalore',
-                  desc: 'Enhance corporate communication and professional English skills to thrive in modern business environments.',
-                },
-                {
-                  icon: '👨‍🏫',
-                  title: 'Teacher training courses in Bangalore',
-                  desc: 'Empower yourself with advanced teaching methodologies to shape and inspire the next generation of learners.',
-                },
-              ].map((card, idx) => (
-                <div
-                  key={idx}
-                  className="glass-dark p-8 rounded-3xl hover:-translate-y-2 transition-all duration-300 border border-white/10 hover:border-[#d4af37]/50 hover:shadow-[0_10px_40px_-15px_rgba(212,175,55,0.3)] group relative overflow-hidden"
-                >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4af37]/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-[#d4af37]/20 transition-colors pointer-events-none"></div>
-                  <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-[#d4af37]/20 transition-all duration-300 relative z-10">
-                    {card.icon}
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 relative z-10">{card.title}</h3>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed relative z-10">
-                    {card.desc}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
