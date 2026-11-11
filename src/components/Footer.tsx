@@ -219,7 +219,7 @@ export default function Footer() {
                   No 87, 2nd Floor, Nehru Road, Kammanahalli, Bangalore, Karnataka - 560084, India
                 </span>
               </p>
-              <p className="flex items-start gap-2">
+              <div className="flex items-start gap-2">
                 <span className="text-[#d4af37] text-sm">📞</span>
                 <div>
                   <a href="tel:08040943580" className="hover:text-white font-bold text-slate-300">
@@ -234,20 +234,20 @@ export default function Footer() {
                     9620806004
                   </a>
                 </div>
-              </p>
+              </div>
               <p className="flex items-start gap-2">
                 <span className="text-[#d4af37] text-sm">✉️</span>
                 <a href="mailto:info@cambridgeacademyofenglish.com" className="hover:text-white">
                   info@cambridgeacademyofenglish.com
                 </a>
               </p>
-              <p className="flex items-start gap-2">
+              <div className="flex items-start gap-2">
                 <span className="text-[#d4af37] text-sm">⏰</span>
                 <div>
                   <span className="font-semibold text-slate-300">Mon - Sat:</span> 9:00 AM – 9:00 PM<br />
                   <span className="font-semibold text-slate-300">Sunday:</span> By Appointment
                 </div>
-              </p>
+              </div>
             </div>
 
             {/* Google Reviews Badge */}
@@ -281,9 +281,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright & Policies */}
+        {/* Bottom Bar: Copyright, HostingBaba Credit & Legal Links */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-400">
           <p>© {new Date().getFullYear()} Cambridge Academy of English, Bangalore. All Rights Reserved.</p>
+
+          {/* Restored HostingBaba Credit */}
+          <p className="text-slate-400 text-xs font-normal tracking-wide text-center">
+            Designed &amp; Developed with 💖 by HostingBaba
+          </p>
+
           <div className="flex flex-wrap gap-4 text-slate-400">
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms &amp; Conditions</Link>
