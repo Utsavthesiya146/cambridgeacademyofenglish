@@ -40,41 +40,81 @@ export default function CoursesDirectoryPage() {
 
   return (
     <div className="bg-slate-50 min-h-screen pb-24">
-      {/* 1. HERO HEADER */}
-      <section className="bg-[#0a192f] pt-32 pb-20 text-center relative overflow-hidden text-white">
-        <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none"></div>
-        <div className="container-custom relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
-            <span>★</span> 21 Years of Educational Excellence in Bangalore
+      {/* 1. HERO HEADER - Restored Premium Layout & Visual Richness */}
+      <section className="bg-slate-900 pt-32 pb-20 text-center relative overflow-hidden text-white">
+        {/* Background Visual Layer */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a192f]/95 via-[#0a192f]/85 to-slate-900 z-10"></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-25"
+            style={{ backgroundImage: "url('/images/slider1.jpg')" }}
+          ></div>
+        </div>
+
+        {/* Ambient Glow Orbs */}
+        <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-[#d4af37]/15 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-blue-600/15 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
+
+        <div className="container-custom relative z-10 fade-in-up">
+          {/* Tagline Badge */}
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping relative">
+              <span className="absolute inset-0 bg-[#d4af37] rounded-full animate-none"></span>
+            </span>
+            <span>21 Years of Educational Excellence in Bangalore</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
-            Comprehensive Course Directory
+
+          {/* Main Heading with Gradient Accent */}
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#ffe066] to-white">Premium Courses</span>
           </h1>
-          <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-            Explore our world-class English language and foreign language training programmes. Each course features an intensive, internationally aligned curriculum taught by certified trainers.
+
+          {/* Supporting Description */}
+          <p className="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed mb-8 drop-shadow-md">
+            Discover tailored programs designed to accelerate your fluency, whether for professional growth, exam excellence, or personal development.
           </p>
 
-          {/* Search Bar */}
-          <div className="max-w-xl mx-auto mt-8">
-            <div className="relative">
+          {/* 4 Value Highlight Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs font-bold text-slate-200 mb-8 max-w-3xl mx-auto">
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/15">
+              <span className="text-[#d4af37]">★</span> 25+ Specialized Programmes
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/15">
+              <span className="text-[#d4af37]">🎯</span> British Council &amp; IDP Aligned
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/15">
+              <span className="text-[#d4af37]">🌍</span> 18+ Nationalities
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/15">
+              <span className="text-[#d4af37]">⭐</span> 4.9/5 Rating (1,000+ Reviews)
+            </span>
+          </div>
+
+          {/* Premium Search Bar */}
+          <div className="max-w-2xl mx-auto relative z-20">
+            <div className="relative glass-dark p-1.5 sm:p-2 rounded-full border border-white/20 shadow-2xl backdrop-blur-xl flex items-center">
+              <span className="pl-4 text-slate-400 text-lg">🔍</span>
               <input
                 type="text"
-                placeholder="Search by course name (e.g. IELTS, Spoken English, German, Kids)..."
+                placeholder="Search by course name, keyword, exam (e.g. IELTS, Spoken English, German)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-5 py-3.5 pl-12 rounded-full bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:bg-white/20 focus:ring-2 focus:ring-[#d4af37] backdrop-blur-md"
+                className="w-full bg-transparent px-3 py-2 text-white placeholder-slate-400 text-sm focus:outline-none"
               />
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">
-                🔍
-              </span>
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                  className="px-3 py-1 text-xs text-slate-400 hover:text-white rounded-full bg-white/10 mr-2 transition-colors shrink-0"
                 >
                   Clear
                 </button>
               )}
+              <button
+                type="button"
+                className="px-5 sm:px-6 py-2.5 rounded-full bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] text-xs font-black uppercase tracking-wider transition-all shadow-md shrink-0"
+              >
+                Find Course
+              </button>
             </div>
           </div>
         </div>

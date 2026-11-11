@@ -37,21 +37,21 @@ export default function Header() {
 
   return (
     <>
-      {/* 1. TOP ANNOUNCEMENT BAR */}
-      <div className="bg-[#0a192f] text-slate-300 text-[11px] py-1.5 hidden lg:block border-b border-white/10">
-        <div className="container-custom flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <div id="google_translate_element" className="scale-90 origin-left">
+      {/* 1. TOP ANNOUNCEMENT BAR - Compact & Slim */}
+      <div className="bg-[#0a192f] text-slate-300 text-[11px] h-7 sm:h-8 hidden lg:flex items-center border-b border-white/10 z-50">
+        <div className="container-custom flex justify-between items-center w-full">
+          <div className="flex items-center gap-3">
+            <div id="google_translate_element" className="scale-90 origin-left flex items-center leading-none">
               Select Language
             </div>
-            <div className="flex items-center gap-2 border-l border-white/20 pl-4 text-[#d4af37] font-semibold tracking-wide">
-              <span>★</span>
+            <div className="flex items-center gap-1.5 border-l border-white/20 pl-3 text-[#d4af37] font-semibold tracking-wide text-[11px] leading-none">
+              <span className="text-[10px]">★</span>
               <span>21 Years of Excellence in English Language Training</span>
             </div>
           </div>
 
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2.5 text-slate-300">
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 text-slate-300 text-[11px] leading-none">
               <span className="text-[#d4af37] font-bold">Bangalore Admissions:</span>
               <a
                 href="tel:08040943580"
@@ -80,9 +80,9 @@ export default function Header() {
 
             <Link
               href="/admin/leads"
-              className="flex items-center gap-1.5 hover:text-[#d4af37] transition-colors font-medium bg-white/10 px-2.5 py-0.5 rounded-full text-[10px]"
+              className="inline-flex items-center gap-1 hover:text-[#d4af37] transition-colors font-medium bg-white/10 px-2 py-0.5 rounded-full text-[10px] leading-none"
             >
-              🔒 Admin
+              <span>🔒</span> Admin
             </Link>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Header() {
         className={`sticky top-0 z-50 transition-all duration-300 border-b border-slate-100 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-sm py-2'
-            : 'bg-white py-2.5'
+            : 'bg-white py-3 sm:py-3.5'
         }`}
       >
         <div className="container-custom">
