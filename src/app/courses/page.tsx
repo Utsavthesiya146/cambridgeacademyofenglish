@@ -2,132 +2,273 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { COURSES_DATA, CourseDetail } from '@/data/coursesData';
 
-export default function CoursesPage() {
-  const [filter, setFilter] = useState('all');
+const CATEGORIES = [
+  { id: 'all', label: 'All Courses' },
+  { id: 'spoken-english', label: 'Spoken English' },
+  { id: 'exam-preparation', label: 'Exam Preparation' },
+  { id: 'english-adults', label: 'English for Adults' },
+  { id: 'foreign-nationals', label: 'Foreign Nationals' },
+  { id: 'teacher-training', label: 'Teacher Training' },
+  { id: 'foreign-languages', label: 'Foreign Languages' },
+  { id: 'kids-english', label: 'English for Kids' },
+];
 
-  const courses = [
-    { 
-      title: 'Learn English Speaking Online', 
-      category: 'online', 
-      badge: 'Online Live', 
-      desc: 'Elevate speaking skills with live interactive guidance from expert mentors.',
-      img: '/images/course-online.jpg',
-      link: '/courses/learn-english-speaking-course-online'
-    },
-    { 
-      title: 'Spoken English Classes (Campus)', 
-      category: 'spoken', 
-      badge: 'Classroom', 
-      desc: 'Boost confidence with immersive classroom sessions and vocabulary drills.',
-      img: '/images/course-spoken.jpg',
-      link: '/courses/class-room-english-course'
-    },
-    { 
-      title: 'Exam Prep (IELTS / PTE / TOEFL)', 
-      category: 'exam', 
-      badge: '8.5 Band Target', 
-      desc: 'Comprehensive test preparation designed to maximize scores with mock exams.',
-      img: '/images/course-exam.jpg',
-      link: '/courses/exam-preparation-course'
-    },
-    { 
-      title: 'Foreign Language Training', 
-      category: 'foreign', 
-      badge: '7 Languages', 
-      desc: 'Learn Spanish, German, French, Italian, Japanese, Chinese, or Arabic.',
-      img: '/images/course-foreign.jpg',
-      link: '/courses/foreign-language-courses-in-bangalore-india'
-    },
-    { 
-      title: 'TEFL / TESOL Teacher Training', 
-      category: 'teacher', 
-      badge: 'Certification', 
-      desc: 'Empower your educational career with international teaching certification.',
-      img: '/images/course-teacher.jpg',
-      link: '/courses/teacher-training-in-banglore'
-    },
-    { 
-      title: 'Cambridge Exam Preparation', 
-      category: 'cambridge', 
-      badge: 'Credentials', 
-      desc: 'Specialized coaching for Cambridge English Qualifications (B2 First, C1 Advanced).',
-      img: '/images/course-cambridge.jpg',
-      link: '/courses/Cambridge-Exam'
-    },
-  ];
+export default function CoursesDirectoryPage() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedMode, setSelectedMode] = useState('all');
 
-  const filteredCourses = filter === 'all' ? courses : courses.filter(c => c.category === filter);
+  const allCourses: CourseDetail[] = Object.values(COURSES_DATA);
+
+  const filteredCourses = allCourses.filter((course) => {
+    const matchesCategory =
+      selectedCategory === 'all' || course.category === selectedCategory;
+    const matchesSearch =
+      !searchQuery ||
+      course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      course.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      course.keywords.some((k) => k.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesMode =
+      selectedMode === 'all' ||
+      (selectedMode === 'online' && (course.mode.includes('Online') || course.mode.includes('Both'))) ||
+      (selectedMode === 'offline' && (course.mode.includes('Classroom') || course.mode.includes('Both')));
+
+    return matchesCategory && matchesSearch && matchesMode;
+  });
 
   return (
-    <div className="bg-slate-50 min-h-screen pb-20">
-      
-      {/* Hero */}
-      <div className="bg-primary pt-24 pb-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
-        <div className="container-custom relative z-10 fade-in-up">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Our Premium Courses</h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto font-light">
-            Discover tailored programs designed to accelerate your fluency, whether for professional growth, exam excellence, or personal development.
+    <div className="bg-slate-50 min-h-screen pb-24">
+      {/* 1. HERO HEADER */}
+      <section className="bg-[#0a192f] pt-32 pb-20 text-center relative overflow-hidden text-white">
+        <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none"></div>
+        <div className="container-custom relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+            <span>★</span> 21 Years of Educational Excellence in Bangalore
+          </div>
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
+            Comprehensive Course Directory
+          </h1>
+          <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+            Explore our world-class English language and foreign language training programmes. Each course features an intensive, internationally aligned curriculum taught by certified trainers.
           </p>
-        </div>
-      </div>
 
-      {/* Filters */}
-      <div className="container-custom mt-12 mb-12 fade-in-up stagger-1">
-        <div className="flex flex-wrap gap-4 justify-center">
-          {[
-            { id: 'all', label: 'All Courses' },
-            { id: 'online', label: 'Online Spoken' },
-            { id: 'spoken', label: 'Campus Spoken' },
-            { id: 'exam', label: 'Exam Prep' },
-            { id: 'foreign', label: 'Foreign Languages' },
-            { id: 'teacher', label: 'Teacher Training' }
-          ].map(btn => (
-            <button 
-              key={btn.id}
-              onClick={() => setFilter(btn.id)}
-              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${filter === btn.id ? 'bg-primary text-white shadow-lg scale-105' : 'bg-white text-slate-600 border border-slate-200 hover:border-primary hover:text-primary'}`}
-            >
-              {btn.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Course Grid */}
-      <div className="container-custom">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCourses.map((course, idx) => (
-            <div key={idx} className="glass-card p-3 flex flex-col group fade-in-up stagger-2">
-              <Link href={course.link} className="relative h-64 block overflow-hidden rounded-[1.25rem]">
-                <div className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" style={{ backgroundImage: `url(${course.img})` }}></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 left-4 bg-accent text-primary text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-md">
-                  {course.badge}
-                </div>
-              </Link>
-              
-              <div className="px-6 py-8 flex flex-col flex-grow">
-                <Link href={course.link}>
-                  <h3 className="text-2xl font-extrabold text-slate-800 mb-3 tracking-tight group-hover:text-accent transition-colors">{course.title}</h3>
-                </Link>
-                <p className="text-slate-500 text-sm mb-8 flex-grow leading-relaxed">{course.desc}</p>
-                <Link href={course.link} className="btn-premium-outline w-full group-hover:bg-primary group-hover:text-white">
-                  Explore Course
-                </Link>
-              </div>
+          {/* Search Bar */}
+          <div className="max-w-xl mx-auto mt-8">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search by course name (e.g. IELTS, Spoken English, German, Kids)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-5 py-3.5 pl-12 rounded-full bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:bg-white/20 focus:ring-2 focus:ring-[#d4af37] backdrop-blur-md"
+              />
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">
+                🔍
+              </span>
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                >
+                  Clear
+                </button>
+              )}
             </div>
-          ))}
+          </div>
         </div>
-        
-        {filteredCourses.length === 0 && (
-          <div className="text-center py-20 text-slate-500 font-medium">
-            No courses found for this category.
+      </section>
+
+      {/* 2. FILTERS & CONTROLS */}
+      <section className="py-8 bg-white border-b border-slate-200 sticky top-16 sm:top-20 z-30 shadow-sm backdrop-blur-md bg-white/95">
+        <div className="container-custom">
+          {/* Category Tabs */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-200 ${
+                  selectedCategory === cat.id
+                    ? 'bg-[#0a192f] text-white shadow-md'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Mode Selector */}
+          <div className="flex items-center justify-between mt-4 pt-3 border-t border-slate-100 text-xs">
+            <span className="text-slate-500 font-medium">
+              Showing <strong>{filteredCourses.length}</strong> programmes
+            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-slate-400 font-medium">Format:</span>
+              {[
+                { id: 'all', label: 'All Modes' },
+                { id: 'offline', label: '🏫 Campus' },
+                { id: 'online', label: '💻 Online Live' },
+              ].map((m) => (
+                <button
+                  key={m.id}
+                  onClick={() => setSelectedMode(m.id)}
+                  className={`px-2.5 py-1 rounded-md text-[11px] font-semibold transition-colors ${
+                    selectedMode === m.id
+                      ? 'bg-[#d4af37] text-[#0a192f]'
+                      : 'text-slate-600 hover:bg-slate-100'
+                  }`}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. COURSES GRID */}
+      <section className="container-custom pt-12">
+        {filteredCourses.length === 0 ? (
+          <div className="text-center py-20 bg-white rounded-3xl border border-slate-200 p-8">
+            <span className="text-5xl block mb-4">📚</span>
+            <h3 className="text-xl font-bold text-slate-800">No matching courses found</h3>
+            <p className="text-sm text-slate-500 mt-2 max-w-md mx-auto">
+              We could not find any programme matching &ldquo;{searchQuery}&rdquo;. Try another keyword or browse our full catalogue.
+            </p>
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                setSelectedCategory('all');
+                setSelectedMode('all');
+              }}
+              className="mt-6 px-6 py-2.5 bg-[#0a192f] text-white font-bold rounded-full text-xs hover:bg-[#162447] transition-colors"
+            >
+              Reset Filters
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredCourses.map((c) => (
+              <div
+                key={c.slug}
+                className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  {/* Card Thumbnail */}
+                  <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                    <img
+                      src={c.heroImage}
+                      alt={c.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                    
+                    {/* Top Badges */}
+                    <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+                      <span className="px-3 py-1 bg-[#0a192f]/90 text-[#d4af37] text-[11px] font-bold rounded-full backdrop-blur-md border border-[#d4af37]/30">
+                        {c.categoryName}
+                      </span>
+                      <span className="px-2.5 py-0.5 bg-white/90 text-slate-800 text-[10px] font-bold rounded-full backdrop-blur-md">
+                        {c.mode.includes('Both') ? 'Online & Campus' : c.mode}
+                      </span>
+                    </div>
+
+                    <div className="absolute bottom-3 left-4 right-4">
+                      <p className="text-[11px] font-semibold text-slate-200">
+                        ⏳ {c.duration}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Card Body */}
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-[#0a192f] group-hover:text-[#d4af37] transition-colors line-clamp-2 leading-snug">
+                      <Link href={`/courses/${c.slug}`}>{c.title}</Link>
+                    </h3>
+
+                    <p className="text-xs text-slate-600 mt-2.5 line-clamp-3 leading-relaxed">
+                      {c.intro}
+                    </p>
+
+                    {/* Highlights bullet points */}
+                    <div className="mt-4 pt-4 border-t border-slate-100 space-y-1.5">
+                      {c.benefits.slice(0, 2).map((b, bIdx) => (
+                        <p key={bIdx} className="text-[11px] text-slate-500 flex items-center gap-1.5 truncate">
+                          <span className="text-emerald-500 font-bold">✓</span>
+                          <span>{b}</span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Action Buttons */}
+                <div className="p-6 pt-0 flex items-center gap-3">
+                  <Link
+                    href={`/courses/${c.slug}`}
+                    className="flex-1 py-2.5 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-bold rounded-xl text-center transition-colors shadow-sm"
+                  >
+                    View Details
+                  </Link>
+                  <a
+                    href={`https://wa.me/918970506004?text=${encodeURIComponent(
+                      `Hello Cambridge Academy, I would like to enquire about ${c.title}.`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center"
+                    title="Enquire on WhatsApp"
+                  >
+                    💬
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         )}
-      </div>
+      </section>
+
+      {/* 4. ADMISSIONS ASSISTANCE BANNER */}
+      <section className="container-custom mt-20">
+        <div className="bg-gradient-to-r from-[#0a192f] to-[#162447] text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="max-w-xl">
+            <span className="text-xs uppercase tracking-widest text-[#d4af37] font-bold">
+              Unsure Which Course to Choose?
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-3">
+              Book a Free Diagnostic Assessment &amp; Counselling
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Our academic counselors will evaluate your current English proficiency level and recommend the ideal course track, batch timings, and timeline for your career or exam goals.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(
+                    new CustomEvent('open-counselling-modal', {
+                      detail: { course: 'General English / Diagnostic Assessment' },
+                    })
+                  );
+                }
+              }}
+              className="px-8 py-3.5 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-bold rounded-full text-xs shadow-lg transition-all hover:-translate-y-0.5"
+            >
+              Book Free Counselling Session
+            </button>
+            <a
+              href="tel:08040943580"
+              className="px-6 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-xs border border-white/20 transition-all text-center"
+            >
+              📞 Call 080-40943580
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-
