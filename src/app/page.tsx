@@ -435,6 +435,14 @@ export default function Home() {
                     slug="spoken-english-offline"
                     onEnquire={() => openCounsellingModal('Spoken English Offline')}
                   />
+                  <CourseCard
+                    title="Advanced Spoken English & Voice Training"
+                    tag="Fluency & Accent Lab"
+                    duration="6 to 8 Weeks"
+                    desc="Intensive voice modulation, British/American accent neutralization, debate rhetoric, and corporate presentation mastery."
+                    slug="advanced-spoken-english"
+                    onEnquire={() => openCounsellingModal('Advanced Spoken English')}
+                  />
                 </>
               )}
 
@@ -538,6 +546,14 @@ export default function Home() {
                     slug="master-diploma-in-english-language"
                     onEnquire={() => openCounsellingModal('Master Diploma in English')}
                   />
+                  <CourseCard
+                    title="Advanced Diploma in English Language"
+                    tag="Academic Immersion"
+                    duration="6 Months"
+                    desc="Intensive linguistic immersion, academic research writing, debate fluency, and university readiness for international scholars."
+                    slug="advanced-diploma-in-english-language"
+                    onEnquire={() => openCounsellingModal('Advanced Diploma in English')}
+                  />
                 </>
               )}
 
@@ -558,6 +574,14 @@ export default function Home() {
                     desc="Teaching Knowledge Test Modules 1, 2, and 3 preparation for school educators seeking international certification."
                     slug="tkt-preparation"
                     onEnquire={() => openCounsellingModal('Cambridge TKT')}
+                  />
+                  <CourseCard
+                    title="Train the Trainer & Corporate Coach"
+                    tag="Executive Faculty"
+                    duration="4 to 8 Weeks"
+                    desc="Advanced corporate soft skills, voice & accent coaching, and adult communicative training pedagogy."
+                    slug="corporate-trainer-certification"
+                    onEnquire={() => openCounsellingModal('Train the Trainer')}
                   />
                 </>
               )}
@@ -595,6 +619,22 @@ export default function Home() {
                     desc="Master Mandarin tones, Pinyin, and Hanzi characters for international business and trade."
                     slug="chinese-mandarin-language"
                     onEnquire={() => openCounsellingModal('Chinese Mandarin')}
+                  />
+                  <CourseCard
+                    title="Japanese Language (JLPT N5, N4, N3)"
+                    tag="🇯🇵 JLPT Aligned"
+                    duration="8 to 12 Weeks/Level"
+                    desc="Master Hiragana, Katakana, and essential Kanji for IT engineering careers and higher study in Japan."
+                    slug="japanese-language"
+                    onEnquire={() => openCounsellingModal('Japanese Language')}
+                  />
+                  <CourseCard
+                    title="Arabic Language (Conversational & Business)"
+                    tag="🇦🇪 Gulf Careers"
+                    duration="6 to 10 Weeks"
+                    desc="Practical spoken Arabic and modern business vocabulary for professionals working across UAE, Saudi Arabia, and GCC nations."
+                    slug="arabic-language"
+                    onEnquire={() => openCounsellingModal('Arabic Language')}
                   />
                 </>
               )}

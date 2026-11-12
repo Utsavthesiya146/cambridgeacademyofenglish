@@ -245,6 +245,104 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     ],
   },
 
+  'advanced-spoken-english': {
+    slug: 'advanced-spoken-english',
+    title: 'Advanced Spoken English & Voice Training',
+    shortTitle: 'Advanced Spoken English',
+    category: 'spoken-english',
+    categoryName: 'Spoken English',
+    tagline: 'Master High-Level Fluency, Voice Modulation, Accent Neutralization, and Stage Presence',
+    heroImage: '/images/courses/course-spoken-offline.jpg',
+    intro:
+      'Elevate your conversational English to executive and international standards. Designed for professionals, scholars, and ambitious speakers who already understand English but struggle with spontaneity, mother-tongue influence (MTI), vocabulary range, and presentation confidence. Our advanced speech lab provides rigorous practice in debate, impromptu speaking, and accent neutralization.',
+    whoShouldJoin: [
+      'Mid and senior-level corporate professionals leading client calls and international teams',
+      'Aspirants preparing for high-stakes job interviews and leadership presentations',
+      'Public speakers, educators, and anchors looking to refine voice modulation and stage rhetoric',
+      'Learners seeking accent neutralization and elimination of mother-tongue influence (MTI)',
+    ],
+    objectives: [
+      'Speak English spontaneously with executive authority and zero hesitation',
+      'Neutralize regional accent influence with systematic phonetic and intonation drills',
+      'Command a sophisticated vocabulary of high-impact idioms, phrasal verbs, and nuance',
+      'Deliver persuasive impromptu speeches and lead challenging group debates effortlessly',
+    ],
+    whatYouLearn: [
+      'Voice modulation, syllable stress, pitch variation, and breath control',
+      'Accent neutralization targeting standard neutral global English',
+      'Advanced conversational rhetoric, diplomatic phrasing, and active listening',
+      'Impromptu speaking frameworks (PREP, STAR) for boardroom meetings and interviews',
+      'Debating strategies, thought structuring, and public podium confidence',
+    ],
+    curriculum: [
+      {
+        title: 'Module 1: Voice Dynamics & Phonetic Precision',
+        description: 'Vocal warmups, consonant-vowel clarity, and eliminating mother-tongue influence.',
+        topics: ['IPA phonetic chart mastery', 'Syllable stress and rhythm', 'Overcoming regional inflection'],
+      },
+      {
+        title: 'Module 2: Advanced Lexicon & Idiomatic Fluency',
+        description: 'Moving beyond basic words to sophisticated professional expressions.',
+        topics: ['Nuanced vocabulary vs simple terms', 'Idioms & metaphors in business', 'Collocations & register'],
+      },
+      {
+        title: 'Module 3: Impromptu Speech & Executive Presence',
+        description: 'Thinking on your feet and structuring spontaneous answers without panic.',
+        topics: ['Extempore speaking drills', 'STAR & PREP communication frameworks', 'Body language and camera presence'],
+      },
+      {
+        title: 'Module 4: Debating & Persuasive Rhetoric',
+        description: 'Defending ideas, countering opposing viewpoints, and commanding room attention.',
+        topics: ['Constructive argument formulation', 'Diplomatic disagreement phrases', 'Podium presentations & Q&A mastery'],
+      },
+    ],
+    methodology:
+      'Lab-based intensive practice. 85% speaking time featuring recorded speech analysis, mock board meetings, and individualized trainer critique.',
+    mode: 'Both Online & Offline Available',
+    duration: '6 to 8 Weeks (Weekday & Weekend batches)',
+    batchTimings: 'Morning (7:30 - 9:00 AM), Evening (6:30 - 8:00 PM), Weekend Intensive (Sat & Sun)',
+    benefits: [
+      'Individual voice and speech diagnostic evaluation',
+      'Recorded speech playback with personalized accent correction',
+      'Interactive debate labs and executive presentation simulations',
+      'Certificate of Advanced English Fluency from Cambridge Academy',
+    ],
+    trainerInfo:
+      'Mentored by senior voice coaches and corporate communication specialists with 15+ years of experience training Fortune 500 executives.',
+    faqs: [
+      {
+        question: 'How is this different from regular Spoken English?',
+        answer: 'Regular Spoken English covers foundational grammar and basic fluency. This advanced course focuses on speech sophistication, voice modulation, accent neutralization, debate rhetoric, and high-stakes executive communication.',
+      },
+      {
+        question: 'Will this help eliminate my mother-tongue influence (MTI)?',
+        answer: 'Yes. We use targeted phonetic drills, mouth-movement guides, and syllable-timing exercises specifically designed to neutralize regional accents.',
+      },
+      {
+        question: 'Are classes available both in Bangalore classroom and online?',
+        answer: 'Yes. You can attend in-person at our Kammanahalli campus or join our live interactive online cohorts.',
+      },
+    ],
+    testimonials: [
+      {
+        name: 'Vikas Deshmukh',
+        location: 'Bangalore, India',
+        comment: 'The accent lab and debate sessions completely transformed my stage presence. I now lead European client briefings with total authority.',
+        rating: 5,
+      },
+    ],
+    metaTitle: 'Advanced Spoken English & Voice Accent Training in Bangalore | Cambridge Academy',
+    metaDescription:
+      'Master advanced spoken English, accent neutralization, voice modulation, and public speaking in Bangalore. Campus and online cohorts with certified master trainers.',
+    keywords: [
+      'advanced spoken english bangalore',
+      'voice and accent training bangalore',
+      'accent neutralization classes',
+      'public speaking courses bangalore',
+      'executive english communication',
+    ],
+  },
+
   // B. EXAMINATION PREPARATION COURSES
   'ielts-preparation': {
     slug: 'ielts-preparation',
@@ -1370,6 +1468,101 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     ],
   },
 
+  'advanced-diploma-in-english-language': {
+    slug: 'advanced-diploma-in-english-language',
+    title: 'Advanced Diploma in English Language (Foreign Nationals)',
+    shortTitle: 'Advanced Diploma in English',
+    category: 'foreign-nationals',
+    categoryName: 'English for Foreign Nationals',
+    tagline: 'Comprehensive Academic Immersion & Professional English for International Students',
+    heroImage: '/images/courses/course-advanced-diploma.jpg',
+    intro:
+      'The Advanced Diploma in English Language is an intensive 6-month academic immersion program designed for foreign nationals and international scholars. Bridging the gap between general fluency and university-grade academic research, this course equips students with sophisticated writing skills, academic debate techniques, and cross-cultural communication needed for university admission in India and abroad.',
+    whoShouldJoin: [
+      'Foreign students preparing for undergraduate or postgraduate university admission in India',
+      'International scholars and researchers needing academic English and thesis writing skills',
+      'Diplomatic personnel, embassy trainees, and government fellows from overseas',
+    ],
+    objectives: [
+      'Achieve strong B2/C1 CEFR proficiency across academic listening, reading, writing, and speech',
+      'Draft well-structured academic essays, research proposals, and seminar reports',
+      'Participate actively in university lectures, seminars, and thesis presentations',
+      'Navigate official Indian visa, FRRO, and university documentation requirements with ease',
+    ],
+    whatYouLearn: [
+      'Academic essay structuring: thesis statements, literature synthesis, and referencing',
+      'Seminar speaking, classroom note-taking, and formal lecture comprehension',
+      'Advanced grammar syntax, formal register, and scholarly vocabulary',
+      'Cross-cultural adaptation, conversational idioms, and campus social etiquette',
+    ],
+    curriculum: [
+      {
+        title: 'Module 1: Advanced Structural Grammar & Academic Lexicon',
+        description: 'Complex sentence structures, passive voice in research, and academic word lists.',
+        topics: ['Compound-complex syntax', 'Academic Word List (AWL)', 'Nominalization and formal tone'],
+      },
+      {
+        title: 'Module 2: Academic Writing & Research Methodology',
+        description: 'Writing essays, reports, and critical literature evaluations.',
+        topics: ['Paragraph cohesion & transitions', 'Citation & plagiarism avoidance', 'Research paper outlines'],
+      },
+      {
+        title: 'Module 3: University Seminar Speaking & Debates',
+        description: 'Defending research findings and participating in university group seminars.',
+        topics: ['Academic debate rules', 'PowerPoint presentation delivery', 'Handling professor critique'],
+      },
+      {
+        title: 'Module 4: Professional Communication & Career Readiness',
+        description: 'Pre-university placement preparation and international workplace interactions.',
+        topics: ['CV writing & university cover letters', 'Academic interview simulations', 'Cross-cultural communication'],
+      },
+    ],
+    methodology:
+      'Full-immersion communicative campus pedagogy with dedicated mentor hours, peer group activities, and regular academic evaluations.',
+    mode: 'Classroom (Bangalore Campus)',
+    duration: '6 Months (Full-Time Campus Immersion)',
+    batchTimings: 'Monday to Friday: 9:30 AM to 1:30 PM (Daily 4 Hours)',
+    benefits: [
+      'Official admission letters for Indian student visa processing',
+      'FRRO registration assistance and local Bangalore orientation',
+      'Access to Cambridge Academy English library and digital labs',
+      'Recognized Diploma Certificate upon successful course completion',
+    ],
+    trainerInfo:
+      'Taught by senior university-empanelled English faculty and Cambridge DELTA certified linguists with decades of international student guidance.',
+    faqs: [
+      {
+        question: 'Do you provide admission letters for student visa applications?',
+        answer: 'Yes, once enrolled, we provide official provisional admission letters and bona fide certificates required for Indian student visa and FRRO processing.',
+      },
+      {
+        question: 'Is accommodation assistance provided in Bangalore?',
+        answer: 'Yes. Our international student coordinator assists with safe, verified PG and apartment accommodations close to our Kammanahalli campus.',
+      },
+      {
+        question: 'Can I progress to university after completing this diploma?',
+        answer: 'Yes. Many of our international alumni successfully gain admission into top Indian and global universities after completing this course.',
+      },
+    ],
+    testimonials: [
+      {
+        name: 'Ahmed Al-Hassani',
+        location: 'Muscat, Oman',
+        comment: 'Studying at Cambridge Academy in Bangalore was life-changing. The Advanced Diploma prepared me perfectly for my Master’s degree in Bangalore University.',
+        rating: 5,
+      },
+    ],
+    metaTitle: 'Advanced Diploma in English Language in Bangalore | Foreign Students Course',
+    metaDescription:
+      'Premier 6-month Advanced Diploma in English for foreign nationals in Kammanahalli, Bangalore. Visa support, academic research writing, and university preparation.',
+    keywords: [
+      'advanced diploma in english language bangalore',
+      'english courses for foreign students bangalore',
+      'english diploma for international students',
+      'bangalore english academy for foreigners',
+    ],
+  },
+
   // E. ENGLISH FOR TEACHERS
   'teacher-training': {
     slug: 'teacher-training',
@@ -1547,6 +1740,98 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     metaDescription:
       'Comprehensive Cambridge TKT preparation in Bangalore. Master Modules 1, 2, and 3 with official practice papers and certified Cambridge trainers.',
     keywords: ['tkt training in bangalore', 'cambridge tkt preparation', 'teaching knowledge test classes', 'tkt exam coaching bangalore'],
+  },
+
+  'corporate-trainer-certification': {
+    slug: 'corporate-trainer-certification',
+    title: 'Train the Trainer & Corporate English Coach Certification',
+    shortTitle: 'Train the Trainer',
+    category: 'teacher-training',
+    categoryName: 'English for Teachers',
+    tagline: 'Become a High-Earning Corporate Communication Coach, Voice Trainer, and Soft Skills Mentor',
+    heroImage: '/images/courses/course-tefl.jpg',
+    intro:
+      'Transition from conventional school classroom teaching to high-paying corporate English and communication coaching. This flagship Train the Trainer program equips aspiring and experienced educators with contemporary training methodologies, adult learning psychology (Andragogy), voice & accent coaching frameworks, and corporate workshop design skills demanded by Fortune 500 enterprises.',
+    whoShouldJoin: [
+      'School teachers and lecturers aiming to transition into corporate training and L&D consulting',
+      'Freelance trainers looking to offer voice, accent, and business communication workshops',
+      'Corporate HR professionals, team leads, and mentors wanting certified facilitation skills',
+    ],
+    objectives: [
+      'Master adult learning principles (Andragogy) and experiential workshop design',
+      'Conduct comprehensive Training Needs Analysis (TNA) for enterprise clients',
+      'Teach voice modulation, accent neutralization, and corporate etiquette professionally',
+      'Build lucrative corporate training proposals and freelance training consulting practices',
+    ],
+    whatYouLearn: [
+      'ADDIE instructional design framework for communication workshops',
+      'Facilitation vs teaching: engaging corporate adult audiences dynamically',
+      'Diagnostic tools for evaluating employee speech, grammar, and email communication',
+      'Designing gamified activities, role-plays, and behavioral case studies',
+      'Client pitching, training pricing, and freelance consulting blueprint',
+    ],
+    curriculum: [
+      {
+        title: 'Module 1: Principles of Corporate Adult Learning (Andragogy)',
+        description: 'Understanding adult learning motivations and facilitation dynamics.',
+        topics: ['Pedagogy vs Andragogy', 'Kolb’s experiential learning cycle', 'Managing difficult corporate participants'],
+      },
+      {
+        title: 'Module 2: Training Needs Analysis & Curriculum Design',
+        description: 'Auditing corporate communication gaps and building custom course outlines.',
+        topics: ['Conducting corporate TNAs', 'The ADDIE instructional framework', 'Developing workbook & slide decks'],
+      },
+      {
+        title: 'Module 3: Voice, Accent & Communication Coaching',
+        description: 'Techniques for teaching voice clarity, phonetics, and corporate email diplomacy.',
+        topics: ['Voice diagnostic frameworks', 'Teaching neutral accent to IT professionals', 'Business writing coaching'],
+      },
+      {
+        title: 'Module 4: Live Facilitation Practicum & Commercialization',
+        description: 'Delivering observed micro-workshops with real-time feedback and business startup guide.',
+        topics: ['Observed facilitation drills', 'Creating corporate training proposals', 'Pricing and freelance client acquisition'],
+      },
+    ],
+    methodology:
+      'Hands-on workshop simulation methodology. Every participant designs and delivers multiple live training sessions with peer and master-trainer assessments.',
+    mode: 'Both Online & Offline Available',
+    duration: '4 to 8 Weeks (Weekend & Evening cohorts)',
+    batchTimings: 'Weekend Cohort: Saturdays & Sundays (10:00 AM - 1:00 PM)',
+    benefits: [
+      'Recognized Master Corporate Trainer Certification',
+      'Complete repository of ready-to-use training decks, games, and handouts',
+      'Observed live delivery with video recorded performance feedback',
+      'Lifetime alumni trainer networking and freelance lead opportunities',
+    ],
+    trainerInfo:
+      'Led by Master Facilitators who have trained over 50,000 corporate professionals across leading multinationals in Bangalore and abroad.',
+    faqs: [
+      {
+        question: 'Do I need previous teaching experience to join this course?',
+        answer: 'While prior teaching or corporate experience is beneficial, our curriculum starts with fundamental facilitation principles and builds up to advanced workshop delivery.',
+      },
+      {
+        question: 'Will this certification help me get corporate training contracts?',
+        answer: 'Yes. We cover how to build your trainer brand, develop commercial training proposals, and pitch effectively to corporate L&D heads.',
+      },
+    ],
+    testimonials: [
+      {
+        name: 'Dr. Ananya Murthy',
+        location: 'Bangalore, India',
+        comment: 'Moving from college lecturing to corporate soft skills training was seamless thanks to Cambridge Academy. I landed my first MNC consulting workshop within 3 weeks of certification!',
+        rating: 5,
+      },
+    ],
+    metaTitle: 'Train the Trainer Certification in Bangalore | Corporate English Coaching Course',
+    metaDescription:
+      'Earn your Corporate Trainer Certification in Bangalore. Learn adult facilitation, workshop design, voice coaching, and corporate communication with master mentors.',
+    keywords: [
+      'train the trainer course bangalore',
+      'corporate english trainer certification',
+      'soft skills trainer course bangalore',
+      'corporate communication coaching',
+    ],
   },
 
   // F. FOREIGN LANGUAGES
@@ -1902,6 +2187,187 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     metaDescription:
       'Learn Mandarin Chinese in Bangalore. Official HSK 1 to 4 preparation, business Chinese, tone mastery, and character writing with expert linguists.',
     keywords: ['chinese language classes in bangalore', 'learn mandarin bangalore', 'hsk coaching bangalore', 'chinese classes kammanahalli'],
+  },
+
+  'japanese-language': {
+    slug: 'japanese-language',
+    title: 'Japanese Language Classes in Bangalore (JLPT N5, N4, N3)',
+    shortTitle: 'Japanese Language',
+    category: 'foreign-languages',
+    categoryName: 'Foreign Languages',
+    tagline: 'Master Japanese for IT Engineering Careers, Global Tech Partnerships, and JLPT Certification',
+    heroImage: '/images/courses/course-chinese.jpg',
+    intro:
+      'Learn Japanese at Cambridge Academy of English in Bangalore, the Silicon Valley of India. With hundreds of Japanese multinational technology, automotive, and semiconductor enterprises operating in Bangalore and Japan actively hiring global bilingual engineers, Japanese fluency opens exceptional career opportunities. Our certified native-level instructors prepare you comprehensively for the official JLPT (Japanese-Language Proficiency Test) from N5 to N3.',
+    whoShouldJoin: [
+      'Software developers, engineers, and IT professionals seeking job opportunities in Japan',
+      'Automotive and mechanical engineers collaborating with Japanese manufacturing corporations',
+      'Students planning higher education, technical internships, or research scholarships in Japan',
+      'Anime, manga, and Japanese cultural enthusiasts wanting authentic conversational skills',
+    ],
+    objectives: [
+      'Master the Japanese writing systems: Hiragana, Katakana, and core Kanji characters',
+      'Pass the official JLPT N5, N4, or N3 examination with outstanding scores',
+      'Communicate naturally in daily Japanese conversations and business settings',
+      'Understand Japanese corporate etiquette, business honorifics (Keigo), and work culture',
+    ],
+    whatYouLearn: [
+      'Reading and writing Hiragana and Katakana alphabets fluently in the first 3 weeks',
+      'Essential Kanji recognition, stroke order, On’yomi and Kun’yomi readings',
+      'Practical Japanese grammar, particle usage, and verb conjugations',
+      'Business Japanese manners (Meishi exchange, bowing, polite phone etiquette)',
+      'Listening comprehension strategies using authentic native Japanese audio',
+    ],
+    curriculum: [
+      {
+        title: 'Level 1: JLPT N5 (Foundations & Kana Mastery)',
+        description: 'Complete Hiragana, Katakana, 100 essential Kanji, and basic conversational sentence structures.',
+        topics: ['Hiragana & Katakana mastery', 'Basic sentence order (SOV)', '100 Kanji & daily vocabulary', 'Polite forms (Desu/Masu)'],
+      },
+      {
+        title: 'Level 2: JLPT N4 (Everyday Conversations)',
+        description: '300 Kanji, complex sentence connections, and natural conversational dialogue.',
+        topics: ['300 Kanji characters', 'Verb conjugations (Te-form, Nai-form, Ta-form)', 'Expressing opinions and reasoning', 'Past paper drills'],
+      },
+      {
+        title: 'Level 3: JLPT N3 (Intermediate & Pre-Business)',
+        description: '650 Kanji, news comprehension, and workplace communication basics.',
+        topics: ['Abstract discussions', 'Business honorifics (Keigo introduction)', 'Advanced listening drills', 'Corporate email basics'],
+      },
+    ],
+    methodology:
+      'Interactive communicative methodology with audio-visual cultural immersion, character stroke order workshops, and regular JLPT mock tests.',
+    mode: 'Both Online & Offline Available',
+    duration: '8 to 12 Weeks per Level (Weekday & Weekend options)',
+    batchTimings: 'Weekday Evenings (6:30 - 8:30 PM), Weekend Batches (Sat & Sun: 10:00 AM - 1:00 PM)',
+    benefits: [
+      'Comprehensive Japanese workbook and Kanji practice guides included',
+      'Official JLPT exam registration assistance and mock testing sessions',
+      'Small interactive batches ensuring personal trainer pronunciation attention',
+      'Course Completion Certificate from Cambridge Academy of English',
+    ],
+    trainerInfo:
+      'Instructed by certified JLPT N1/N2 bilingual experts and native guest speakers with extensive corporate Indo-Japanese experience.',
+    faqs: [
+      {
+        question: 'Is Japanese difficult to learn for Indian students?',
+        answer: 'Not at all! Japanese grammar structure (Subject-Object-Verb) is actually very similar to Indian languages like Hindi and Kannada, making sentence framing surprisingly intuitive once writing scripts are learned.',
+      },
+      {
+        question: 'Do you prepare students for the official JLPT exam?',
+        answer: 'Yes! Our course syllabus is strictly aligned with the Japan Foundation JLPT examination standards, and we conduct full-length timed mock tests.',
+      },
+    ],
+    testimonials: [
+      {
+        name: 'Pradeep Shenoy',
+        location: 'Bangalore, India',
+        comment: 'Cleared JLPT N5 in my very first attempt with 158/180! The trainers made Kanji so easy to remember through memory mnemonics.',
+        rating: 5,
+      },
+    ],
+    metaTitle: 'Japanese Language Classes in Bangalore | JLPT N5 N4 N3 Coaching | Cambridge Academy',
+    metaDescription:
+      'Top-rated Japanese language training in Bangalore. JLPT N5, N4, N3 preparation, Hiragana, Katakana, Kanji, and conversational Japanese with certified experts.',
+    keywords: [
+      'japanese language classes in bangalore',
+      'jlpt coaching bangalore',
+      'learn japanese bangalore',
+      'japanese language institute kammanahalli',
+      'japanese classes for it professionals',
+    ],
+  },
+
+  'arabic-language': {
+    slug: 'arabic-language',
+    title: 'Arabic Language Classes in Bangalore (Conversational & Business)',
+    shortTitle: 'Arabic Language',
+    category: 'foreign-languages',
+    categoryName: 'Foreign Languages',
+    tagline: 'Learn Spoken and Modern Standard Arabic for Gulf Careers, Trade, and Higher Studies',
+    heroImage: '/images/courses/course-foreign-nationals.jpg',
+    intro:
+      'Master conversational and Modern Standard Arabic (MSA) at Cambridge Academy of English. As economic, commercial, and employment ties between India and the Middle East continue to flourish, Arabic language fluency is a distinguished advantage for professionals working in Saudi Arabia, UAE, Qatar, Oman, and Kuwait. Our practical course covers the Arabic alphabet, everyday conversational dialects, and formal business communication.',
+    whoShouldJoin: [
+      'Healthcare professionals, engineers, and corporate executives relocating to Middle Eastern countries',
+      'Import-export entrepreneurs and trade representatives conducting business with Gulf nations',
+      'Scholars, translators, and travel consultants working in Middle East relations',
+    ],
+    objectives: [
+      'Read and write the Arabic alphabet with accurate phonetic pronunciation and vocalization',
+      'Conduct confident conversations in daily social, market, and travel settings',
+      'Understand foundational Modern Standard Arabic (Fusha) and common Gulf spoken expressions',
+      'Learn Middle Eastern cultural customs, business negotiation etiquette, and greetings',
+    ],
+    whatYouLearn: [
+      'Arabic alphabet recognition, letter joining in initial, medial, and final forms',
+      'Phonetic pronunciation of guttural and emphatic Arabic sounds',
+      'Everyday conversational vocabulary: introductions, directions, dining, and shopping',
+      'Business Arabic terms: meetings, contracts, hospitality etiquette, and formal greetings',
+      'Listening comprehension using genuine Gulf Arab speech and audio dialogues',
+    ],
+    curriculum: [
+      {
+        title: 'Module 1: Arabic Script & Phonetic Foundations',
+        description: 'Letter recognition, vowels (Harakat), and accurate sound production.',
+        topics: ['28 letters of the Arabic alphabet', 'Joining letters in words', 'Short and long vowels', 'Pronunciation lab'],
+      },
+      {
+        title: 'Module 2: Conversational Survival Arabic',
+        description: 'Everyday greetings, polite phrasing, and practical daily dialogues.',
+        topics: ['Formal & informal greetings', 'Numbers, dates, and time', 'Airport, hotel, and taxi conversations'],
+      },
+      {
+        title: 'Module 3: Grammar Foundations & Sentence Framing',
+        description: 'Noun-adjective agreements, gender rules, and simple verb forms.',
+        topics: ['Nominal and verbal sentences', 'Pronouns and possessive attachments', 'Interrogative questions'],
+      },
+      {
+        title: 'Module 4: Business Arabic & Gulf Culture',
+        description: 'Professional dialogues for workplace and trade in GCC nations.',
+        topics: ['Corporate meeting greetings', 'Commercial negotiation phrases', 'Arab cultural taboos and etiquette'],
+      },
+    ],
+    methodology:
+      'Communicative oral immersion with active pair drills, roleplays, and authentic cultural context.',
+    mode: 'Both Online & Offline Available',
+    duration: '6 to 10 Weeks (Flexible batches)',
+    batchTimings: 'Morning (8:00 - 9:30 AM), Evening (7:00 - 8:30 PM), Weekend Batches',
+    benefits: [
+      'Full printed Arabic study guide and script writing practice sheets',
+      'Audio drills for accent and ear training recorded by native speakers',
+      'Practical focus on Gulf spoken Arabic as well as standard written forms',
+      'Certificate of Arabic Language Competence from Cambridge Academy',
+    ],
+    trainerInfo:
+      'Delivered by experienced linguists and Arabic scholars with decades of diplomatic and corporate translation background.',
+    faqs: [
+      {
+        question: 'Will I learn Modern Standard Arabic or Gulf dialect?',
+        answer: 'Our course combines Modern Standard Arabic (for reading and formal business) with practical Gulf conversational expressions so you can communicate effortlessly across the UAE, Saudi Arabia, and Qatar.',
+      },
+      {
+        question: 'How long does it take to learn the Arabic script?',
+        answer: 'Most students master reading and writing the complete Arabic alphabet within the first 2 to 3 weeks through our step-by-step writing worksheets.',
+      },
+    ],
+    testimonials: [
+      {
+        name: 'Mohammed Farooq',
+        location: 'Bangalore, India',
+        comment: 'Before moving to Dubai for my project management role, I completed the Arabic course here. Knowing the language helped me connect with local clients from day one!',
+        rating: 5,
+      },
+    ],
+    metaTitle: 'Arabic Language Classes in Bangalore | Spoken & Business Arabic Course',
+    metaDescription:
+      'Learn Arabic in Bangalore at Cambridge Academy. Spoken Gulf Arabic, Modern Standard Arabic script, and business communication for Gulf careers.',
+    keywords: [
+      'arabic language classes in bangalore',
+      'learn arabic bangalore',
+      'spoken arabic classes kammanahalli',
+      'arabic courses for gulf jobs',
+    ],
   },
 
   // G. ENGLISH FOR KIDS
