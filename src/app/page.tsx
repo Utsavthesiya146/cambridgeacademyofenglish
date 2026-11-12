@@ -188,7 +188,7 @@ export default function Home() {
                   Founded in Bangalore, <strong>Cambridge Academy of English</strong> has stood as a pioneer in communicative language training, academic English, and international examination coaching for over 21 years.
                 </p>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  Our core mission is to bridge cultural and linguistic boundaries, equipping students, corporate executives, doctors, engineers, and international scholars with the verbal fluency, syntactic precision, and personal confidence needed to excel on the global stage.
+                  
                 </p>
 
                 {/* Key Highlights */}
