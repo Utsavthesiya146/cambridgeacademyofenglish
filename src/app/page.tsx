@@ -1266,9 +1266,6 @@ export default function Home() {
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
-
-                {/* Callback Widget */}
-                <CallbackForm initialCourse="Spoken English / General Enquiry" />
               </div>
 
               {/* Right Column: Full Student Enquiry Form */}
@@ -1278,6 +1275,54 @@ export default function Home() {
                   source="Homepage Lead Section"
                   compact={false}
                 />
+              </div>
+            </div>
+
+            {/* Dedicated Instant Callback Section - Balanced 2-Column Banner */}
+            <div className="mt-12 bg-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                {/* Left Column: Why Request a Callback / Benefits */}
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0a192f] text-[#d4af37] text-xs font-bold uppercase tracking-wider">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Fast Response • Within 15 Minutes
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-black text-[#0a192f] tracking-tight">
+                    Request an Instant Callback
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Short on time? Leave your mobile number and preferred time slot. Our senior academic counsellor will call you directly to discuss batch timings, course curriculums, and fee structures.
+                  </p>
+
+                  <div className="pt-1 space-y-2.5 text-xs text-slate-700">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+                      <span className="font-semibold">100% Free Consultation with Certified Master Trainer</span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+                      <span className="font-semibold">Personalized Diagnostic Level Evaluation</span>
+                    </div>
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+                      <span className="font-semibold">Flexible morning, afternoon &amp; evening time slots</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-slate-600">
+                    <span className="font-bold text-[#0a192f]">Direct Admissions Helpline:</span>
+                    <a href="tel:08040943580" className="font-bold text-[#0a192f] hover:text-[#d4af37]">080-40943580</a>
+                    <span>|</span>
+                    <a href="tel:8970506004" className="font-bold text-[#0a192f] hover:text-[#d4af37]">8970506004</a>
+                    <span>|</span>
+                    <a href="tel:9620806004" className="font-bold text-[#0a192f] hover:text-[#d4af37]">9620806004</a>
+                  </div>
+                </div>
+
+                {/* Right Column: Callback Form */}
+                <div className="lg:col-span-7">
+                  <CallbackForm initialCourse="Spoken English / General Enquiry" />
+                </div>
               </div>
             </div>
           </div>
