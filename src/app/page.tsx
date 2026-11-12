@@ -62,7 +62,7 @@ export default function Home() {
           </div>
 
           <div className="container-custom relative z-20 w-full pt-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
               {/* Left Hero Copy */}
               <div className="lg:col-span-7 text-center lg:text-left fade-in-up">
                 {/* Main Tagline */}
@@ -176,7 +176,7 @@ export default function Home() {
         {/* 2. ABOUT CAMBRIDGE ACADEMY OF ENGLISH */}
         <section id="about" className="py-20 md:py-28 bg-white relative">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
               <div className="lg:col-span-6 space-y-6">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-[#0a192f] text-xs font-bold uppercase tracking-wider">
                   <span>🏛️</span> Institutional Profile
@@ -238,7 +238,7 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
-                  <div className="space-y-4 pt-8">
+                  <div className="space-y-4">
                     <div className="bg-[#d4af37] text-[#0a192f] p-6 rounded-3xl shadow-lg">
                       <p className="text-3xl font-black">25,000+</p>
                       <p className="text-xs font-bold uppercase tracking-wider mt-1">
@@ -622,7 +622,7 @@ export default function Home() {
         {/* 6. ENGLISH LANGUAGE TRAINING PROGRAMMES (DEEP DIVE) */}
         <section className="py-20 bg-slate-50 border-t border-slate-200">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
               <div className="lg:col-span-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37]">
                   Core Foundation
@@ -739,7 +739,7 @@ export default function Home() {
         {/* 8. ENGLISH FOR INTERNATIONAL STUDENTS */}
         <section className="py-20 bg-gradient-to-br from-[#0a192f] via-[#162447] to-[#0a192f] text-white relative overflow-hidden">
           <div className="container-custom relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
               <div className="lg:col-span-7 space-y-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-3.5 py-1.5 rounded-full inline-block">
                   International Learners Hub
