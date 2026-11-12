@@ -30,7 +30,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. CORE MISSION & VISION CARD */}
-      <section className="relative z-30 -mt-12 container-custom">
+      <section className="relative z-30 py-12 container-custom">
         <div className="bg-white p-8 md:p-14 rounded-3xl shadow-2xl border border-slate-200/80 flex flex-col md:flex-row gap-8 md:gap-14 items-center">
           <div className="md:w-1/3 flex flex-col items-center md:items-start">
             <span className="text-xs font-bold text-[#d4af37] uppercase tracking-wider mb-1">

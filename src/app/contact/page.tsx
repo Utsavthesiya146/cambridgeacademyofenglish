@@ -22,7 +22,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. CONTACT DETAILS & FORMS GRID */}
-      <section className="container-custom -mt-10 relative z-20">
+      <section className="container-custom py-12 relative z-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Left Column: Campus Information & Instant Callback (5 cols) */}
