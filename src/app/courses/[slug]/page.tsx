@@ -92,16 +92,12 @@ export default async function CourseDetailPage({
       <FAQSchema items={course.faqs} />
 
       <div className="overflow-hidden bg-slate-50 text-slate-800">
-        {/* 1. HERO SECTION */}
-        <section className="relative min-h-[500px] lg:min-h-[560px] flex items-center bg-[#0a192f] text-white pt-28 pb-16 overflow-hidden">
-          {/* Subtle Background Overlay Image */}
-          <div className="absolute inset-0 z-0 opacity-20">
-            <img
-              src={course.heroImage}
-              alt={course.title}
-              className="w-full h-full object-cover filter blur-sm scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/90 to-transparent"></div>
+        {/* 1. HERO SECTION - CLEAN & FOCUSED */}
+        <section className="relative min-h-[480px] lg:min-h-[520px] flex items-center bg-[#0a192f] text-white pt-28 pb-16 overflow-hidden">
+          {/* Subtle Ambient Radial Glow */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-[#1e3a8a]/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#d4af37]/10 rounded-full blur-3xl"></div>
           </div>
 
           <div className="container-custom relative z-10 w-full">

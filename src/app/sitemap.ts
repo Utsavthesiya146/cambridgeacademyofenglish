@@ -9,10 +9,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const mainRoutes = [
     { url: `${baseUrl}`, priority: 1.0, changeFrequency: 'daily' as const },
     { url: `${baseUrl}/courses`, priority: 0.95, changeFrequency: 'daily' as const },
+    { url: `${baseUrl}/our-trainers`, priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/success-stories`, priority: 0.9, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/testimonials`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/contact`, priority: 0.9, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/about`, priority: 0.85, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/admission`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${baseUrl}/book`, priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/test`, priority: 0.8, changeFrequency: 'weekly' as const },
     { url: `${baseUrl}/certificate`, priority: 0.7, changeFrequency: 'monthly' as const },
   ].map((r) => ({
     ...r,

@@ -386,21 +386,21 @@ export default function Header() {
               </div>
 
               <Link
-                href="/#trainers"
+                href="/our-trainers"
                 className="px-2.5 xl:px-3 py-1.5 text-[13px] xl:text-[14px] font-semibold text-slate-700 hover:text-[#0a192f] transition-colors whitespace-nowrap"
               >
                 Our Trainers
               </Link>
 
               <Link
-                href="/#success-stories"
+                href="/success-stories"
                 className="px-2.5 xl:px-3 py-1.5 text-[13px] xl:text-[14px] font-semibold text-slate-700 hover:text-[#0a192f] transition-colors whitespace-nowrap"
               >
                 Success Stories
               </Link>
 
               <Link
-                href="/#testimonials"
+                href="/testimonials"
                 className="px-2.5 xl:px-3 py-1.5 text-[13px] xl:text-[14px] font-semibold text-slate-700 hover:text-[#0a192f] transition-colors whitespace-nowrap"
               >
                 Testimonials
@@ -663,7 +663,7 @@ export default function Header() {
               </div>
 
               <Link
-                href="/#trainers"
+                href="/our-trainers"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-3 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 rounded-lg"
               >
@@ -671,7 +671,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/#success-stories"
+                href="/success-stories"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-3 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 rounded-lg"
               >
@@ -679,7 +679,7 @@ export default function Header() {
               </Link>
 
               <Link
-                href="/#testimonials"
+                href="/testimonials"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-3 py-2 text-sm font-bold text-slate-800 hover:bg-slate-50 rounded-lg"
               >

@@ -53,16 +53,12 @@ export default function Home() {
       <FAQSchema items={HOMEPAGE_FAQS} />
 
       <div className="overflow-hidden">
-        {/* 1. HERO SECTION */}
-        <section className="relative min-h-[92vh] flex items-center justify-center bg-[#0a192f] text-white pt-24 pb-20 overflow-hidden">
-          {/* Background Layer with Dark Gradient */}
-          <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/90 to-[#0a192f]/60 z-10"></div>
-            <img
-              src="/images/hero-classroom.jpg"
-              alt="Professional English language classroom with trainer and students at Cambridge Academy of English Bangalore"
-              className="w-full h-full object-cover object-center opacity-30 scale-105 transition-transform duration-1000"
-            />
+        {/* 1. HERO SECTION - CLEAN & PREMIUM */}
+        <section className="relative min-h-[90vh] flex items-center justify-center bg-[#0a192f] text-white pt-24 pb-20 overflow-hidden">
+          {/* Subtle Ambient Radial Glow */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#1e3a8a]/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#d4af37]/10 rounded-full blur-3xl"></div>
           </div>
 
           <div className="container-custom relative z-20 w-full pt-8">
@@ -231,8 +227,8 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-4">
                     <img
-                      src="/images/course-spoken.jpg"
-                      alt="Classroom interactive session"
+                      src="/images/slider1.jpg"
+                      alt="Classroom interactive session at Cambridge Academy of English"
                       className="rounded-3xl shadow-lg object-cover w-full h-48 sm:h-64"
                     />
                     <div className="bg-[#0a192f] text-white p-6 rounded-3xl shadow-lg">
@@ -250,8 +246,8 @@ export default function Home() {
                       </p>
                     </div>
                     <img
-                      src="/images/course-exam.jpg"
-                      alt="Exam preparation laboratory"
+                      src="/images/hero.jpg"
+                      alt="Language learning laboratory at Cambridge Academy of English"
                       className="rounded-3xl shadow-lg object-cover w-full h-48 sm:h-64"
                     />
                   </div>
@@ -887,7 +883,7 @@ export default function Home() {
                   cred: 'CELTA, PhD in Applied Linguistics',
                   exp: '14+ Years Experience',
                   spec: 'Exam Preparation & Healthcare English',
-                  img: '/images/t1.jpg',
+                  initials: 'SM',
                 },
                 {
                   name: 'Prof. Rajesh Nair',
@@ -895,7 +891,7 @@ export default function Home() {
                   cred: 'MA English, Cambridge DELTA Certified',
                   exp: '16+ Years Experience',
                   spec: 'Accent Neutralization & Speech Labs',
-                  img: '/images/t2.jpg',
+                  initials: 'RN',
                 },
                 {
                   name: 'Madame Claire Dubois',
@@ -903,7 +899,7 @@ export default function Home() {
                   cred: 'DALF C2, Sorbonne University Alum',
                   exp: '11+ Years Experience',
                   spec: 'DELF & TEF Canada Preparation',
-                  img: '/images/t3.jpg',
+                  initials: 'CD',
                 },
                 {
                   name: 'Herr Klaus Weber',
@@ -911,12 +907,12 @@ export default function Home() {
                   cred: 'Goethe-Zertifikat C2 Großes Diplom',
                   exp: '12+ Years Experience',
                   spec: 'German A1-B2 & Chancenkarte Prep',
-                  img: '/images/t4.jpg',
+                  initials: 'KW',
                 },
               ].map((t, idx) => (
                 <div key={idx} className="bg-white rounded-3xl p-6 border border-slate-200 text-center shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-[#d4af37] bg-slate-100 flex items-center justify-center">
-                    <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-[#0a192f] to-[#1e293b] text-[#d4af37] font-black text-xl flex items-center justify-center mb-4 border-2 border-[#d4af37] shadow-inner">
+                    {t.initials}
                   </div>
                   <h3 className="text-base font-bold text-[#0a192f]">{t.name}</h3>
                   <p className="text-xs text-[#d4af37] font-semibold mt-0.5">{t.role}</p>
@@ -926,6 +922,15 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Link
+                href="/our-trainers"
+                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-black uppercase tracking-wider rounded-full shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              >
+                Meet All Certified Faculty Members &amp; Credentials →
+              </Link>
             </div>
           </div>
         </section>
@@ -1002,7 +1007,7 @@ export default function Home() {
                   name: 'Pooja Venkatesh',
                   course: 'Spoken English & Professional Communication',
                   loc: 'Kammanahalli, Bangalore',
-                  img: '/images/t5.jpg',
+                  avatar: 'PV',
                   rating: 5,
                   comment:
                     'I used to hesitate in every team meeting. Cambridge Academy transformed my articulation completely. Within 2 months, I was promoted to Senior Product Consultant at an MNC!',
@@ -1011,7 +1016,7 @@ export default function Home() {
                   name: 'Rohit Kulkarni',
                   course: 'IELTS Academic Intensive',
                   loc: 'Bangalore, India',
-                  img: '/images/t6.jpg',
+                  avatar: 'RK',
                   rating: 5,
                   comment:
                     'Scored 8.5 Band overall on IELTS! The writing evaluation clinics and 1-on-1 speaking interviews with British Council certified trainers gave me the exact edge I needed.',
@@ -1020,7 +1025,7 @@ export default function Home() {
                   name: 'Fatima Al-Zahra',
                   course: 'Diploma in English for Foreign Nationals',
                   loc: 'Yemen / Saudi Arabia',
-                  img: '/images/t7.jpg',
+                  avatar: 'FA',
                   rating: 5,
                   comment:
                     'Coming from Yemen, I was worried about language in India. Cambridge Academy gave me a warm second home, great teachers, and complete English fluency for my university studies.',
@@ -1036,7 +1041,9 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <img src={t.img} alt={t.name} className="w-11 h-11 rounded-full object-cover border border-[#d4af37]" />
+                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#0a192f] to-[#1e293b] text-[#d4af37] font-extrabold text-sm flex items-center justify-center border-2 border-[#d4af37]/40 shadow-sm shrink-0">
+                      {t.avatar}
+                    </div>
                     <div>
                       <p className="font-bold text-xs text-[#0a192f]">{t.name}</p>
                       <p className="text-[10px] text-slate-400">{t.course} &bull; {t.loc}</p>

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: 'Cambridge Academy of English',
     images: [
       {
-        url: '/images/hero-classroom.jpg',
+        url: '/images/og-share-cover.jpg',
         width: 1200,
         height: 630,
         alt: 'Cambridge Academy of English Classroom',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: 'Cambridge Academy of English | Bangalore',
     description:
       'India’s No 1 Language Academy. 21 Years of Excellence in English Language Training.',
-    images: ['/images/hero-classroom.jpg'],
+    images: ['/images/og-share-cover.jpg'],
   },
   robots: {
     index: true,

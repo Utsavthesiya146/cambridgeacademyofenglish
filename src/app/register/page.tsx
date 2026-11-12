@@ -12,7 +12,7 @@ export default function RegisterPage() {
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
-        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#0a192f_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
       </div>
 
       <div className="container-custom relative z-10 fade-in-up">

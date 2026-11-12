@@ -291,6 +291,9 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap gap-4 text-slate-400">
+            <Link href="/our-trainers" className="hover:text-white transition-colors">Our Trainers</Link>
+            <Link href="/success-stories" className="hover:text-white transition-colors">Success Stories</Link>
+            <Link href="/testimonials" className="hover:text-white transition-colors">Testimonials</Link>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms &amp; Conditions</Link>
             <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link>

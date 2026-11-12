@@ -3,10 +3,9 @@ import Link from 'next/link';
 export default function AdmissionPage() {
   return (
     <div className="overflow-hidden bg-slate-50 min-h-screen">
-      {/* Header */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-primary/90 z-10"></div>
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/slider3.jpg')" }}></div>
+      {/* Header - Clean & Focused */}
+      <section className="relative h-[45vh] min-h-[380px] flex items-center justify-center bg-[#0a192f] text-white">
+        <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none"></div>
         <div className="container-custom relative z-20 pt-16 text-center fade-in-up">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-2xl">
             Admissions <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">& Enrollments</span>

@@ -1,10 +1,9 @@
 export default function CertificatePage() {
   return (
     <div className="overflow-hidden">
-      {/* Hero */}
-      <section className="relative min-h-[500px] flex items-center justify-center">
-        <div className="absolute inset-0 bg-primary/90 z-10"></div>
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/slider3.jpg')" }}></div>
+      {/* Hero - Clean & Focused */}
+      <section className="relative min-h-[420px] flex items-center justify-center bg-[#0a192f] text-white">
+        <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none"></div>
         <div className="container-custom relative z-20 pt-20 pb-16 md:pb-0 text-center fade-in-up">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-2xl">
             Verify Your Certificate

@@ -10,7 +10,7 @@ export default function BlogFeedPage() {
     <div className="bg-slate-50 min-h-screen pb-24">
       {/* Header */}
       <div className="bg-primary pt-24 pb-16 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#0a192f_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
         <div className="container-custom relative z-10 fade-in-up">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Blog Updates</h1>
           <p className="text-lg text-slate-300 font-light max-w-2xl mx-auto">

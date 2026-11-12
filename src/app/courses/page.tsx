@@ -40,91 +40,89 @@ export default function CoursesDirectoryPage() {
 
   return (
     <div className="bg-slate-50 min-h-screen pb-24">
-      {/* 1. HERO HEADER */}
-      <section className="bg-[#0a192f] pt-32 pb-20 text-center relative overflow-hidden text-white">
+      {/* 1. HERO HEADER - CLEAN & CONCISE */}
+      <section className="bg-[#0a192f] pt-28 pb-14 text-center relative overflow-hidden text-white">
         <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none"></div>
-        <div className="container-custom relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-6 backdrop-blur-md">
+        <div className="container-custom relative z-10 max-w-3xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#d4af37]/40 text-[#d4af37] text-xs font-bold tracking-widest uppercase mb-4 backdrop-blur-md">
             <span>★</span> 21 Years of Educational Excellence in Bangalore
           </div>
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black mb-3 tracking-tight">
             Comprehensive Course Directory
           </h1>
-          <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
-            Explore our world-class English language and foreign language training programmes. Each course features an intensive, internationally aligned curriculum taught by certified trainers.
+          <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed max-w-2xl mx-auto">
+            Explore 25 world-class English language, exam coaching, and foreign language programmes taught by Cambridge &amp; CELTA certified faculty in Bangalore and live online.
           </p>
-
-          {/* Search Bar */}
-          <div className="max-w-xl mx-auto mt-8">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search by course name (e.g. IELTS, Spoken English, German, Kids)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-5 py-3.5 pl-12 rounded-full bg-white/10 border border-white/20 text-white placeholder-slate-400 text-sm focus:outline-none focus:bg-white/20 focus:ring-2 focus:ring-[#d4af37] backdrop-blur-md"
-              />
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">
-                🔍
-              </span>
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
-                >
-                  Clear
-                </button>
-              )}
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* 2. FILTERS & CONTROLS */}
-      <section className="py-8 bg-white border-b border-slate-200 sticky top-16 sm:top-20 z-30 shadow-sm backdrop-blur-md bg-white/95">
+      {/* 2. SEARCH & FILTER CONTROLS (SEPARATE SECTION BELOW HERO) */}
+      <section className="bg-white border-b border-slate-200 py-6 shadow-sm">
         <div className="container-custom">
+          {/* Top row: Search Bar & Format Filter & Result count */}
+          <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-4">
+            <div className="relative flex-1 max-w-md">
+              <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm">
+                🔍
+              </span>
+              <input
+                type="text"
+                placeholder="Search by course name (e.g. IELTS, Spoken English, German)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-9 py-2.5 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#0a192f] text-slate-900 placeholder:text-slate-400"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 hover:text-slate-700"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+
+            <div className="flex items-center justify-between md:justify-end gap-3 text-xs">
+              <span className="text-slate-500 font-medium">
+                Showing <strong>{filteredCourses.length}</strong> of <strong>{allCourses.length}</strong> programmes
+              </span>
+              <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
+                {[
+                  { id: 'all', label: 'All Formats' },
+                  { id: 'offline', label: '🏫 Campus' },
+                  { id: 'online', label: '💻 Online Live' },
+                ].map((m) => (
+                  <button
+                    key={m.id}
+                    onClick={() => setSelectedMode(m.id)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                      selectedMode === m.id
+                        ? 'bg-[#0a192f] text-white shadow-sm'
+                        : 'text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    {m.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap transition-all duration-200 ${
                   selectedCategory === cat.id
-                    ? 'bg-[#0a192f] text-white shadow-md'
+                    ? 'bg-[#0a192f] text-[#d4af37] shadow-md border border-[#d4af37]/40'
                     : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                 }`}
               >
                 {cat.label}
               </button>
             ))}
-          </div>
-
-          {/* Mode Selector */}
-          <div className="flex items-center justify-between mt-4 pt-3 border-t border-slate-100 text-xs">
-            <span className="text-slate-500 font-medium">
-              Showing <strong>{filteredCourses.length}</strong> programmes
-            </span>
-            <div className="flex items-center gap-2">
-              <span className="text-slate-400 font-medium">Format:</span>
-              {[
-                { id: 'all', label: 'All Modes' },
-                { id: 'offline', label: '🏫 Campus' },
-                { id: 'online', label: '💻 Online Live' },
-              ].map((m) => (
-                <button
-                  key={m.id}
-                  onClick={() => setSelectedMode(m.id)}
-                  className={`px-2.5 py-1 rounded-md text-[11px] font-semibold transition-colors ${
-                    selectedMode === m.id
-                      ? 'bg-[#d4af37] text-[#0a192f]'
-                      : 'text-slate-600 hover:bg-slate-100'
-                  }`}
-                >
-                  {m.label}
-                </button>
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -16,7 +16,7 @@ export default function DiplomaEnglishPage() {
             <div className="rich-text text-gray-700">
               <div className="mb-6">
                 <Image
-                  src="/images/course-online.jpg"
+                  src="/images/courses/legacy-del-online.svg"
                   alt="Diploma in English Language Teaching, Best English Diploma Training in Bangalore, English Language courses in Jeddah, Saudi Arabia , Diploma in English Language in Riyadh"
                   width={650}
                   height={375}
@@ -49,7 +49,7 @@ export default function DiplomaEnglishPage() {
 
               <div className="mb-6">
                 <Image
-                  src="/images/course-cambridge.jpg"
+                  src="/images/courses/legacy-del-certification.svg"
                   alt="English Diploma course online Training in Bangalore, Diploma in English Language Teaching,  Best English Diploma Training in Bangalore"
                   width={700}
                   height={248}

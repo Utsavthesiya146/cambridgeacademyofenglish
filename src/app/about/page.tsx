@@ -13,22 +13,17 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="overflow-hidden bg-slate-50 pb-24">
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[460px] md:h-[65vh] flex flex-col items-center justify-center bg-[#0a192f] text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[#0a192f]/90 z-10"></div>
-        <img
-          src="/images/hero-classroom.jpg"
-          alt="Cambridge Academy of English Classroom"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="container-custom relative z-20 pt-32 pb-20 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[#d4af37] text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md">
+      {/* 1. HERO SECTION - CLEAN & CONCISE */}
+      <section className="relative min-h-[380px] md:h-[50vh] flex flex-col items-center justify-center bg-[#0a192f] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-radial-gradient opacity-20 pointer-events-none"></div>
+        <div className="container-custom relative z-20 pt-28 pb-16 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[#d4af37] text-xs font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
             <span>★</span> 21 Years of Educational Excellence
           </div>
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 drop-shadow-xl tracking-tight">
+          <h1 className="text-3xl md:text-5xl font-black text-white mb-4 drop-shadow-xl tracking-tight">
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#ffe066] to-white">Cambridge Academy of English</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 font-light drop-shadow-md max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-slate-300 font-light drop-shadow-md max-w-2xl mx-auto leading-relaxed">
             Bangalore’s premier institute for English language acquisition, international examination coaching, and foreign languages.
           </p>
         </div>
@@ -111,8 +106,8 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5 text-center">
-              <div className="w-56 h-56 mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#d4af37]/30 bg-slate-800">
-                <img src="/images/t9.jpg" alt="Founder of Cambridge Academy of English" className="w-full h-full object-cover" />
+              <div className="w-56 h-56 mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#d4af37]/30 bg-slate-800 p-2">
+                <img src="/images/about-leadership.svg" alt="Academic Leadership Seal of Cambridge Academy of English" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-lg font-bold text-[#0a192f] mt-4">Academic Director &amp; Founder</h3>
               <p className="text-xs text-[#d4af37] font-semibold">Cambridge Academy of English, Bangalore</p>
