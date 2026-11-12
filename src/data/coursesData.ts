@@ -58,7 +58,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'spoken-english',
     categoryName: 'Spoken English',
     tagline: 'Master Conversational English Fluency from Anywhere in the World',
-    heroImage: '/images/course-online.jpg',
+    heroImage: '/images/courses/course-spoken-online.jpg',
     intro:
       'Cambridge Academy of English offers interactive online spoken English training designed to eliminate hesitation, expand vocabulary, and build natural spoken fluency. Delivered via live, small-group video seminars with certified trainers, our curriculum focuses on active oral communication, daily conversational scenarios, and instant pronunciation feedback.',
     whoShouldJoin: [
@@ -155,7 +155,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'spoken-english',
     categoryName: 'Spoken English',
     tagline: 'Immersive In-Person Speaking Practice at Our Kammanahalli Campus',
-    heroImage: '/images/course-spoken.jpg',
+    heroImage: '/images/courses/course-spoken-offline.jpg',
     intro:
       'Experience dynamic, face-to-face English fluency training at our state-of-the-art campus in Kammanahalli, Bangalore. Designed for learners who thrive in an immersive physical classroom, this course combines speech labs, live debates, roleplays, and interpersonal drills to banish fear and establish effortless verbal communication.',
     whoShouldJoin: [
@@ -699,7 +699,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'exam-preparation',
     categoryName: 'Examination Courses',
     tagline: 'Fast, Flexible International English Qualifications for Global Visas & Study',
-    heroImage: '/images/courses/course-languagecert.svg',
+    heroImage: '/images/courses/course-languagecert.jpg',
     intro:
       'Prepare for LanguageCert International ESOL examinations (levels B1, B2 Communicator, C1 Expert, and C2 Mastery). Widely recognized by UK Visas and Immigration (SELT), international universities, and government ministries, LanguageCert offers flexible remote-proctored online and test-center exams with swift results.',
     whoShouldJoin: [
@@ -774,7 +774,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'exam-preparation',
     categoryName: 'Examination Courses',
     tagline: 'Master High-Level English for Academic & Professional Distinction',
-    heroImage: '/images/course-cambridge.jpg',
+    heroImage: '/images/courses/course-cae.jpg',
     intro:
       'The Cambridge English C1 Advanced (formerly known as CAE) is the gold standard in in-depth English language proficiency. Trusted by over 9,000 educational institutions, governments, and employers worldwide, C1 Advanced demonstrates that you have the language skills required for complex academic study and high-level corporate roles.',
     whoShouldJoin: [
@@ -855,7 +855,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'exam-preparation',
     categoryName: 'Examination Courses',
     tagline: 'The Pinnacle of English Language Mastery – Highest Level Cambridge Qualification',
-    heroImage: '/images/courses/course-cpe.svg',
+    heroImage: '/images/courses/course-cpe.jpg',
     intro:
       'Cambridge English C2 Proficiency (formerly known as CPE) is the highest qualification offered by Cambridge English, demonstrating an exceptional level of English approaching native speaker fluency. Our specialized coaching prepares candidates to communicate with native-level nuance, precision, and sophistication in high-level academic, diplomatic, and executive spheres.',
     whoShouldJoin: [
@@ -937,7 +937,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'english-adults',
     categoryName: 'English for Adults',
     tagline: 'Practical Everyday English for Social Confidence and Personal Growth',
-    heroImage: '/images/courses/course-general-adults.svg',
+    heroImage: '/images/courses/course-general-adults.jpg',
     intro:
       'Our General English course for adults is tailored for individuals who want to communicate naturally in everyday life—at social events, family gatherings, travel destinations, and daily community interactions. We focus on speaking fluency, listening comprehension, functional grammar, and real-life vocabulary in a supportive, judgment-free setting.',
     whoShouldJoin: [
@@ -1025,7 +1025,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'english-adults',
     categoryName: 'English for Adults',
     tagline: 'Communicate with Authority, Precision, and Executive Poise',
-    heroImage: '/images/courses/course-professional.svg',
+    heroImage: '/images/courses/course-professional.jpg',
     intro:
       'Equip yourself with the sophisticated communication skills demanded by top multinational companies, corporate boardrooms, and fast-growing startups. Our Professional English course focuses on high-impact meeting participation, executive presentations, persuasive business email writing, and confident cross-functional collaboration.',
     whoShouldJoin: [
@@ -1113,7 +1113,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'english-adults',
     categoryName: 'English for Adults',
     tagline: 'Strategic Verbal and Written Communication for Modern Enterprise Leaders',
-    heroImage: '/images/slider2.jpg',
+    heroImage: '/images/courses/course-advanced-diploma.jpg',
     intro:
       'Master the strategic art of business communication. Designed for entrepreneurs, senior executives, business analysts, and managers, this intensive program covers corporate negotiations, commercial proposals, stakeholder management, boardroom diplomacy, and crisis communication in English.',
     whoShouldJoin: [
@@ -1197,7 +1197,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'foreign-nationals',
     categoryName: 'English for Foreign Nationals',
     tagline: 'Structured Immersion Program for International Learners in Bangalore',
-    heroImage: '/images/slider3.jpg',
+    heroImage: '/images/courses/course-foreign-nationals.jpg',
     intro:
       'For over two decades, Cambridge Academy of English has welcomed international learners from over 18 countries across the Middle East, East Asia, Africa, and Europe. Our Diploma in English Language provides a structured, immersive pathway from elementary communication to academic competence, combining daily classroom instruction, cultural integration, and practical English fluency.',
     whoShouldJoin: [
@@ -1290,7 +1290,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'foreign-nationals',
     categoryName: 'English for Foreign Nationals',
     tagline: 'Advanced Academic, Literary, and Professional English for International Scholars',
-    heroImage: '/images/courses/course-master-diploma.svg',
+    heroImage: '/images/courses/course-master-diploma.jpg',
     intro:
       'The Master Diploma in English Language is our most comprehensive postgraduate-level immersion program for foreign nationals. Designed for international scholars, government fellows, and university lecturers, this rigorous multi-semester program covers advanced linguistics, rhetorical writing, critical literature analysis, and professional diplomatic communication.',
     whoShouldJoin: [
@@ -1378,7 +1378,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'teacher-training',
     categoryName: 'English for Teachers',
     tagline: 'Launch an International English Teaching Career with Certified Pedagogy',
-    heroImage: '/images/course-teacher.jpg',
+    heroImage: '/images/courses/course-tefl.jpg',
     intro:
       'Transform your passion for language into a rewarding global career. Our TEFL (Teaching English as a Foreign Language) / TESOL Teacher Training program at Cambridge Academy of English equips aspiring and experienced educators with international communicative teaching methodology, classroom management skills, lesson planning frameworks, and observed teaching practice.',
     whoShouldJoin: [
@@ -1470,7 +1470,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'teacher-training',
     categoryName: 'English for Teachers',
     tagline: 'Earn Cambridge English Teaching Credentials Recognized in Over 60 Countries',
-    heroImage: '/images/courses/course-tkt.svg',
+    heroImage: '/images/courses/course-tkt.jpg',
     intro:
       'Prepare for the Cambridge English Teaching Knowledge Test (TKT) with Bangalore’s premier Cambridge test preparation center. TKT is an internationally recognized test from Cambridge English that proves your knowledge of core concepts in teaching English to speakers of other languages, giving you an edge in leading schools and international academies.',
     whoShouldJoin: [
@@ -2000,7 +2000,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'kids-english',
     categoryName: 'English for Kids',
     tagline: 'Build an Internationally Certified English Foundation for School Students',
-    heroImage: '/images/courses/course-ket.svg',
+    heroImage: '/images/courses/course-ket.jpg',
     intro:
       'The Cambridge English A2 Key for Schools (formerly known as KET for Schools) is an internationally recognized qualification that proves a student can communicate in simple, everyday English. Tailored specifically for school-age students, this qualification builds real-world confidence and provides an ideal first step toward higher Cambridge English qualifications.',
     whoShouldJoin: [
@@ -2082,7 +2082,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'kids-english',
     categoryName: 'English for Kids',
     tagline: 'Practical Intermediate English for School Students & Future Global Pathways',
-    heroImage: '/images/courses/course-pet.svg',
+    heroImage: '/images/courses/course-pet.jpg',
     intro:
       'The Cambridge English B1 Preliminary for Schools (formerly known as PET for Schools) is an intermediate-level qualification showing that a school student has mastered the basics of English and possesses practical language skills for everyday academic and social use. It represents a vital milestone on the journey toward B2 First and C1 Advanced.',
     whoShouldJoin: [
@@ -2163,7 +2163,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'kids-english',
     categoryName: 'English for Kids',
     tagline: 'Comprehensive Foundation in Cambridge English for Young Learners',
-    heroImage: '/images/courses/course-young-learners.svg',
+    heroImage: '/images/courses/course-young-learners.jpg',
     intro:
       'Looking for KET for Schools? "KET for Schools" (Key English Test) has officially been updated by Cambridge English to "A2 Key for Schools". While the name was modernized to clearly reflect its CEFR Level A2 alignment, the core value remains unchanged: it provides young learners with an internationally accredited certificate demonstrating their ability to understand and use everyday spoken and written English.',
     whoShouldJoin: [

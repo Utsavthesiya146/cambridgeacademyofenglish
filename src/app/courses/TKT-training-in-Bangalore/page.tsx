@@ -16,7 +16,7 @@ export default function TKTTrainingPage() {
             <div className="rich-text text-gray-700">
               <div className="mb-6">
                 <Image
-                  src="/images/courses/legacy-tkt.svg"
+                  src="/images/courses/legacy-tkt.jpg"
                   alt="Teaching Knowledge Test, Teachers Qualification, English language teaching knowledge certificate, TKT training in Bangalore"
                   width={600}
                   height={400}

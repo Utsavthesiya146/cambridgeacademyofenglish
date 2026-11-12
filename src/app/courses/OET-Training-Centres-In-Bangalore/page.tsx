@@ -16,7 +16,7 @@ export default function OETTrainingPage() {
             <div className="rich-text text-gray-700">
               <div className="mb-6">
                 <Image
-                  src="/images/courses/legacy-oet.svg"
+                  src="/images/courses/legacy-oet.jpg"
                   alt="OET coaching in Bangalore, oet training in Bangalore, Occupational English Test, OET online coaching in Bangalore, oet classes near me, OET Online Course"
                   width={625}
                   height={450}

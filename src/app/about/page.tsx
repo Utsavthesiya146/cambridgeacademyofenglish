@@ -106,8 +106,8 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5 text-center">
-              <div className="w-56 h-56 mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#d4af37]/30 bg-slate-800 p-2">
-                <img src="/images/about-leadership.svg" alt="Academic Leadership Seal of Cambridge Academy of English" className="w-full h-full object-contain" />
+              <div className="w-56 h-56 mx-auto rounded-3xl overflow-hidden shadow-2xl border-4 border-[#d4af37]/30 bg-slate-800">
+                <img src="/images/about-director.jpg" alt="Academic Director &amp; Founder of Cambridge Academy of English" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-lg font-bold text-[#0a192f] mt-4">Academic Director &amp; Founder</h3>
               <p className="text-xs text-[#d4af37] font-semibold">Cambridge Academy of English, Bangalore</p>

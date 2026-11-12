@@ -16,7 +16,7 @@ export default function AdvancedDiplomaPage() {
             <div className="rich-text text-gray-700">
               <div className="mb-6">
                 <Image
-                  src="/images/courses/legacy-advanced-diploma.svg"
+                  src="/images/courses/legacy-advanced-diploma.jpg"
                   alt="advanced English speaking course online in Saudi Arabia, diploma in English language in Saudi Arabia, English diploma, online English language course in Bangalore, India, Advanced English classes, Advanced English courses in bangalore"
                   width={600}
                   height={432}
@@ -46,7 +46,7 @@ export default function AdvancedDiplomaPage() {
 
               <div className="mb-6">
                  <Image
-                  src="/images/courses/legacy-master-diploma.svg"
+                  src="/images/courses/legacy-master-diploma.jpg"
                   alt="Diploma in English Language Teaching, online diploma courses in english language, diploma in english language teaching online, diploma in english language in india"
                   width={600}
                   height={400}

@@ -16,7 +16,7 @@ export default function TEFLCoursesPage() {
             <div className="rich-text text-gray-700">
               <div className="mb-6">
                 <Image
-                  src="/images/courses/legacy-tefl.svg"
+                  src="/images/courses/legacy-tefl.jpg"
                   alt="tefl course online, tefl online, tefl certification, teach english as a foreign language, tefl certification in Bangalore, tefl certification in Bangalore"
                   width={600}
                   height={400}

@@ -883,7 +883,7 @@ export default function Home() {
                   cred: 'CELTA, PhD in Applied Linguistics',
                   exp: '14+ Years Experience',
                   spec: 'Exam Preparation & Healthcare English',
-                  initials: 'SM',
+                  img: '/images/t5.jpg',
                 },
                 {
                   name: 'Prof. Rajesh Nair',
@@ -891,7 +891,7 @@ export default function Home() {
                   cred: 'MA English, Cambridge DELTA Certified',
                   exp: '16+ Years Experience',
                   spec: 'Accent Neutralization & Speech Labs',
-                  initials: 'RN',
+                  img: '/images/t6.jpg',
                 },
                 {
                   name: 'Madame Claire Dubois',
@@ -899,7 +899,7 @@ export default function Home() {
                   cred: 'DALF C2, Sorbonne University Alum',
                   exp: '11+ Years Experience',
                   spec: 'DELF & TEF Canada Preparation',
-                  initials: 'CD',
+                  img: '/images/t7.jpg',
                 },
                 {
                   name: 'Herr Klaus Weber',
@@ -907,12 +907,12 @@ export default function Home() {
                   cred: 'Goethe-Zertifikat C2 Großes Diplom',
                   exp: '12+ Years Experience',
                   spec: 'German A1-B2 & Chancenkarte Prep',
-                  initials: 'KW',
+                  img: '/images/faculty-speaking-lead.jpg',
                 },
               ].map((t, idx) => (
                 <div key={idx} className="bg-white rounded-3xl p-6 border border-slate-200 text-center shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-[#0a192f] to-[#1e293b] text-[#d4af37] font-black text-xl flex items-center justify-center mb-4 border-2 border-[#d4af37] shadow-inner">
-                    {t.initials}
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-[#d4af37] bg-slate-100 flex items-center justify-center">
+                    <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-base font-bold text-[#0a192f]">{t.name}</h3>
                   <p className="text-xs text-[#d4af37] font-semibold mt-0.5">{t.role}</p>
@@ -1007,7 +1007,7 @@ export default function Home() {
                   name: 'Pooja Venkatesh',
                   course: 'Spoken English & Professional Communication',
                   loc: 'Kammanahalli, Bangalore',
-                  avatar: 'PV',
+                  img: '/images/student-pooja.jpg',
                   rating: 5,
                   comment:
                     'I used to hesitate in every team meeting. Cambridge Academy transformed my articulation completely. Within 2 months, I was promoted to Senior Product Consultant at an MNC!',
@@ -1016,7 +1016,7 @@ export default function Home() {
                   name: 'Rohit Kulkarni',
                   course: 'IELTS Academic Intensive',
                   loc: 'Bangalore, India',
-                  avatar: 'RK',
+                  img: '/images/student-rohit.jpg',
                   rating: 5,
                   comment:
                     'Scored 8.5 Band overall on IELTS! The writing evaluation clinics and 1-on-1 speaking interviews with British Council certified trainers gave me the exact edge I needed.',
@@ -1025,7 +1025,7 @@ export default function Home() {
                   name: 'Fatima Al-Zahra',
                   course: 'Diploma in English for Foreign Nationals',
                   loc: 'Yemen / Saudi Arabia',
-                  avatar: 'FA',
+                  img: '/images/student-fatima.jpg',
                   rating: 5,
                   comment:
                     'Coming from Yemen, I was worried about language in India. Cambridge Academy gave me a warm second home, great teachers, and complete English fluency for my university studies.',
@@ -1041,9 +1041,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#0a192f] to-[#1e293b] text-[#d4af37] font-extrabold text-sm flex items-center justify-center border-2 border-[#d4af37]/40 shadow-sm shrink-0">
-                      {t.avatar}
-                    </div>
+                    <img src={t.img} alt={t.name} className="w-11 h-11 rounded-full object-cover border border-[#d4af37]" />
                     <div>
                       <p className="font-bold text-xs text-[#0a192f]">{t.name}</p>
                       <p className="text-[10px] text-slate-400">{t.course} &bull; {t.loc}</p>
