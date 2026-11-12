@@ -176,7 +176,7 @@ export default function Home() {
         {/* 2. ABOUT CAMBRIDGE ACADEMY OF ENGLISH */}
         <section id="about" className="py-20 md:py-28 bg-white relative">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 space-y-6">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-[#0a192f] text-xs font-bold uppercase tracking-wider">
                   <span>🏛️</span> Institutional Profile
@@ -188,7 +188,7 @@ export default function Home() {
                   Founded in Bangalore, <strong>Cambridge Academy of English</strong> has stood as a pioneer in communicative language training, academic English, and international examination coaching for over 21 years.
                 </p>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                  
+                  Our core mission is to bridge cultural and linguistic boundaries, equipping students, corporate executives, doctors, engineers, and international scholars with the verbal fluency, syntactic precision, and personal confidence needed to excel on the global stage.
                 </p>
 
                 {/* Key Highlights */}
@@ -199,9 +199,11 @@ export default function Home() {
                     { title: 'Personalized Learning', desc: 'Small batch sizes with individualized diagnostic evaluation.' },
                     { title: 'Global Recognition', desc: 'Authorized British Council and IDP registration associate.' },
                   ].map((feat, idx) => (
-                    <div key={idx} className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                      <p className="font-bold text-sm text-[#0a192f] mb-1">✓ {feat.title}</p>
-                      <p className="text-xs text-slate-500 leading-relaxed">{feat.desc}</p>
+                    <div key={idx} className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+                      <div>
+                        <p className="font-bold text-sm text-[#0a192f] mb-1">✓ {feat.title}</p>
+                        <p className="text-xs text-slate-500 leading-relaxed">{feat.desc}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -224,32 +226,42 @@ export default function Home() {
 
               {/* Campus Showcase Collage */}
               <div className="lg:col-span-6">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <img
-                      src="/images/slider1.jpg"
-                      alt="Classroom interactive session at Cambridge Academy of English"
-                      className="rounded-3xl shadow-lg object-cover w-full h-48 sm:h-64"
-                    />
-                    <div className="bg-[#0a192f] text-white p-6 rounded-3xl shadow-lg">
-                      <p className="text-3xl font-black text-[#d4af37]">21+</p>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-300 mt-1">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className="space-y-4 sm:space-y-6 flex flex-col justify-between">
+                    <div className="overflow-hidden rounded-3xl shadow-lg">
+                      <img
+                        src="/images/slider1.jpg"
+                        alt="Classroom interactive session at Cambridge Academy of English"
+                        className="object-cover w-full h-56 sm:h-72 lg:h-80 hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="bg-[#0a192f] text-white p-6 sm:p-7 rounded-3xl shadow-lg border border-slate-800">
+                      <p className="text-3xl lg:text-4xl font-black text-[#d4af37]">21+</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-slate-200 mt-1">
                         Years of Legacy in Bangalore
+                      </p>
+                      <p className="text-[11px] text-slate-400 mt-1">
+                        Established 2005 • Kammanahalli Campus
                       </p>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="bg-[#d4af37] text-[#0a192f] p-6 rounded-3xl shadow-lg">
-                      <p className="text-3xl font-black">25,000+</p>
+                  <div className="space-y-4 sm:space-y-6 flex flex-col justify-between">
+                    <div className="bg-[#d4af37] text-[#0a192f] p-6 sm:p-7 rounded-3xl shadow-lg">
+                      <p className="text-3xl lg:text-4xl font-black">25,000+</p>
                       <p className="text-xs font-bold uppercase tracking-wider mt-1">
                         Successful Students Trained
                       </p>
+                      <p className="text-[11px] text-[#0a192f]/80 mt-1 font-medium">
+                        Across India &amp; 18+ Countries
+                      </p>
                     </div>
-                    <img
-                      src="/images/hero.jpg"
-                      alt="Language learning laboratory at Cambridge Academy of English"
-                      className="rounded-3xl shadow-lg object-cover w-full h-48 sm:h-64"
-                    />
+                    <div className="overflow-hidden rounded-3xl shadow-lg">
+                      <img
+                        src="/images/hero.jpg"
+                        alt="Language learning laboratory at Cambridge Academy of English"
+                        className="object-cover w-full h-56 sm:h-72 lg:h-80 hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -737,56 +749,112 @@ export default function Home() {
         </section>
 
         {/* 8. ENGLISH FOR INTERNATIONAL STUDENTS */}
-        <section className="py-20 bg-gradient-to-br from-[#0a192f] via-[#162447] to-[#0a192f] text-white relative overflow-hidden">
+        <section className="py-20 md:py-24 bg-gradient-to-br from-[#0a192f] via-[#162447] to-[#0a192f] text-white relative overflow-hidden">
           <div className="container-custom relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-              <div className="lg:col-span-7 space-y-6">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-3.5 py-1.5 rounded-full inline-block">
-                  International Learners Hub
-                </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-                  English for Foreign Nationals &amp; International Students
-                </h2>
-                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                  For over 21 years, our Kammanahalli campus has been the premier destination for foreign students from Saudi Arabia, Yemen, Oman, Bahrain, Egypt, Thailand, Japan, Korea, Turkey, and across Africa.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="bg-white/10 border border-white/10 p-5 rounded-2xl">
-                    <p className="font-bold text-[#d4af37] text-sm">Diploma in English</p>
-                    <p className="text-xs text-slate-300 mt-1">Structured 3 to 6-month immersion covering grammar, conversational fluency, and university readiness.</p>
+            {/* Centered Section Header */}
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-4 py-1.5 rounded-full inline-block mb-3 border border-white/10">
+                International Learners Hub
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                English for Foreign Nationals &amp; International Students
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
+                For over 21 years, our Kammanahalli campus has been the premier destination for foreign students from Saudi Arabia, Yemen, Oman, Bahrain, Egypt, Thailand, Japan, Korea, Turkey, and across Africa.
+              </p>
+            </div>
+
+            {/* 3 Perfectly Aligned Equal-Height Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+              {/* Card 1: Diploma in English */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-7 rounded-3xl flex flex-col justify-between hover:bg-white/15 transition-all group">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#d4af37]/20 border border-[#d4af37]/30 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                    🎓
                   </div>
-                  <div className="bg-white/10 border border-white/10 p-5 rounded-2xl">
-                    <p className="font-bold text-[#d4af37] text-sm">Master Diploma</p>
-                    <p className="text-xs text-slate-300 mt-1">Postgraduate academic research, thesis defense, literature analysis, and diplomatic rhetoric.</p>
-                  </div>
+                  <h3 className="font-bold text-[#d4af37] text-lg sm:text-xl mb-2">
+                    Diploma in English
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                    Structured 3 to 6-month immersion covering grammar, conversational fluency, pronunciation, and university readiness.
+                  </p>
+                  <ul className="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4">
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#d4af37]">✓</span> CEFR A1 to B2 Proficiency Levels
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#d4af37]">✓</span> Intensive Spoken Drills &amp; Accent Labs
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#d4af37]">✓</span> Daily 2-Hour Practical Immersion
+                    </li>
+                  </ul>
                 </div>
-                <div className="pt-2 flex flex-wrap gap-4">
+                <div className="pt-6">
                   <Link
                     href="/courses/diploma-in-english-language"
-                    className="px-6 py-3 bg-[#d4af37] text-[#0a192f] font-bold rounded-full text-xs hover:bg-[#b89628] transition-all"
+                    className="block text-center w-full py-2.5 px-4 bg-white/10 hover:bg-[#d4af37] hover:text-[#0a192f] text-white text-xs font-bold rounded-xl transition-all border border-white/20"
                   >
-                    View International Diplomas →
-                  </Link>
-                  <Link
-                    href="/admission/foreign-students"
-                    className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-xs border border-white/20 transition-all"
-                  >
-                    International Admission Guidelines
+                    View Diploma Syllabus →
                   </Link>
                 </div>
               </div>
 
-              <div className="lg:col-span-5">
-                <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
-                  <p className="text-xs font-bold text-[#d4af37] uppercase tracking-wider mb-4">
-                    International Student Welfare Support:
+              {/* Card 2: Master Diploma in English */}
+              <div className="bg-white/10 backdrop-blur-md border border-[#d4af37]/50 p-7 rounded-3xl flex flex-col justify-between relative shadow-2xl hover:bg-white/15 transition-all group">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-full bg-[#d4af37] text-[#0a192f] text-[10px] font-black uppercase tracking-wider shadow-md">
+                  Advanced Track
+                </span>
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#d4af37]/20 border border-[#d4af37]/30 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                    📜
+                  </div>
+                  <h3 className="font-bold text-[#d4af37] text-lg sm:text-xl mb-2">
+                    Master Diploma in English
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                    Postgraduate academic research, thesis defense, literature analysis, professional rhetoric, and diplomatic discourse.
                   </p>
-                  <ul className="space-y-3 text-xs text-slate-200">
+                  <ul className="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4">
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#d4af37]">✓</span> Advanced Syntactic &amp; Lexical Mastery
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#d4af37]">✓</span> Thesis Defense &amp; Debate Workshops
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-[#d4af37]">✓</span> Career &amp; University Entrance Readiness
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-6">
+                  <Link
+                    href="/courses/master-diploma-in-english"
+                    className="block text-center w-full py-2.5 px-4 bg-[#d4af37] text-[#0a192f] hover:bg-[#b89628] text-xs font-bold rounded-xl transition-all shadow-md"
+                  >
+                    View Master Syllabus →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Card 3: International Student Welfare Support */}
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 p-7 rounded-3xl flex flex-col justify-between hover:bg-white/15 transition-all group">
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#d4af37]/20 border border-[#d4af37]/30 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                    🌐
+                  </div>
+                  <h3 className="font-bold text-[#d4af37] text-lg sm:text-xl mb-2">
+                    International Welfare Support
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                    Comprehensive relocation, legal, and academic support for seamless living in Kammanahalli, Bangalore.
+                  </p>
+                  <ul className="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4">
                     <li className="flex items-center gap-2">
                       <span className="text-[#d4af37]">✓</span> Official Admission &amp; Course Letters
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-[#d4af37]">✓</span> Local Accommodation Assistance in Kammanahalli
+                      <span className="text-[#d4af37]">✓</span> Kammanahalli Local Accommodation Aid
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-[#d4af37]">✓</span> FRRO Registration Guidance
@@ -795,11 +863,35 @@ export default function Home() {
                       <span className="text-[#d4af37]">✓</span> Multi-Cultural Student Community &amp; Events
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-[#d4af37]">✓</span> Foundation English for Indian University Entry
+                      <span className="text-[#d4af37]">✓</span> Indian University Entry Preparation
                     </li>
                   </ul>
                 </div>
+                <div className="pt-6">
+                  <Link
+                    href="/admission/foreign-students"
+                    className="block text-center w-full py-2.5 px-4 bg-white/10 hover:bg-[#d4af37] hover:text-[#0a192f] text-white text-xs font-bold rounded-xl transition-all border border-white/20"
+                  >
+                    Admission Guidelines →
+                  </Link>
+                </div>
               </div>
+            </div>
+
+            {/* Bottom Call to Action Buttons */}
+            <div className="mt-12 text-center flex flex-wrap justify-center gap-4">
+              <Link
+                href="/admission/foreign-students"
+                className="px-8 py-3.5 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black rounded-full text-xs shadow-lg transition-all hover:-translate-y-0.5"
+              >
+                Apply for International Admissions →
+              </Link>
+              <button
+                onClick={() => openCounsellingModal()}
+                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-xs border border-white/20 transition-all"
+              >
+                Request Foreign Student Brochure
+              </button>
             </div>
           </div>
         </section>
@@ -883,7 +975,7 @@ export default function Home() {
                   cred: 'CELTA, PhD in Applied Linguistics',
                   exp: '14+ Years Experience',
                   spec: 'Exam Preparation & Healthcare English',
-                  img: '/images/t5.jpg',
+                  img: '/images/faculty-sarah.jpg',
                 },
                 {
                   name: 'Prof. Rajesh Nair',
@@ -891,7 +983,7 @@ export default function Home() {
                   cred: 'MA English, Cambridge DELTA Certified',
                   exp: '16+ Years Experience',
                   spec: 'Accent Neutralization & Speech Labs',
-                  img: '/images/t6.jpg',
+                  img: '/images/faculty-rajesh.jpg',
                 },
                 {
                   name: 'Madame Claire Dubois',
@@ -899,7 +991,7 @@ export default function Home() {
                   cred: 'DALF C2, Sorbonne University Alum',
                   exp: '11+ Years Experience',
                   spec: 'DELF & TEF Canada Preparation',
-                  img: '/images/t7.jpg',
+                  img: '/images/faculty-claire.jpg',
                 },
                 {
                   name: 'Herr Klaus Weber',
@@ -907,11 +999,11 @@ export default function Home() {
                   cred: 'Goethe-Zertifikat C2 Großes Diplom',
                   exp: '12+ Years Experience',
                   spec: 'German A1-B2 & Chancenkarte Prep',
-                  img: '/images/faculty-speaking-lead.jpg',
+                  img: '/images/faculty-klaus.jpg',
                 },
               ].map((t, idx) => (
                 <div key={idx} className="bg-white rounded-3xl p-6 border border-slate-200 text-center shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-[#d4af37] bg-slate-100 flex items-center justify-center">
+                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-[#d4af37] bg-slate-100 flex items-center justify-center shadow-sm">
                     <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
                   </div>
                   <h3 className="text-base font-bold text-[#0a192f]">{t.name}</h3>
@@ -943,7 +1035,7 @@ export default function Home() {
                 <div className="lg:col-span-4 text-center lg:text-left">
                   <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-3xl overflow-hidden border-4 border-[#d4af37]/40 shadow-2xl bg-slate-800">
                     <img
-                      src="/images/t9.jpg"
+                      src="/images/faculty-director.jpg"
                       alt="Founder & Academic Director of Cambridge Academy of English"
                       className="w-full h-full object-cover"
                     />

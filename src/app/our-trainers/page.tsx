@@ -17,7 +17,7 @@ const TRAINERS = [
     credentials: 'CELTA, PhD in Applied Linguistics',
     experience: '14+ Years Teaching Experience',
     specialisations: ['IELTS Academic & General (Target Band 8.0+)', 'OET for Healthcare Professionals', 'Writing Assessment Clinics'],
-    image: '/images/t1.jpg',
+    image: '/images/faculty-sarah.jpg',
     bio: 'Dr. Sarah has guided over 4,500 students to secure top bands in IELTS and OET. She specializes in diagnostic error correction, structured essay argumentation, and high-pressure speaking simulation interviews.',
   },
   {
@@ -26,7 +26,7 @@ const TRAINERS = [
     credentials: 'MA English Literature, Cambridge DELTA Certified',
     experience: '16+ Years Teaching Experience',
     specialisations: ['Spoken English Fluency & Public Speaking', 'Accent Neutralization & Phonetics', 'Corporate Business Communication'],
-    image: '/images/t2.jpg',
+    image: '/images/faculty-rajesh.jpg',
     bio: 'Prof. Rajesh leads communicative speech lab sessions at our Bangalore campus. His dynamic, drill-based methodology removes hesitation and builds spontaneous conversational eloquence.',
   },
   {
@@ -35,7 +35,7 @@ const TRAINERS = [
     credentials: 'DALF C2 Certified, Sorbonne University Alumna',
     experience: '11+ Years Teaching Experience',
     specialisations: ['French A1 to B2 (DELF / DALF)', 'TEF Canada Exam Coaching for PR', 'European Conversational Seminars'],
-    image: '/images/t3.jpg',
+    image: '/images/faculty-claire.jpg',
     bio: 'With over a decade of European language teaching, Madame Claire brings immersive cultural and grammatical mastery to students preparing for higher education in France and Canadian immigration.',
   },
   {
@@ -44,7 +44,7 @@ const TRAINERS = [
     credentials: 'Goethe-Zertifikat C2 Großes Deutsches Sprachdiplom',
     experience: '12+ Years Teaching Experience',
     specialisations: ['German A1 to B2 (Goethe-Zertifikat)', 'Chancenkarte & German Job Seeker Visa Prep', 'Technical & Workplace German'],
-    image: '/images/t4.jpg',
+    image: '/images/faculty-klaus.jpg',
     bio: 'Herr Klaus specializes in structured German pedagogy, guiding engineering graduates, doctors, and nurses aiming for tuition-free public universities and hospital placements in Germany.',
   },
   {
@@ -53,7 +53,7 @@ const TRAINERS = [
     credentials: 'Senior Applied Linguist & Academic Administrator',
     experience: '21+ Years Academy Leadership',
     specialisations: ['Curriculum Engineering', 'British Council & IDP Partnership Associate', 'Faculty Mentorship & Quality Assurance'],
-    image: '/images/t8.jpg',
+    image: '/images/faculty-director.jpg',
     bio: 'Established Cambridge Academy of English in 2005. Over 21 years, he has championed student-centric communicative learning, transforming Cambridge Academy into South India’s most trusted language institute.',
   },
 ];

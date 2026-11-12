@@ -62,7 +62,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   // Faculty & Leadership (Authentic photos)
   'faculty-director': {
     id: 'faculty-director',
-    path: '/images/t9.jpg',
+    path: '/images/faculty-director.jpg',
     alt: 'Founder & Academic Director of Cambridge Academy of English',
     assignedPageOrCourse: 'Homepage Founder & Director Section',
     category: 'faculty',
@@ -78,7 +78,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'faculty-director-trainers': {
     id: 'faculty-director-trainers',
-    path: '/images/t8.jpg',
+    path: '/images/faculty-director.jpg',
     alt: 'Academic Founder & Master Linguist',
     assignedPageOrCourse: 'Our Trainers Page - Director Profile',
     category: 'faculty',
@@ -86,7 +86,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'faculty-sarah': {
     id: 'faculty-sarah',
-    path: '/images/t1.jpg',
+    path: '/images/faculty-sarah.jpg',
     alt: 'Dr. Sarah Mathews, Senior IELTS & OET Master Coach',
     assignedPageOrCourse: 'Our Trainers Page - Dr. Sarah Mathews Profile',
     category: 'faculty',
@@ -94,7 +94,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'faculty-rajesh': {
     id: 'faculty-rajesh',
-    path: '/images/t2.jpg',
+    path: '/images/faculty-rajesh.jpg',
     alt: 'Prof. Rajesh Nair, Head of Spoken English & Voice Coach',
     assignedPageOrCourse: 'Prof. Rajesh Nair Faculty Profile',
     category: 'faculty',
@@ -102,7 +102,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'faculty-claire': {
     id: 'faculty-claire',
-    path: '/images/t3.jpg',
+    path: '/images/faculty-claire.jpg',
     alt: 'Madame Claire Dubois, Senior French & European Linguist',
     assignedPageOrCourse: 'Madame Claire Dubois Faculty Profile',
     category: 'faculty',
@@ -110,7 +110,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'faculty-klaus': {
     id: 'faculty-klaus',
-    path: '/images/t4.jpg',
+    path: '/images/faculty-klaus.jpg',
     alt: 'Herr Klaus Weber, Lead German Language Instructor',
     assignedPageOrCourse: 'Herr Klaus Weber Faculty Profile',
     category: 'faculty',
@@ -120,7 +120,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   // Student Testimonials (Authentic photos)
   'testimonial-pooja': {
     id: 'testimonial-pooja',
-    path: '/images/t5.jpg',
+    path: '/images/student-pooja.jpg',
     alt: 'Pooja Venkatesh, Spoken English graduate',
     assignedPageOrCourse: 'Student Review - Pooja Venkatesh',
     category: 'testimonial',
@@ -128,7 +128,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'testimonial-rohit': {
     id: 'testimonial-rohit',
-    path: '/images/t6.jpg',
+    path: '/images/student-rohit.jpg',
     alt: 'Rohit Kulkarni, IELTS 8.5 Band graduate',
     assignedPageOrCourse: 'Student Review - Rohit Kulkarni',
     category: 'testimonial',
@@ -136,7 +136,7 @@ export const IMAGE_REGISTRY: Record<string, ImageAssetRegistration> = {
   },
   'testimonial-fatima': {
     id: 'testimonial-fatima',
-    path: '/images/t7.jpg',
+    path: '/images/student-fatima.jpg',
     alt: 'Fatima Al-Zahra, Foreign Nationals Diploma graduate',
     assignedPageOrCourse: 'Student Review - Fatima Al-Zahra',
     category: 'testimonial',

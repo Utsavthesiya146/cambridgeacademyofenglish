@@ -266,40 +266,64 @@ export default function Footer() {
         </div>
 
         {/* Local Bangalore SEO Keywords Strip */}
-        <div className="py-6 border-b border-white/10 text-[11px] text-slate-400 leading-relaxed">
-          <p className="font-bold text-slate-300 mb-1">Popular Programmes in Bangalore:</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1">
-            <Link href="/courses/spoken-english-offline" className="hover:text-[#d4af37]">English Language Academy in Bangalore</Link>
-            <Link href="/courses/spoken-english-offline" className="hover:text-[#d4af37]">Best English Speaking Classes in Bangalore</Link>
-            <Link href="/courses/spoken-english-offline" className="hover:text-[#d4af37]">Spoken English Classes in Kammanahalli</Link>
-            <Link href="/courses/ielts-preparation" className="hover:text-[#d4af37]">IELTS Coaching in Bangalore</Link>
-            <Link href="/courses/pte-preparation" className="hover:text-[#d4af37]">PTE Coaching in Bangalore</Link>
-            <Link href="/courses/oet-preparation" className="hover:text-[#d4af37]">OET Training Centres in Bangalore</Link>
-            <Link href="/courses/german-language" className="hover:text-[#d4af37]">German Language Classes in Bangalore</Link>
-            <Link href="/courses/french-language" className="hover:text-[#d4af37]">French Language Classes in Bangalore</Link>
-            <Link href="/courses/kids-academic-english" className="hover:text-[#d4af37]">English Classes for Kids in Bangalore</Link>
+        <div className="py-6 border-b border-white/10">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-3">
+            <span className="text-slate-300 font-bold text-xs uppercase tracking-wider shrink-0 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#d4af37]"></span>
+              Popular Programmes in Bangalore:
+            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              {[
+                { label: 'English Language Academy in Bangalore', href: '/courses/spoken-english-offline' },
+                { label: 'Best English Speaking Classes in Bangalore', href: '/courses/spoken-english-offline' },
+                { label: 'Spoken English Classes in Kammanahalli', href: '/courses/spoken-english-offline' },
+                { label: 'IELTS Coaching in Bangalore', href: '/courses/ielts-preparation' },
+                { label: 'PTE Coaching in Bangalore', href: '/courses/pte-preparation' },
+                { label: 'OET Training Centres in Bangalore', href: '/courses/oet-preparation' },
+                { label: 'German Language Classes in Bangalore', href: '/courses/german-language' },
+                { label: 'French Language Classes in Bangalore', href: '/courses/french-language' },
+                { label: 'English Classes for Kids in Bangalore', href: '/courses/kids-academic-english' },
+              ].map((prog, idx) => (
+                <Link
+                  key={idx}
+                  href={prog.href}
+                  className="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 hover:text-[#d4af37] text-slate-400 text-[11px] border border-white/5 transition-all"
+                >
+                  {prog.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar: Copyright, HostingBaba Credit & Legal Links */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-400">
-          <p>© {new Date().getFullYear()} Cambridge Academy of English, Bangalore. All Rights Reserved.</p>
-
-          {/* Restored HostingBaba Credit */}
-          <p className="text-slate-400 text-xs font-normal tracking-wide text-center">
-            Designed &amp; Developed with 💖 by HostingBaba
-          </p>
-
-          <div className="flex flex-wrap gap-4 text-slate-400">
+        {/* Bottom Bar: Multi-Tier Symmetrical & Clean Alignment */}
+        <div className="pt-8 pb-4 border-b border-white/5">
+          <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-xs text-slate-400">
             <Link href="/our-trainers" className="hover:text-white transition-colors">Our Trainers</Link>
+            <span className="text-white/20 select-none">•</span>
             <Link href="/success-stories" className="hover:text-white transition-colors">Success Stories</Link>
+            <span className="text-white/20 select-none">•</span>
             <Link href="/testimonials" className="hover:text-white transition-colors">Testimonials</Link>
+            <span className="text-white/20 select-none">•</span>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="text-white/20 select-none">•</span>
             <Link href="/terms-conditions" className="hover:text-white transition-colors">Terms &amp; Conditions</Link>
+            <span className="text-white/20 select-none">•</span>
             <Link href="/refund-policy" className="hover:text-white transition-colors">Refund Policy</Link>
+            <span className="text-white/20 select-none">•</span>
             <Link href="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
-            <Link href="/admin/leads" className="hover:text-[#d4af37] transition-colors">Admissions Portal</Link>
+            <span className="text-white/20 select-none">•</span>
+            <Link href="/admin/leads" className="text-[#d4af37] hover:underline font-semibold">Admissions Portal</Link>
           </div>
+        </div>
+
+        {/* Copyright & HostingBaba Credit Symmetrical Row */}
+        <div className="pt-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-400 text-center sm:text-left">
+          <p>© {new Date().getFullYear()} Cambridge Academy of English, Bangalore. All Rights Reserved.</p>
+          <p className="flex items-center gap-1.5 font-normal">
+            Designed &amp; Developed with <span className="text-rose-500">❤️</span> by{' '}
+            <span className="text-white font-medium">HostingBaba</span>
+          </p>
         </div>
       </div>
     </footer>
