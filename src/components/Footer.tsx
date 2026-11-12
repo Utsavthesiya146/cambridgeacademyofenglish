@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a192f] text-slate-300 pt-20 pb-12 border-t-[5px] border-[#d4af37] text-sm relative mt-20">
+    <footer className="bg-[#0a192f] text-slate-300 pt-10 pb-8 border-t-[4px] border-[#d4af37] text-sm relative mt-8 sm:mt-12">
       <div className="container-custom relative z-10">
         {/* Main Multi-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-10 border-b border-white/10">
           
           {/* Col 1: Brand & Heritage (Col-span 4) */}
           <div className="lg:col-span-4 pr-0 lg:pr-6">
@@ -266,7 +266,7 @@ export default function Footer() {
         </div>
 
         {/* Local Bangalore SEO Keywords Strip */}
-        <div className="py-6 border-b border-white/10">
+        <div className="py-4 border-b border-white/10">
           <div className="flex flex-col lg:flex-row lg:items-center gap-3">
             <span className="text-slate-300 font-bold text-xs uppercase tracking-wider shrink-0 flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#d4af37]"></span>
@@ -297,7 +297,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Multi-Tier Symmetrical & Clean Alignment */}
-        <div className="pt-8 pb-4 border-b border-white/5">
+        <div className="pt-5 pb-3 border-b border-white/5">
           <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-xs text-slate-400">
             <Link href="/our-trainers" className="hover:text-white transition-colors">Our Trainers</Link>
             <span className="text-white/20 select-none">•</span>
@@ -318,7 +318,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright & HostingBaba Credit Symmetrical Row */}
-        <div className="pt-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-400 text-center sm:text-left">
+        <div className="pt-3 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-400 text-center sm:text-left">
           <p>© {new Date().getFullYear()} Cambridge Academy of English, Bangalore. All Rights Reserved.</p>
           <div className="flex items-center gap-2 font-normal">
             <span>

@@ -54,29 +54,29 @@ export default function Home() {
 
       <div className="overflow-hidden">
         {/* 1. HERO SECTION - CLEAN & PREMIUM */}
-        <section className="relative min-h-[90vh] flex items-center justify-center bg-[#0a192f] text-white pt-24 pb-20 overflow-hidden">
+        <section className="relative flex items-center justify-center bg-[#0a192f] text-white pt-16 sm:pt-20 pb-12 sm:pb-14 overflow-hidden">
           {/* Subtle Ambient Radial Glow */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#1e3a8a]/20 rounded-full blur-3xl"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#d4af37]/10 rounded-full blur-3xl"></div>
           </div>
 
-          <div className="container-custom relative z-20 w-full pt-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+          <div className="container-custom relative z-20 w-full pt-2 sm:pt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Left Hero Copy */}
               <div className="lg:col-span-7 text-center lg:text-left fade-in-up">
                 {/* Main Tagline */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-[#d4af37]/40 backdrop-blur-md mb-6 shadow-lg">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#d4af37] animate-ping relative">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-[#d4af37]/40 backdrop-blur-md mb-4 shadow-lg">
+                  <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping relative">
                     <span className="absolute inset-0 bg-[#d4af37] rounded-full animate-none"></span>
                   </span>
-                  <span className="text-xs font-black tracking-widest text-[#d4af37] uppercase">
+                  <span className="text-[11px] font-black tracking-widest text-[#d4af37] uppercase">
                     India’s No 1 Language Academy
                   </span>
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-[1.15] tracking-tight drop-shadow-xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-3 leading-[1.18] tracking-tight drop-shadow-xl">
                   Speak with Confidence.{' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#ffe066] to-white block sm:inline">
                     Communicate with Excellence.
@@ -84,21 +84,21 @@ export default function Home() {
                 </h1>
 
                 {/* Experience Statement */}
-                <p className="text-xl sm:text-2xl text-[#d4af37] font-bold mb-4 drop-shadow-md">
+                <p className="text-lg sm:text-xl text-[#d4af37] font-bold mb-3 drop-shadow-md">
                   21 Years of Excellence in English Language Training
                 </p>
 
                 {/* Supporting Description */}
-                <p className="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
+                <p className="text-sm sm:text-base text-slate-300 mb-6 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
                   Transforming communication skills through expert-led training, internationally aligned programmes and personalised learning.
                 </p>
 
                 {/* 3 Prominent Homepage Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-3 items-center justify-center lg:justify-start">
                   {/* Button 1: Explore Courses */}
                   <a
                     href="#courses"
-                    className="w-full sm:w-auto px-8 py-4 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black rounded-full transition-all duration-300 shadow-xl hover:-translate-y-1 text-center text-sm uppercase tracking-wider"
+                    className="w-full sm:w-auto px-6 py-3 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 text-center text-xs uppercase tracking-wider"
                   >
                     Explore Courses
                   </a>
@@ -108,7 +108,7 @@ export default function Home() {
                     href="https://wa.me/918970506004?text=Hello%20Cambridge%20Academy%20of%20English%2C%20I%20would%20like%20to%20get%20course%20details%20and%20batch%20timings."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-7 py-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-full transition-all duration-300 shadow-xl hover:-translate-y-1 text-center text-sm flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 text-center text-xs flex items-center justify-center gap-2"
                   >
                     <span>💬</span> WhatsApp Us for Course Details
                   </a>
@@ -116,14 +116,14 @@ export default function Home() {
                   {/* Button 3: Book a Free Counselling Session */}
                   <button
                     onClick={() => openCounsellingModal()}
-                    className="w-full sm:w-auto px-7 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 backdrop-blur-md border border-white/20 hover:border-white/40 text-center text-sm hover:-translate-y-1"
+                    className="w-full sm:w-auto px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all duration-300 backdrop-blur-md border border-white/20 hover:border-white/40 text-center text-xs hover:-translate-y-0.5"
                   >
                     Book a Free Counselling Session
                   </button>
                 </div>
 
                 {/* Trust Badges */}
-                <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-300">
+                <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-300">
                   <div className="flex items-center gap-2">
                     <span className="text-[#d4af37] font-bold">✓</span> British Council &amp; IDP Partner
                   </div>
@@ -147,22 +147,22 @@ export default function Home() {
                     <img
                       src="/images/hero-classroom.jpg"
                       alt="Students in a modern interactive English language classroom at Cambridge Academy of English"
-                      className="w-full h-[460px] object-cover"
+                      className="w-full h-[380px] object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent"></div>
 
                     {/* Floating Rating Badge */}
-                    <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-slate-100 flex items-center justify-between shadow-xl text-slate-800">
+                    <div className="absolute bottom-5 left-5 right-5 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl border border-slate-100 flex items-center justify-between shadow-xl text-slate-800">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl text-amber-500 font-black">
+                        <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center text-xl text-amber-500 font-black">
                           ★
                         </div>
                         <div>
-                          <p className="font-extrabold text-slate-900 text-sm">4.9/5 Rating</p>
-                          <p className="text-[11px] text-slate-500 font-medium">1,000+ Google Reviews</p>
+                          <p className="font-extrabold text-slate-900 text-xs sm:text-sm">4.9/5 Rating</p>
+                          <p className="text-[10px] text-slate-500 font-medium">1,000+ Google Reviews</p>
                         </div>
                       </div>
-                      <span className="px-3 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">
+                      <span className="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">
                         Verified Academy
                       </span>
                     </div>
@@ -174,50 +174,50 @@ export default function Home() {
         </section>
 
         {/* 2. ABOUT CAMBRIDGE ACADEMY OF ENGLISH */}
-        <section id="about" className="py-20 md:py-28 bg-white relative">
+        <section id="about" className="py-10 md:py-14 bg-white relative">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-6 space-y-6">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 text-[#0a192f] text-xs font-bold uppercase tracking-wider">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              <div className="lg:col-span-6 space-y-3.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-[#0a192f] text-[11px] font-bold uppercase tracking-wider">
                   <span>🏛️</span> Institutional Profile
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight leading-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight leading-tight">
                   About Cambridge Academy of English
                 </h2>
-                <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                   Founded in Bangalore, <strong>Cambridge Academy of English</strong> has stood as a pioneer in communicative language training, academic English, and international examination coaching for over 21 years.
                 </p>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
                   Our core mission is to bridge cultural and linguistic boundaries, equipping students, corporate executives, doctors, engineers, and international scholars with the verbal fluency, syntactic precision, and personal confidence needed to excel on the global stage.
                 </p>
 
                 {/* Key Highlights */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                   {[
                     { title: 'Communicative Pedagogy', desc: 'Focus on active speaking drills rather than dry grammar rules.' },
                     { title: 'Certified Master Trainers', desc: 'Cambridge and CELTA/TESOL certified mentors with 10+ years experience.' },
                     { title: 'Personalized Learning', desc: 'Small batch sizes with individualized diagnostic evaluation.' },
                     { title: 'Global Recognition', desc: 'Authorized British Council and IDP registration associate.' },
                   ].map((feat, idx) => (
-                    <div key={idx} className="p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
+                    <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
                       <div>
-                        <p className="font-bold text-sm text-[#0a192f] mb-1">✓ {feat.title}</p>
-                        <p className="text-xs text-slate-500 leading-relaxed">{feat.desc}</p>
+                        <p className="font-bold text-xs text-[#0a192f] mb-0.5">✓ {feat.title}</p>
+                        <p className="text-[11px] text-slate-500 leading-relaxed">{feat.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-4 flex flex-wrap gap-4">
+                <div className="pt-2 flex flex-wrap gap-3">
                   <Link
                     href="/about"
-                    className="px-6 py-3 bg-[#0a192f] text-white font-bold rounded-full text-xs hover:bg-[#162447] transition-all shadow-md"
+                    className="px-5 py-2.5 bg-[#0a192f] text-white font-bold rounded-full text-xs hover:bg-[#162447] transition-all shadow-md"
                   >
                     Read Full Academy Story →
                   </Link>
                   <button
                     onClick={() => openCounsellingModal()}
-                    className="px-6 py-3 border border-slate-300 text-slate-700 font-bold rounded-full text-xs hover:bg-slate-50 transition-all"
+                    className="px-5 py-2.5 border border-slate-300 text-slate-700 font-bold rounded-full text-xs hover:bg-slate-50 transition-all"
                   >
                     Book Campus Tour
                   </button>
@@ -226,40 +226,40 @@ export default function Home() {
 
               {/* Campus Showcase Collage */}
               <div className="lg:col-span-6">
-                <div className="grid grid-cols-2 gap-4 sm:gap-6">
-                  <div className="space-y-4 sm:space-y-6 flex flex-col justify-between">
-                    <div className="overflow-hidden rounded-3xl shadow-lg">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  <div className="space-y-3 sm:space-y-4 flex flex-col justify-between">
+                    <div className="overflow-hidden rounded-2xl shadow-md">
                       <img
                         src="/images/slider1.jpg"
                         alt="Classroom interactive session at Cambridge Academy of English"
-                        className="object-cover w-full h-56 sm:h-72 lg:h-80 hover:scale-105 transition-transform duration-500"
+                        className="object-cover w-full h-44 sm:h-52 lg:h-56 hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <div className="bg-[#0a192f] text-white p-6 sm:p-7 rounded-3xl shadow-lg border border-slate-800">
-                      <p className="text-3xl lg:text-4xl font-black text-[#d4af37]">21+</p>
-                      <p className="text-xs font-bold uppercase tracking-wider text-slate-200 mt-1">
+                    <div className="bg-[#0a192f] text-white p-4 sm:p-5 rounded-2xl shadow-md border border-slate-800">
+                      <p className="text-2xl sm:text-3xl font-black text-[#d4af37]">21+</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-slate-200 mt-0.5">
                         Years of Legacy in Bangalore
                       </p>
-                      <p className="text-[11px] text-slate-400 mt-1">
-                        Established 2005 • Kammanahalli Campus
+                      <p className="text-[11px] text-slate-400 mt-0.5">
+                        Established 2005 • Kammanahalli
                       </p>
                     </div>
                   </div>
-                  <div className="space-y-4 sm:space-y-6 flex flex-col justify-between">
-                    <div className="bg-[#d4af37] text-[#0a192f] p-6 sm:p-7 rounded-3xl shadow-lg">
-                      <p className="text-3xl lg:text-4xl font-black">25,000+</p>
-                      <p className="text-xs font-bold uppercase tracking-wider mt-1">
+                  <div className="space-y-3 sm:space-y-4 flex flex-col justify-between">
+                    <div className="bg-[#d4af37] text-[#0a192f] p-4 sm:p-5 rounded-2xl shadow-md">
+                      <p className="text-2xl sm:text-3xl font-black">25,000+</p>
+                      <p className="text-xs font-bold uppercase tracking-wider mt-0.5">
                         Successful Students Trained
                       </p>
-                      <p className="text-[11px] text-[#0a192f]/80 mt-1 font-medium">
+                      <p className="text-[11px] text-[#0a192f]/80 mt-0.5 font-medium">
                         Across India &amp; 18+ Countries
                       </p>
                     </div>
-                    <div className="overflow-hidden rounded-3xl shadow-lg">
+                    <div className="overflow-hidden rounded-2xl shadow-md">
                       <img
                         src="/images/hero.jpg"
                         alt="Language learning laboratory at Cambridge Academy of English"
-                        className="object-cover w-full h-56 sm:h-72 lg:h-80 hover:scale-105 transition-transform duration-500"
+                        className="object-cover w-full h-44 sm:h-52 lg:h-56 hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                   </div>
@@ -270,22 +270,22 @@ export default function Home() {
         </section>
 
         {/* 3. 21 YEARS OF EXCELLENCE */}
-        <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <section className="py-10 md:py-14 bg-slate-900 text-white relative overflow-hidden">
           <div className="container-custom relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-4 py-1.5 rounded-full inline-block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-4 py-1.5 rounded-full inline-block mb-2">
                 Milestones &amp; Track Record
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
                 21 Years of Educational Excellence
               </h2>
-              <p className="text-slate-400 text-sm sm:text-base mt-3">
+              <p className="text-slate-400 text-xs sm:text-sm mt-2">
                 Since 2005, Cambridge Academy of English has set the benchmark for language instruction in South India.
               </p>
             </div>
 
             {/* Metrics Counter Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { number: '21+', label: 'Years of Experience', sub: 'Established language leader in Bangalore' },
                 { number: '25,000+', label: 'Alumni Worldwide', sub: 'Working in top MNCs & global universities' },
@@ -294,11 +294,11 @@ export default function Home() {
               ].map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:bg-white/10 transition-colors"
+                  className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 transition-colors"
                 >
-                  <p className="text-4xl sm:text-5xl font-black text-[#d4af37] mb-2">{stat.number}</p>
-                  <p className="text-sm font-bold text-white mb-1">{stat.label}</p>
-                  <p className="text-[11px] text-slate-400">{stat.sub}</p>
+                  <p className="text-3xl sm:text-4xl font-black text-[#d4af37] mb-1">{stat.number}</p>
+                  <p className="text-xs sm:text-sm font-bold text-white mb-0.5">{stat.label}</p>
+                  <p className="text-[10px] sm:text-[11px] text-slate-400">{stat.sub}</p>
                 </div>
               ))}
             </div>
@@ -306,21 +306,21 @@ export default function Home() {
         </section>
 
         {/* 4. WHY CHOOSE US? */}
-        <section className="py-20 md:py-28 bg-slate-50">
+        <section className="py-10 md:py-14 bg-slate-50">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
                 The Cambridge Advantage
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 Why Choose Cambridge Academy of English?
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-3">
+              <p className="text-slate-600 text-xs sm:text-sm mt-2">
                 Here is why thousands of professionals, students, and international learners trust us for their communication transformation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
               {[
                 {
                   icon: '🗣️',
@@ -355,11 +355,11 @@ export default function Home() {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  <span className="text-3xl mb-4 block">{item.icon}</span>
-                  <h3 className="text-lg font-bold text-[#0a192f] mb-2">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                  <span className="text-2xl mb-2.5 block">{item.icon}</span>
+                  <h3 className="text-base font-bold text-[#0a192f] mb-1">{item.title}</h3>
+                  <p className="text-xs text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -367,31 +367,31 @@ export default function Home() {
         </section>
 
         {/* 5. OUR COURSES (INTERACTIVE OVERVIEW & TABS) */}
-        <section id="courses" className="py-20 md:py-28 bg-white border-t border-slate-200">
+        <section id="courses" className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8">
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37]">
                   Academic Directory
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight mt-1">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight mt-1">
                   Our Comprehensive Courses
                 </h2>
-                <p className="text-slate-600 text-sm mt-2 max-w-xl">
+                <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-xl">
                   Dedicated landing pages for every programme. Select a category below to explore curriculums and learning outcomes.
                 </p>
               </div>
 
               <Link
                 href="/courses"
-                className="mt-4 md:mt-0 px-6 py-2.5 bg-[#0a192f] text-white text-xs font-bold rounded-full hover:bg-[#162447] transition-colors"
+                className="mt-3 md:mt-0 px-5 py-2 bg-[#0a192f] text-white text-xs font-bold rounded-full hover:bg-[#162447] transition-colors"
               >
                 Browse All 24 Landing Pages →
               </Link>
             </div>
 
             {/* Course Category Tabs */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8">
+            <div className="flex items-center gap-2 overflow-x-auto pb-3 scrollbar-none mb-6">
               {[
                 { id: 'spoken', label: '1. Spoken English' },
                 { id: 'exam', label: '2. Examination Prep' },
@@ -632,42 +632,42 @@ export default function Home() {
         </section>
 
         {/* 6. ENGLISH LANGUAGE TRAINING PROGRAMMES (DEEP DIVE) */}
-        <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <section className="py-10 md:py-14 bg-slate-50 border-t border-slate-200">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               <div className="lg:col-span-6">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37]">
                   Core Foundation
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] mt-1 mb-6">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] mt-1 mb-4">
                   English Language Training Programmes
                 </h2>
-                <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
                   Whether you are starting from basic phrases or refining advanced corporate articulation, our spoken English curriculum is structured around the Common European Framework of Reference (CEFR).
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {[
                     'Speech Lab Audio Drills: Neutralizing mother tongue influence and refining vowel phonetics.',
                     'Extempore & Impromptu Speaking: Eliminating mental hesitation during real-time speech production.',
                     'Conversational Vocabulary: Acquiring 1,500+ high-frequency everyday idioms, collocations, and phrases.',
                     'Interview & Placement Readiness: Mock HR interviews, group discussions, and telephone etiquette.',
                   ].map((pt, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-slate-700">
-                      <span className="text-[#d4af37] font-bold text-base mt-0.5">★</span>
+                    <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
+                      <span className="text-[#d4af37] font-bold text-sm mt-0.5">★</span>
                       <span>{pt}</span>
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 flex gap-4">
+                <div className="mt-6 flex flex-wrap gap-3">
                   <Link
                     href="/courses/spoken-english-offline"
-                    className="px-6 py-3 bg-[#0a192f] text-white font-bold rounded-full text-xs hover:bg-[#162447] transition-all"
+                    className="px-5 py-2.5 bg-[#0a192f] text-white font-bold rounded-full text-xs hover:bg-[#162447] transition-all"
                   >
                     Explore Campus Classes →
                   </Link>
                   <Link
                     href="/courses/spoken-english-online"
-                    className="px-6 py-3 bg-white border border-slate-200 text-slate-700 font-bold rounded-full text-xs hover:bg-slate-50 transition-all"
+                    className="px-5 py-2.5 bg-white border border-slate-200 text-slate-700 font-bold rounded-full text-xs hover:bg-slate-50 transition-all"
                   >
                     Explore Online Classes →
                   </Link>
@@ -675,21 +675,21 @@ export default function Home() {
               </div>
 
               <div className="lg:col-span-6">
-                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-lg">
-                  <h3 className="text-lg font-bold text-[#0a192f] mb-4">
+                <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-md">
+                  <h3 className="text-base font-bold text-[#0a192f] mb-3">
                     Fluency Development Stages at Cambridge
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {[
                       { stage: 'Stage 1: Hesitation Elimination', time: 'Weeks 1-2', focus: 'Breaking anxiety, voice projection, and everyday confidence.' },
                       { stage: 'Stage 2: Sentence Framing & Grammar', time: 'Weeks 3-4', focus: 'Thinking directly in English without native-language mental translation.' },
                       { stage: 'Stage 3: Advanced Vocabulary & Pronunciation', time: 'Weeks 5-8', focus: 'Phonetic articulation, idiomatic phrasing, and presentation skills.' },
                       { stage: 'Stage 4: Executive Mastery & Placement', time: 'Weeks 9-12', focus: 'Debates, corporate meetings, and professional interview simulations.' },
                     ].map((st, idx) => (
-                      <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start justify-between gap-4">
+                      <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start justify-between gap-4">
                         <div>
                           <p className="font-bold text-xs text-[#0a192f]">{st.stage}</p>
-                          <p className="text-[11px] text-slate-500 mt-1">{st.focus}</p>
+                          <p className="text-[11px] text-slate-500 mt-0.5">{st.focus}</p>
                         </div>
                         <span className="text-[10px] font-bold bg-[#d4af37]/20 text-[#0a192f] px-2.5 py-1 rounded-full whitespace-nowrap">
                           {st.time}
@@ -704,41 +704,41 @@ export default function Home() {
         </section>
 
         {/* 7. EXAMINATION PREPARATION PROGRAMMES (IELTS, PTE, OET, CELPIP, TOEFL) */}
-        <section className="py-20 md:py-28 bg-white border-t border-slate-200">
+        <section className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
                 Official Test Center Standards
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 Examination Preparation Programmes
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-3">
+              <p className="text-slate-600 text-xs sm:text-sm mt-2">
                 Target high bands with official British Council, IDP, and Pearson certified trainers.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {[
                 { title: 'IELTS Academic & General', target: 'Band 8.0+', desc: 'In-depth strategy for Listening, Reading, Task 1/2 Writing, and Speaking interviews.', link: '/courses/ielts-preparation' },
                 { title: 'PTE Academic', target: 'Score 79+', desc: 'Automated AI scoring strategy, Read Aloud, Describe Image, and Repeat Sentence drills.', link: '/courses/pte-preparation' },
                 { title: 'OET for Healthcare', target: 'Grade B+', desc: 'Clinical consultations, discharge letter writing, and medical audio comprehension.', link: '/courses/oet-preparation' },
                 { title: 'CELPIP for Canada PR', target: 'CLB 9+', desc: '100% computer-based test strategies for Canadian Express Entry and PNP visas.', link: '/courses/celpip-preparation' },
               ].map((exam, idx) => (
-                <div key={idx} className="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all">
+                <div key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-md transition-all">
                   <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs font-black text-[#d4af37] bg-white px-2.5 py-1 rounded-lg border border-slate-200">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-black text-[#d4af37] bg-white px-2 py-0.5 rounded-lg border border-slate-200">
                         {exam.target}
                       </span>
-                      <span className="text-xs text-slate-400 font-bold">2026 Batch</span>
+                      <span className="text-[11px] text-slate-400 font-bold">2026 Batch</span>
                     </div>
-                    <h3 className="text-base font-bold text-[#0a192f] mb-2">{exam.title}</h3>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-6">{exam.desc}</p>
+                    <h3 className="text-sm font-bold text-[#0a192f] mb-1.5">{exam.title}</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{exam.desc}</p>
                   </div>
                   <Link
                     href={exam.link}
-                    className="w-full py-2.5 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-bold rounded-xl text-center transition-colors block"
+                    className="w-full py-2 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-bold rounded-xl text-center transition-colors block"
                   >
                     View Exam Curriculum →
                   </Link>
@@ -749,17 +749,17 @@ export default function Home() {
         </section>
 
         {/* 8. ENGLISH FOR INTERNATIONAL STUDENTS */}
-        <section className="py-20 md:py-24 bg-gradient-to-br from-[#0a192f] via-[#162447] to-[#0a192f] text-white relative overflow-hidden">
+        <section className="py-10 md:py-14 bg-gradient-to-br from-[#0a192f] via-[#162447] to-[#0a192f] text-white relative overflow-hidden">
           <div className="container-custom relative z-10">
             {/* Centered Section Header */}
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-4 py-1.5 rounded-full inline-block mb-3 border border-white/10">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-4 py-1.5 rounded-full inline-block mb-2 border border-white/10">
                 International Learners Hub
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
                 English for Foreign Nationals &amp; International Students
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed mt-4">
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2">
                 For over 21 years, our Kammanahalli campus has been the premier destination for foreign students from Saudi Arabia, Yemen, Oman, Bahrain, Egypt, Thailand, Japan, Korea, Turkey, and across Africa.
               </p>
             </div>
@@ -879,16 +879,16 @@ export default function Home() {
             </div>
 
             {/* Bottom Call to Action Buttons */}
-            <div className="mt-12 text-center flex flex-wrap justify-center gap-4">
+            <div className="mt-8 text-center flex flex-wrap justify-center gap-3">
               <Link
                 href="/admission/foreign-students"
-                className="px-8 py-3.5 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black rounded-full text-xs shadow-lg transition-all hover:-translate-y-0.5"
+                className="px-6 py-3 bg-[#d4af37] hover:bg-[#b89628] text-[#0a192f] font-black rounded-full text-xs shadow-lg transition-all hover:-translate-y-0.5"
               >
                 Apply for International Admissions →
               </Link>
               <button
                 onClick={() => openCounsellingModal()}
-                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-xs border border-white/20 transition-all"
+                className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full text-xs border border-white/20 transition-all"
               >
                 Request Foreign Student Brochure
               </button>
@@ -897,21 +897,21 @@ export default function Home() {
         </section>
 
         {/* 9. ENGLISH FOR KIDS */}
-        <section className="py-20 md:py-28 bg-white border-t border-slate-200">
+        <section className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
                 Young Learners Academy
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 English for Kids (School Students)
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-3">
+              <p className="text-slate-600 text-xs sm:text-sm mt-2">
                 Inspiring early linguistic confidence, phonics, creative writing, and public speaking in a warm, child-centric setting.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
               {[
                 {
                   title: 'Kids Academic English',
@@ -932,17 +932,17 @@ export default function Home() {
                   slug: 'b1-preliminary-for-schools',
                 },
               ].map((k, idx) => (
-                <div key={idx} className="bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
+                <div key={idx} className="bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
                   <div>
-                    <span className="px-3 py-1 bg-amber-100 text-[#0a192f] text-[10px] font-bold rounded-full inline-block mb-4">
+                    <span className="px-2.5 py-0.5 bg-amber-100 text-[#0a192f] text-[10px] font-bold rounded-full inline-block mb-3">
                       {k.target}
                     </span>
-                    <h3 className="text-xl font-bold text-[#0a192f] mb-2">{k.title}</h3>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-6">{k.desc}</p>
+                    <h3 className="text-lg font-bold text-[#0a192f] mb-1.5">{k.title}</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{k.desc}</p>
                   </div>
                   <Link
                     href={`/courses/${k.slug}`}
-                    className="w-full py-3 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-bold rounded-xl text-center transition-colors block"
+                    className="w-full py-2.5 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-bold rounded-xl text-center transition-colors block"
                   >
                     View Program Details →
                   </Link>
@@ -953,21 +953,21 @@ export default function Home() {
         </section>
 
         {/* 10. PROFESSIONAL TRAINERS */}
-        <section id="trainers" className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+        <section id="trainers" className="py-10 md:py-14 bg-slate-50 border-t border-slate-200">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
                 Expert Faculty
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 Learn from Certified Senior Instructors
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-3">
+              <p className="text-slate-600 text-xs sm:text-sm mt-2">
                 Our trainers hold international CELTA, TESOL, and Cambridge qualifications with decades of collective pedagogical experience.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {[
                 {
                   name: 'Dr. Sarah Mathews',
@@ -1002,24 +1002,24 @@ export default function Home() {
                   img: '/images/faculty-klaus.jpg',
                 },
               ].map((t, idx) => (
-                <div key={idx} className="bg-white rounded-3xl p-6 border border-slate-200 text-center shadow-sm hover:shadow-xl transition-all">
-                  <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-[#d4af37] bg-slate-100 flex items-center justify-center shadow-sm">
+                <div key={idx} className="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-all">
+                  <div className="w-20 h-20 mx-auto rounded-full overflow-hidden mb-3 border-2 border-[#d4af37] bg-slate-100 flex items-center justify-center shadow-sm">
                     <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
                   </div>
-                  <h3 className="text-base font-bold text-[#0a192f]">{t.name}</h3>
-                  <p className="text-xs text-[#d4af37] font-semibold mt-0.5">{t.role}</p>
-                  <p className="text-[11px] text-slate-500 mt-2">{t.cred}</p>
-                  <div className="mt-4 pt-3 border-t border-slate-100 text-[10px] text-slate-400 font-bold uppercase">
+                  <h3 className="text-sm font-bold text-[#0a192f]">{t.name}</h3>
+                  <p className="text-[11px] text-[#d4af37] font-semibold mt-0.5">{t.role}</p>
+                  <p className="text-[10px] text-slate-500 mt-1.5">{t.cred}</p>
+                  <div className="mt-3 pt-2.5 border-t border-slate-100 text-[10px] text-slate-400 font-bold uppercase">
                     {t.spec} &bull; {t.exp}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="mt-8 text-center">
               <Link
                 href="/our-trainers"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-black uppercase tracking-wider rounded-full shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-black uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all"
               >
                 Meet All Certified Faculty Members &amp; Credentials →
               </Link>
@@ -1028,46 +1028,46 @@ export default function Home() {
         </section>
 
         {/* 11. FOUNDER PROFILE */}
-        <section id="founder" className="py-20 md:py-28 bg-white border-t border-slate-200">
+        <section id="founder" className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="bg-[#0a192f] text-white rounded-3xl p-8 md:p-14 shadow-2xl relative overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="bg-[#0a192f] text-white rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
                 <div className="lg:col-span-4 text-center lg:text-left">
-                  <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-3xl overflow-hidden border-4 border-[#d4af37]/40 shadow-2xl bg-slate-800">
+                  <div className="w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-2xl overflow-hidden border-2 border-[#d4af37]/40 shadow-xl bg-slate-800">
                     <img
                       src="/images/faculty-director.jpg"
                       alt="Founder & Academic Director of Cambridge Academy of English"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-xs uppercase tracking-widest text-[#d4af37] font-bold mt-4">
+                  <p className="text-[11px] uppercase tracking-widest text-[#d4af37] font-bold mt-3">
                     Founder &amp; Academic Director
                   </p>
-                  <h3 className="text-xl font-bold text-white mt-1">
+                  <h3 className="text-lg font-bold text-white mt-0.5">
                     Director, Cambridge Academy of English
                   </h3>
-                  <p className="text-xs text-slate-400 mt-1">
+                  <p className="text-[11px] text-slate-400 mt-0.5">
                     21+ Years of Leadership in English Language Education
                   </p>
                 </div>
 
-                <div className="lg:col-span-8 space-y-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-3.5 py-1 rounded-full inline-block">
+                <div className="lg:col-span-8 space-y-3">
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-3 py-1 rounded-full inline-block">
                     A Message from Our Leadership
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                  <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
                     &ldquo;Language is not merely grammar; it is the bridge to human opportunity.&rdquo;
                   </h2>
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-300 text-xs leading-relaxed">
                     When Cambridge Academy of English was established over 21 years ago in Kammanahalli, Bangalore, our founding vision was simple yet uncompromising: to provide world-class, internationally accredited language education that empowers every student to speak with unshakeable confidence.
                   </p>
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  <p className="text-slate-300 text-xs leading-relaxed">
                     Over the last two decades, we have mentored thousands of Indian learners and international scholars from the Middle East, East Asia, and Africa. Today, Cambridge Academy stands as a testament to pedagogical excellence, personal mentorship, and transformative career growth.
                   </p>
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <button
                       onClick={() => openCounsellingModal('Academic Director Consultation')}
-                      className="px-6 py-3 bg-[#d4af37] text-[#0a192f] font-bold rounded-full text-xs hover:bg-[#b89628] transition-all shadow-md"
+                      className="px-5 py-2.5 bg-[#d4af37] text-[#0a192f] font-bold rounded-full text-xs hover:bg-[#b89628] transition-all shadow-md"
                     >
                       Schedule Personal Consultation with Director →
                     </button>
@@ -1079,21 +1079,21 @@ export default function Home() {
         </section>
 
         {/* 12. STUDENT TESTIMONIALS */}
-        <section id="testimonials" className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+        <section id="testimonials" className="py-10 md:py-14 bg-slate-50 border-t border-slate-200">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-3">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
                 Student Testimonials
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 Real Stories of Fluency &amp; Transformation
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-3">
+              <p className="text-slate-600 text-xs sm:text-sm mt-2">
                 Read how our programmes have empowered careers, boosted exam scores, and built confidence.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
               {[
                 {
                   name: 'Pooja Venkatesh',
@@ -1123,17 +1123,17 @@ export default function Home() {
                     'Coming from Yemen, I was worried about language in India. Cambridge Academy gave me a warm second home, great teachers, and complete English fluency for my university studies.',
                 },
               ].map((t, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
+                <div key={idx} className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
                   <div>
-                    <div className="flex items-center gap-1 text-amber-400 text-sm mb-4">
+                    <div className="flex items-center gap-1 text-amber-400 text-sm mb-3">
                       {'★'.repeat(t.rating)}
                     </div>
-                    <p className="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6">
+                    <p className="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-4">
                       &ldquo;{t.comment}&rdquo;
                     </p>
                   </div>
-                  <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <img src={t.img} alt={t.name} className="w-11 h-11 rounded-full object-cover border border-[#d4af37]" />
+                  <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
+                    <img src={t.img} alt={t.name} className="w-10 h-10 rounded-full object-cover border border-[#d4af37]" />
                     <div>
                       <p className="font-bold text-xs text-[#0a192f]">{t.name}</p>
                       <p className="text-[10px] text-slate-400">{t.course} &bull; {t.loc}</p>
@@ -1146,35 +1146,35 @@ export default function Home() {
         </section>
 
         {/* 13. STUDENT SUCCESS STORIES */}
-        <section id="success-stories" className="py-20 bg-white border-t border-slate-200">
+        <section id="success-stories" className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
               <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37]">
                 Proven Results
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight mt-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight mt-1">
                 Student Success Stories
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-3">
+              <p className="text-slate-600 text-xs sm:text-sm mt-2">
                 Real milestones achieved by Cambridge Academy graduates across top institutions worldwide.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
               {[
                 { title: 'Admitted to University of Manchester (UK)', student: 'Arjun Swaminathan', badge: 'IELTS Band 8.5', story: 'Cracked the IELTS Academic exam with 9 in Listening and 8.5 in Reading. Now pursuing MSc Data Science.' },
                 { title: 'Registered NHS Nurse in London (UK)', student: 'Sister Ancy Philip', badge: 'OET Grade B (370 pts)', story: 'Cleared all 4 OET healthcare sub-tests on first attempt. Completed UK NMC registration seamlessly.' },
                 { title: 'Secured Canadian PR via Express Entry', student: 'Manish & Neha Sharma', badge: 'CELPIP CLB 10', story: 'Maximized their CRS scores by scoring CLB 10 across all CELPIP modules following our test-prep sprint.' },
               ].map((c, idx) => (
-                <div key={idx} className="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between">
+                <div key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col justify-between">
                   <div>
-                    <span className="px-3 py-1 bg-[#0a192f] text-[#d4af37] text-[10px] font-bold rounded-full inline-block mb-3">
+                    <span className="px-2.5 py-0.5 bg-[#0a192f] text-[#d4af37] text-[10px] font-bold rounded-full inline-block mb-2.5">
                       {c.badge}
                     </span>
-                    <h3 className="text-base font-bold text-[#0a192f] mb-2">{c.title}</h3>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-4">{c.story}</p>
+                    <h3 className="text-sm font-bold text-[#0a192f] mb-1.5">{c.title}</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3">{c.story}</p>
                   </div>
-                  <p className="text-[11px] font-bold text-slate-500 border-t border-slate-200/60 pt-3">
+                  <p className="text-[11px] font-bold text-slate-500 border-t border-slate-200/60 pt-2.5">
                     Student: {c.student}
                   </p>
                 </div>
@@ -1184,21 +1184,21 @@ export default function Home() {
         </section>
 
         {/* 14. INTERNATIONAL STUDENT ACHIEVEMENTS */}
-        <section className="py-20 bg-slate-900 text-white relative">
+        <section className="py-10 md:py-14 bg-slate-900 text-white relative">
           <div className="container-custom">
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
               <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37]">
                 Global Footprint
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mt-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mt-1">
                 International Student Achievements
               </h2>
-              <p className="text-slate-400 text-sm sm:text-base mt-3">
+              <p className="text-slate-400 text-xs sm:text-sm mt-2">
                 Over 21 years, we have welcomed students from across Asia, the Gulf, and Africa.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 text-center">
               {[
                 { country: 'Saudi Arabia', flag: '🇸🇦', count: '5,000+ Students' },
                 { country: 'Yemen', flag: '🇾🇪', count: '3,200+ Students' },
@@ -1207,10 +1207,10 @@ export default function Home() {
                 { country: 'UAE & Oman', flag: '🇦🇪🇴🇲', count: '2,500+ Students' },
                 { country: 'African Nations', flag: '🌍', count: '3,000+ Students' },
               ].map((cty, idx) => (
-                <div key={idx} className="bg-white/5 border border-white/10 p-5 rounded-2xl">
-                  <span className="text-3xl block mb-2">{cty.flag}</span>
+                <div key={idx} className="bg-white/5 border border-white/10 p-4 rounded-xl">
+                  <span className="text-2xl block mb-1">{cty.flag}</span>
                   <p className="font-bold text-xs text-white">{cty.country}</p>
-                  <p className="text-[10px] text-[#d4af37] font-semibold mt-1">{cty.count}</p>
+                  <p className="text-[10px] text-[#d4af37] font-semibold mt-0.5">{cty.count}</p>
                 </div>
               ))}
             </div>
@@ -1218,15 +1218,15 @@ export default function Home() {
         </section>
 
         {/* 15. GOOGLE REVIEWS SECTION */}
-        <section className="py-20 bg-white border-t border-slate-200">
+        <section className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="bg-amber-50/60 border border-amber-200/80 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="max-w-xl">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl text-amber-500 font-bold">★★★★★</span>
-                  <span className="text-base font-extrabold text-slate-900">4.9 / 5 Rating on Google</span>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span className="text-xl text-amber-500 font-bold">★★★★★</span>
+                  <span className="text-sm font-extrabold text-slate-900">4.9 / 5 Rating on Google</span>
                 </div>
-                <h3 className="text-2xl font-black text-[#0a192f] mb-2">
+                <h3 className="text-xl sm:text-2xl font-black text-[#0a192f] mb-1.5">
                   Trusted by 1,000+ Verified Google Reviews
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -1239,7 +1239,7 @@ export default function Home() {
                   href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 bg-[#0a192f] hover:bg-[#162447] text-white font-bold rounded-full text-xs shadow-md transition-all text-center"
+                  className="px-5 py-3 bg-[#0a192f] hover:bg-[#162447] text-white font-bold rounded-full text-xs shadow-md transition-all text-center"
                 >
                   View All Google Reviews →
                 </a>
@@ -1247,7 +1247,7 @@ export default function Home() {
                   href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 bg-white border border-slate-300 text-slate-800 font-bold rounded-full text-xs hover:bg-slate-50 transition-all text-center"
+                  className="px-5 py-3 bg-white border border-slate-300 text-slate-800 font-bold rounded-full text-xs hover:bg-slate-50 transition-all text-center"
                 >
                   Leave a Google Review ★
                 </a>
@@ -1257,37 +1257,37 @@ export default function Home() {
         </section>
 
         {/* 16. FREQUENTLY ASKED QUESTIONS */}
-        <section className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
+        <section className="py-10 md:py-14 bg-slate-50 border-t border-slate-200">
           <div className="container-custom max-w-4xl">
-            <div className="text-center mb-16">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-3">
+            <div className="text-center mb-8 sm:mb-10">
+              <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
                 Got Questions?
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a192f] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 Frequently Asked Questions
               </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-2">
+              <p className="text-slate-600 text-xs sm:text-sm mt-1.5">
                 Everything you need to know about admissions, batch schedules, and training formats.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {HOMEPAGE_FAQS.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm transition-all"
+                  className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm transition-all"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-[#0a192f] hover:text-[#d4af37] transition-colors"
+                    className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-[#0a192f] hover:text-[#d4af37] transition-colors"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-slate-400 font-black text-lg">
+                    <span className="text-slate-400 font-black text-base">
                       {openFaq === idx ? '−' : '+'}
                     </span>
                   </button>
                   {openFaq === idx && (
-                    <div className="px-6 pb-6 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    <div className="px-4 sm:px-5 pb-4 pt-0 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
                       {faq.answer}
                     </div>
                   )}
@@ -1298,9 +1298,9 @@ export default function Home() {
         </section>
 
         {/* 17. CONTACT & ENQUIRY SECTION (WITH GOOGLE MAPS) */}
-        <section id="contact-enquiry" className="py-20 md:py-28 bg-white border-t border-slate-200">
+        <section id="contact-enquiry" className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               {/* Left Column: Campus Details & Interactive Google Maps */}
               <div className="lg:col-span-5 space-y-8">
                 <div>
