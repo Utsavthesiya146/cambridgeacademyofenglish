@@ -320,10 +320,24 @@ export default function Footer() {
         {/* Copyright & HostingBaba Credit Symmetrical Row */}
         <div className="pt-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-400 text-center sm:text-left">
           <p>© {new Date().getFullYear()} Cambridge Academy of English, Bangalore. All Rights Reserved.</p>
-          <p className="flex items-center gap-1.5 font-normal">
-            Designed &amp; Developed with <span className="text-rose-500">❤️</span> by{' '}
-            <span className="text-white font-medium">HostingBaba</span>
-          </p>
+          <div className="flex items-center gap-2 font-normal">
+            <span>
+              Designed &amp; Developed with <span className="text-rose-500">❤️</span> by
+            </span>
+            <a
+              href="https://webhostingbaba.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center bg-white px-2 py-0.5 rounded shadow-sm hover:opacity-90 hover:scale-105 transition-all"
+              title="HostingBaba"
+            >
+              <img
+                src="/images/hosting-baba-logo.png"
+                alt="HostingBaba"
+                className="h-4 sm:h-5 w-auto object-contain"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
