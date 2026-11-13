@@ -1183,42 +1183,78 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Campus Video Highlight */}
-            <div className="mt-10 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm max-w-3xl mx-auto text-center">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#0a192f] px-3 py-1 rounded-full text-white inline-block mb-3">
-                Authentic Campus Life
-              </span>
-              <h3 className="text-xl sm:text-2xl font-black text-[#0a192f] mb-2">
-                Watch Cambridge Academy in Action
-              </h3>
-              <p className="text-slate-600 text-xs sm:text-sm mb-5 max-w-xl mx-auto">
-                Discover our interactive speech lab, group debates, and international student community in Kammanahalli, Bangalore.
-              </p>
-              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-black aspect-video max-w-2xl mx-auto">
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
-                  poster="/images/hero-classroom.jpg"
-                  className="w-full h-full object-cover"
-                >
-                  <source src="/videos/campus-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="mt-4 flex flex-wrap justify-center items-center gap-4 text-xs font-bold">
-                <Link href="/testimonials" className="text-[#0a192f] hover:text-[#d4af37] underline">
-                  Read All 9+ Verified International Reviews &rarr;
-                </Link>
-                <span className="text-slate-300">&bull;</span>
-                <a
-                  href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-600 hover:text-[#d4af37]"
-                >
-                  📺 Official YouTube Channel &rarr;
-                </a>
+            {/* Campus Video Highlight - Full Width 2-Column Showcase */}
+            <div className="mt-8 sm:mt-10 bg-white p-6 sm:p-8 lg:p-10 rounded-3xl border border-slate-200/80 shadow-sm w-full">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                {/* Video Player Column */}
+                <div className="lg:col-span-7">
+                  <div className="relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-black aspect-video w-full">
+                    <video
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster="/images/hero-classroom.jpg"
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/videos/campus-video.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+
+                {/* Campus Information & Highlights Column */}
+                <div className="lg:col-span-5 flex flex-col justify-center text-left">
+                  <div className="inline-flex items-center gap-1.5 self-start text-[11px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#0a192f] px-3 py-1 rounded-full text-white mb-3">
+                    <span>🎥</span> Authentic Campus Life
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#0a192f] tracking-tight mb-2">
+                    Watch Cambridge Academy in Action
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                    Discover our interactive speech lab, group debates, and international student community in Kammanahalli, Bangalore.
+                  </p>
+
+                  <div className="space-y-2.5 mb-5 border-y border-slate-100 py-3.5">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[#d4af37] text-sm leading-none mt-0.5 font-bold">✔</span>
+                      <div>
+                        <p className="text-xs font-bold text-[#0a192f]">Interactive Audio &amp; Speech Lab</p>
+                        <p className="text-[11px] text-slate-500">Real-time pronunciation and accent neutralization drills</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[#d4af37] text-sm leading-none mt-0.5 font-bold">✔</span>
+                      <div>
+                        <p className="text-xs font-bold text-[#0a192f]">Group Debates &amp; Presentation Skills</p>
+                        <p className="text-[11px] text-slate-500">Daily conversational drills and extempore practice</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[#d4af37] text-sm leading-none mt-0.5 font-bold">✔</span>
+                      <div>
+                        <p className="text-xs font-bold text-[#0a192f]">International Student Community</p>
+                        <p className="text-[11px] text-slate-500">Cohort from South Korea, Yemen, Iran &amp; 15+ countries</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-bold">
+                    <Link
+                      href="/testimonials"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0a192f] hover:bg-[#d4af37] hover:text-[#0a192f] text-white transition-all shadow-sm"
+                    >
+                      Read All 9+ Verified Reviews &rarr;
+                    </Link>
+                    <a
+                      href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"
+                    >
+                      <span>📺</span> YouTube Channel &rarr;
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

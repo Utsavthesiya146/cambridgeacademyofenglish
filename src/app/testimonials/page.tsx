@@ -73,42 +73,74 @@ export default function TestimonialsPage() {
       </section>
 
       {/* 2B. AUTHENTIC CAMPUS & CLASSROOM VIDEO SHOWCASE */}
-      <section className="py-12 bg-white border-b border-slate-200">
-        <div className="container-custom max-w-4xl mx-auto">
-          <div className="text-center mb-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
-              Campus Life &amp; Activities
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f] tracking-tight">
-              Inside Cambridge Academy of English
-            </h2>
-            <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-xl mx-auto">
-              Watch authentic classroom sessions, speech practice, and student activities recorded at our Kammanahalli campus.
-            </p>
-          </div>
+      <section className="py-8 sm:py-10 bg-white border-b border-slate-200">
+        <div className="container-custom">
+          <div className="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+              {/* Video Player Column */}
+              <div className="lg:col-span-7">
+                <div className="relative rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-black aspect-video w-full">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster="/images/hero-classroom.jpg"
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/videos/campus-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
 
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100 bg-black aspect-video max-w-2xl mx-auto">
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster="/images/hero-classroom.jpg"
-              className="w-full h-full object-cover"
-            >
-              <source src="/videos/campus-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+              {/* Campus Information & Highlights Column */}
+              <div className="lg:col-span-5 flex flex-col justify-center text-left">
+                <div className="inline-flex items-center gap-1.5 self-start text-[11px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#0a192f] px-3 py-1 rounded-full text-white mb-3">
+                  <span>🎥</span> Campus Life &amp; Activities
+                </div>
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#0a192f] tracking-tight mb-2">
+                  Inside Cambridge Academy of English
+                </h2>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                  Watch authentic classroom sessions, speech practice, and student activities recorded at our Kammanahalli campus in Bangalore.
+                </p>
 
-          <div className="text-center mt-3">
-            <a
-              href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0a192f] hover:text-[#d4af37] transition-colors"
-            >
-              <span>📺</span> Visit Official Cambridge Academy YouTube Channel &rarr;
-            </a>
+                <div className="space-y-2.5 mb-5 border-y border-slate-200/70 py-3.5">
+                  <div className="flex items-start gap-2.5">
+                    <span className="text-[#d4af37] text-sm leading-none mt-0.5 font-bold">✔</span>
+                    <div>
+                      <p className="text-xs font-bold text-[#0a192f]">Interactive Audio &amp; Speech Lab</p>
+                      <p className="text-[11px] text-slate-500">Real-time pronunciation and accent neutralization drills</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="text-[#d4af37] text-sm leading-none mt-0.5 font-bold">✔</span>
+                    <div>
+                      <p className="text-xs font-bold text-[#0a192f]">Group Debates &amp; Presentation Skills</p>
+                      <p className="text-[11px] text-slate-500">Daily conversational drills and public speaking workshops</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="text-[#d4af37] text-sm leading-none mt-0.5 font-bold">✔</span>
+                    <div>
+                      <p className="text-xs font-bold text-[#0a192f]">International Student Cohort</p>
+                      <p className="text-[11px] text-slate-500">Learners from South Korea, Yemen, Iran &amp; 15+ countries</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <a
+                    href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0a192f] hover:bg-[#d4af37] hover:text-[#0a192f] text-white text-xs font-bold transition-all shadow-sm"
+                  >
+                    <span>📺</span> Visit Official YouTube Channel &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
