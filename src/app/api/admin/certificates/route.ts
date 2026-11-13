@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest } from 'next/server';
 import { getAllCertificates, createCertificate, updateCertificate } from '@/lib/certificates';
 import { isAuthorizedAdminSession, jsonAdminResponse } from '@/lib/adminSession';

@@ -94,7 +94,8 @@
   font-size: 11px !important;
   line-height: 1 !important;
 }
-.goog-te-gadget .goog-te-combo {
+.goog-te-gadget .goog-te-combo,
+select.goog-te-combo {
   color: #f8fafc !important;
   margin: 0 !important;
   padding: 3px 8px !important;
@@ -106,7 +107,9 @@
   cursor: pointer !important;
   max-width: 150px !important;
 }
-.goog-te-gadget .goog-te-combo option {
+.goog-te-gadget .goog-te-combo option,
+select.goog-te-combo option,
+.goog-te-combo option {
   color: #0f172a !important;
   background-color: #ffffff !important;
   font-size: 12px !important;

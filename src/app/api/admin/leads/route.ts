@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest } from 'next/server';
 import { getAllLeads, updateLead } from '@/lib/leads';
 import { isAuthorizedAdminSession, jsonAdminResponse } from '@/lib/adminSession';
