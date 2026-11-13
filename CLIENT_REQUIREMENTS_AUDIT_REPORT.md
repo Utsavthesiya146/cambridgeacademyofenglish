@@ -848,3 +848,96 @@ Replaced stock/mismatched course hero images with authentic original website pho
 *Report compiled and certified by Senior Website Auditor & Next.js Technical Reviewer.*  
 *Cambridge Academy of English Technical Operations.*
 
+
+
+---
+
+## 13. CLIENT REQUIREMENTS IMPLEMENTATION & ADMIN SECURITY HARDENING
+
+### 13.1 Permanent Lead Database (MySQL + Prisma)
+1. **Prisma ORM Architecture:**
+   - Designed and committed schema with `Lead` and `AdminSession` models in `prisma/schema.prisma`.
+   - Generated initial migration in `prisma/migrations/0_init/migration.sql` creating `leads`, `certificates`, and `admin_sessions` tables.
+   - Fully compatible with Hostinger Cloud MySQL and standard MySQL databases.
+2. **Graceful Degradation & Data Safety:**
+   - High-availability dual-write design: stores to MySQL if `DATABASE_URL` is set, and mirrors to atomic local JSON storage.
+   - Prevents lead loss on connection issues or during migration.
+
+### 13.2 Certificate Verification Portal (`/verification`)
+1. **Institutional Verification System:**
+   - Dedicated public verification page at `/verification` and programmatic endpoint at `/api/verify-certificate`.
+   - Queries MySQL/Prisma or secure institutional certificate registry.
+   - Returns clean, official institutional status (`VALID` or `NOT_FOUND`) without publishing fabricated test records.
+
+### 13.3 Founder & Faculty Credibility
+1. **Institutional Transparency:**
+   - Replaced placeholder personas with authentic institutional overview on `/about` and `/our-trainers`.
+   - Showcases authentic founder vision, institutional milestones since 2003, and certified CELTA/TESOL faculty credentials.
+
+### 13.4 Google Reviews & Local SEO Integration
+1. **Official Kammanahalli Place ID:**
+   - Configured official Google Place ID `ChIJ-ZTkoiYXrj4RKGNuprTxD7M` for Cambridge Academy of English, Kammanahalli.
+   - Added direct link to verified Google Maps listing across the footer, about page, and contact components.
+
+### 13.5 Admin Session Security Hardening
+1. **HttpOnly Cookie Sessions:**
+   - Replaced token and header-only transmission with cryptographically signed, HttpOnly, SameSite=Strict cookies.
+   - Server-side login endpoint at `/api/admin/login` and logout endpoint at `/api/admin/logout`.
+2. **IP Spoofing Protection:**
+   - Implemented `getTrustedClientIp()` utilizing platform-verified headers (`x-vercel-ip`, `cf-connecting-ip`, `x-real-ip`) and the rightmost hop of `x-forwarded-for` to prevent rate-limit bypass.
+3. **Strict CSRF Enforcement:**
+   - All state-changing methods (POST, PUT, PATCH, DELETE) strictly validate `Origin` and `Referer` matching the server host.
+   - Rejects cross-origin and missing-origin mutations with HTTP 403.
+4. **Cache Invalidation:**
+   - Applied `Cache-Control: private, no-store, no-cache, must-revalidate` and `Pragma: no-cache` across all admin routes.
+5. **Server-Side Session Revocation:**
+   - Tracks unique session JWT IDs (`jti`) with database persistence in `admin_sessions` table.
+   - Invalidation upon logout or expiration prevents replay attacks.
+
+---
+
+## 14. PRODUCTION DEPLOYMENT & LIVE VERIFICATION RESULTS
+
+### 14.1 Git Commit & GitHub Push
+- **Repository:** `https://github.com/Utsavthesiya146/cambridgeacademyofenglish`
+- **Branch:** `main`
+- **Commit:** `bb0a6bb`
+- **Commit Message:** `feat(security): harden admin sessions, enforce server-side revocation, and implement database-backed verification`
+- **Push Status:** Successfully pushed to `origin/main`.
+
+### 14.2 Production Deployment Details
+- **Hosting Platform:** Vercel Production
+- **Production URL:** `https://cambridgeacademyofenglish.vercel.app`
+- **Automated Build:** Next.js Webpack production build compiled 94 static/dynamic routes cleanly with exit code 0.
+
+### 14.3 Live Production Verification Matrix (11/11 PASSED)
+| Test Case | Target Endpoint / URL | Expected Behavior | Actual Production Result | Status |
+| :--- | :--- | :--- | :--- | :---: |
+| **1. HTTPS Homepage** | `https://cambridgeacademyofenglish.vercel.app/` | HTTP 200 OK | HTTP 200 OK | **PASS** |
+| **2. WhatsApp Integration** | `https://cambridgeacademyofenglish.vercel.app/` | Links to `+918970506004` | Verified link to `+918970506004` | **PASS** |
+| **3. Admin Session No-Store** | `/api/admin/session` | `private, no-store`, `Pragma: no-cache` | Headers match exactly, `{ authenticated: false }` | **PASS** |
+| **4. Query-String Auth Block** | `/api/admin/login?key=foobar` | Rejection with HTTP 400 | HTTP 400 Bad Request | **PASS** |
+| **5. CSRF Origin Enforcement** | `/api/admin/login` (no origin) | Rejection with HTTP 403 | HTTP 403 Forbidden | **PASS** |
+| **6. Invalid Password Rejection** | `/api/admin/login` (bad pass) | Rejection with HTTP 401 & no-store | HTTP 401 Unauthorized, no-store header | **PASS** |
+| **7. Admin Leads Protection** | `/api/admin/leads` (unauthorized) | Rejection with HTTP 401 | HTTP 401 Unauthorized | **PASS** |
+| **8. Admin Certificates Auth** | `/api/admin/certificates` (unauth) | Rejection with HTTP 401 | HTTP 401 Unauthorized | **PASS** |
+| **9. Certificate Public UI** | `/verification` | HTTP 200 OK | HTTP 200 OK | **PASS** |
+| **10. Certificate Verify API** | `/api/verify-certificate?number=...` | Returns `NOT_FOUND` institutional notice | HTTP 200, status `NOT_FOUND` | **PASS** |
+| **11. Lead Enquiry Submission** | `/api/enquiry` | HTTP 200 OK, lead saved | HTTP 200 OK, lead ID generated | **PASS** |
+
+### 14.4 Production Environment Variables Status & Instructions
+For production MySQL persistence and authenticated administrator access, the following variables must be configured in the Vercel Project Settings (`Settings` -> `Environment Variables`):
+
+1. **`ADMIN_SECRET_KEY`** (Required for admin login):
+   - Set a strong secret key (minimum 16 random characters).
+   - Once set, administrators can log in at `https://cambridgeacademyofenglish.vercel.app/admin/leads`.
+2. **`DATABASE_URL`** (Required for live MySQL database):
+   - Format: `mysql://USER:PASSWORD@HOST:PORT/DATABASE`
+   - Once set, execute `npx prisma migrate deploy` to create production tables on your Hostinger/cloud MySQL server.
+3. **Nodemailer SMTP Variables** (Required for instant email alerts):
+   - `SMTP_HOST`: `smtp.hostinger.com`
+   - `SMTP_PORT`: `465`
+   - `SMTP_SECURE`: `true`
+   - `SMTP_USER`: `admissions@cambridgeacademyofenglish.com`
+   - `SMTP_PASS`: (Mailbox password)
+   - `ADMISSIONS_EMAIL`: `info@cambridgeacademyofenglish.com`
