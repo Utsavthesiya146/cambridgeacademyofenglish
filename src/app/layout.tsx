@@ -114,7 +114,34 @@ export default function RootLayout({
             __html: `
               function googleTranslateElementInit() {
                 if (window.google && window.google.translate) {
-                  new window.google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                  new window.google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    autoDisplay: false
+                  }, 'google_translate_element');
+                }
+              }
+
+              if (typeof window !== 'undefined' && typeof MutationObserver !== 'undefined') {
+                var fixTranslateLayout = function() {
+                  if (document.body && document.body.style.top && document.body.style.top !== '0px') {
+                    document.body.style.top = '0px';
+                  }
+                  var banners = document.querySelectorAll('.goog-te-banner-frame, iframe.skiptranslate, iframe[id*=":"]');
+                  for (var i = 0; i < banners.length; i++) {
+                    banners[i].style.display = 'none';
+                    banners[i].style.visibility = 'hidden';
+                    banners[i].style.height = '0';
+                    banners[i].style.width = '0';
+                  }
+                };
+
+                var observer = new MutationObserver(fixTranslateLayout);
+                if (document.body) {
+                  observer.observe(document.body, { attributes: true, childList: true, subtree: true, attributeFilter: ['style', 'class'] });
+                } else {
+                  window.addEventListener('DOMContentLoaded', function() {
+                    observer.observe(document.body, { attributes: true, childList: true, subtree: true, attributeFilter: ['style', 'class'] });
+                  });
                 }
               }
             `,
