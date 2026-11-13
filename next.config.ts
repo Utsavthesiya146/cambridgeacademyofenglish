@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Legacy Static URL Mappings -> Canonical Routes (301 Permanent)
-      { source: '/about/Values-of-Cambridge', destination: '/about/values-of-cambridge', permanent: true },
       { source: '/about/vision-mission', destination: '/about/vision-mision', permanent: true },
       { source: '/accomodation/Academic-Extracts', destination: '/admission/academic-extracts', permanent: true },
       { source: '/accomodation/Admission-form-For-Foreign-Students', destination: '/admission/foreign-students', permanent: true },
@@ -60,7 +59,6 @@ const nextConfig: NextConfig = {
       { source: '/courses/LearnSpanishlanguage', destination: '/courses/spanish-language', permanent: true },
       { source: '/courses/ChineseLanguage', destination: '/courses/chinese-mandarin-language', permanent: true },
       { source: '/courses/foreign-language-courses-in-bangalore-india', destination: '/courses/foreign-language-courses', permanent: true },
-      { source: '/courses/Diploma-in-English-Language', destination: '/courses/diploma-in-english-language', permanent: true },
       { source: '/courses/advanced-diploma-in-english-training-in-bangalore', destination: '/courses/master-diploma-in-english-language', permanent: true },
       { source: '/courses/teacher-training-in-banglore', destination: '/courses/teacher-training', permanent: true },
       { source: '/courses/TEFL-Courses-In-Bangalore', destination: '/courses/teacher-training', permanent: true },
