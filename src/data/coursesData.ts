@@ -252,7 +252,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'spoken-english',
     categoryName: 'Spoken English',
     tagline: 'Master High-Level Fluency, Voice Modulation, Accent Neutralization, and Stage Presence',
-    heroImage: '/images/courses/course-spoken-offline.jpg',
+    heroImage: '/images/courses/course-advanced-spoken.jpg',
     intro:
       'Elevate your conversational English to executive and international standards. Designed for professionals, scholars, and ambitious speakers who already understand English but struggle with spontaneity, mother-tongue influence (MTI), vocabulary range, and presentation confidence. Our advanced speech lab provides rigorous practice in debate, impromptu speaking, and accent neutralization.',
     whoShouldJoin: [
@@ -1211,7 +1211,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'english-adults',
     categoryName: 'English for Adults',
     tagline: 'Strategic Verbal and Written Communication for Modern Enterprise Leaders',
-    heroImage: '/images/courses/course-advanced-diploma.jpg',
+    heroImage: '/images/courses/course-business-communication.jpg',
     intro:
       'Master the strategic art of business communication. Designed for entrepreneurs, senior executives, business analysts, and managers, this intensive program covers corporate negotiations, commercial proposals, stakeholder management, boardroom diplomacy, and crisis communication in English.',
     whoShouldJoin: [
@@ -1749,7 +1749,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'teacher-training',
     categoryName: 'English for Teachers',
     tagline: 'Become a High-Earning Corporate Communication Coach, Voice Trainer, and Soft Skills Mentor',
-    heroImage: '/images/courses/course-tefl.jpg',
+    heroImage: '/images/courses/course-corporate-trainer.jpg',
     intro:
       'Transition from conventional school classroom teaching to high-paying corporate English and communication coaching. This flagship Train the Trainer program equips aspiring and experienced educators with contemporary training methodologies, adult learning psychology (Andragogy), voice & accent coaching frameworks, and corporate workshop design skills demanded by Fortune 500 enterprises.',
     whoShouldJoin: [
@@ -2196,7 +2196,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'foreign-languages',
     categoryName: 'Foreign Languages',
     tagline: 'Master Japanese for IT Engineering Careers, Global Tech Partnerships, and JLPT Certification',
-    heroImage: '/images/courses/course-chinese.jpg',
+    heroImage: '/images/courses/course-japanese.jpg',
     intro:
       'Learn Japanese at Cambridge Academy of English in Bangalore, the Silicon Valley of India. With hundreds of Japanese multinational technology, automotive, and semiconductor enterprises operating in Bangalore and Japan actively hiring global bilingual engineers, Japanese fluency opens exceptional career opportunities. Our certified native-level instructors prepare you comprehensively for the official JLPT (Japanese-Language Proficiency Test) from N5 to N3.',
     whoShouldJoin: [
@@ -2285,7 +2285,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     category: 'foreign-languages',
     categoryName: 'Foreign Languages',
     tagline: 'Learn Spoken and Modern Standard Arabic for Gulf Careers, Trade, and Higher Studies',
-    heroImage: '/images/courses/course-foreign-nationals.jpg',
+    heroImage: '/images/courses/course-arabic.jpg',
     intro:
       'Master conversational and Modern Standard Arabic (MSA) at Cambridge Academy of English. As economic, commercial, and employment ties between India and the Middle East continue to flourish, Arabic language fluency is a distinguished advantage for professionals working in Saudi Arabia, UAE, Qatar, Oman, and Kuwait. Our practical course covers the Arabic alphabet, everyday conversational dialects, and formal business communication.',
     whoShouldJoin: [

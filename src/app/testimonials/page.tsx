@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ALL_TESTIMONIALS } from '@/data/testimonialsData';
 
 export const metadata: Metadata = {
   title: 'Verified Student Reviews & Testimonials | Cambridge Academy of English',
@@ -9,109 +11,6 @@ export const metadata: Metadata = {
     canonical: 'https://cambridgeacademyofenglish.vercel.app/testimonials',
   },
 };
-
-const TESTIMONIALS = [
-  {
-    name: 'Pooja Venkatesh',
-    course: 'Spoken English & Workplace Communication',
-    location: 'Kammanahalli, Bangalore',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'PV',
-    feedback:
-      'I used to hesitate in every team meeting. Cambridge Academy transformed my articulation completely. Within 2 months, I was promoted to Senior Product Consultant at an MNC! The active speech drills and supportive feedback from trainers made all the difference.',
-  },
-  {
-    name: 'Rohit Kulkarni',
-    course: 'IELTS Academic Intensive Preparation',
-    location: 'Bangalore, India',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'RK',
-    feedback:
-      'Scored 8.5 Band overall on IELTS! The writing evaluation clinics and 1-on-1 speaking interviews with British Council certified trainers gave me the exact edge I needed. Highly recommend their personalized strategy sessions.',
-  },
-  {
-    name: 'Fatima Al-Zahra',
-    course: 'Diploma in English for Foreign Nationals',
-    location: 'Yemen / Saudi Arabia',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'FA',
-    feedback:
-      'Coming from Yemen, I was worried about language in India. Cambridge Academy gave me a warm second home, great teachers, and complete English fluency for my university studies. Truly the best language institute in South India.',
-  },
-  {
-    name: 'Soo Jung',
-    course: 'Communicative English Immersion',
-    location: 'Seoul, South Korea',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'SJ',
-    feedback:
-      'I studied Communicative English at Cambridge. Before, I was able to read English but could not speak fluently. Here, I gained immense confidence in public presentation and everyday conversation.',
-  },
-  {
-    name: 'Geunduk Jeon',
-    course: 'Spoken English & Presentation Skills',
-    location: 'South Korea',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'GJ',
-    feedback:
-      'Cambridge Academy of English brought out the best in me. The trainers and management are really supportive and friendly. Joining here was one of the best educational decisions of my life.',
-  },
-  {
-    name: 'Omar Al-Haidari',
-    course: 'Diploma in English Language',
-    location: 'Sana’a, Yemen',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'OM',
-    feedback:
-      'I finished my Diploma in English language here. I used to find English hard, but the step-by-step guidance from certified teachers helped me master sentence structure and pronunciation. Now I speak with complete confidence!',
-  },
-  {
-    name: 'Tenzin Ngodup',
-    course: 'English for Academic Purposes',
-    location: 'Tibet / India',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'TN',
-    feedback:
-      'A great place to learn! Meeting students from 18 different countries gave me a truly international experience. The small group attention and dedicated doubt-clearing sessions made learning natural and fast.',
-  },
-  {
-    name: 'Esmail',
-    course: 'Flexible Spoken English & Vocabulary',
-    location: 'Iran',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'ES',
-    feedback:
-      'The flexible morning and evening batch timings allowed me to study while managing my professional commitments. The mentors are passionate and experienced. Best English academy in Bangalore without a doubt.',
-  },
-  {
-    name: 'Edris',
-    course: 'IELTS Band Booster Workshop',
-    location: 'Iran / Bangalore',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'ED',
-    feedback:
-      'Their proven training methods for IELTS are exceptional. The daily full-length mock tests and individual writing critiques ensured I felt 100% prepared on the day of my exam.',
-  },
-  {
-    name: 'Mohammed Farooq',
-    course: 'Advanced English Grammar & Vocabulary',
-    location: 'International Student',
-    rating: 5,
-    date: 'Verified Student',
-    avatar: 'MF',
-    feedback:
-      'Excellent study materials and regular diagnostic evaluations helped me track my progress continuously. The faculty genuinely care about every student’s improvement. Highly recommended!',
-  },
-];
 
 export default function TestimonialsPage() {
   return (
@@ -173,6 +72,47 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
+      {/* 2B. AUTHENTIC CAMPUS & CLASSROOM VIDEO SHOWCASE */}
+      <section className="py-12 bg-white border-b border-slate-200">
+        <div className="container-custom max-w-4xl mx-auto">
+          <div className="text-center mb-6">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
+              Campus Life &amp; Activities
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0a192f] tracking-tight">
+              Inside Cambridge Academy of English
+            </h2>
+            <p className="text-slate-600 text-xs sm:text-sm mt-1 max-w-xl mx-auto">
+              Watch authentic classroom sessions, speech practice, and student activities recorded at our Kammanahalli campus.
+            </p>
+          </div>
+
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100 bg-black aspect-video max-w-2xl mx-auto">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/images/hero-classroom.jpg"
+              className="w-full h-full object-cover"
+            >
+              <source src="/videos/campus-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div className="text-center mt-3">
+            <a
+              href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#0a192f] hover:text-[#d4af37] transition-colors"
+            >
+              <span>📺</span> Visit Official Cambridge Academy YouTube Channel &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* 3. TESTIMONIALS GRID */}
       <section className="container-custom py-16 sm:py-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -188,9 +128,9 @@ export default function TestimonialsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {TESTIMONIALS.map((t, idx) => (
+          {ALL_TESTIMONIALS.map((t) => (
             <div
-              key={idx}
+              key={t.id}
               className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
             >
               <div>
@@ -212,14 +152,20 @@ export default function TestimonialsPage() {
 
               {/* Author Info */}
               <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#0a192f] text-[#d4af37] flex items-center justify-center font-black text-xs shadow-sm flex-shrink-0">
-                  {t.avatar}
+                <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-[#d4af37]/70 shadow-sm flex-shrink-0 bg-slate-100">
+                  <Image
+                    src={t.image}
+                    alt={`${t.name} - Student Review`}
+                    width={44}
+                    height={44}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <p className="font-bold text-xs text-[#0a192f] group-hover:text-[#d4af37] transition-colors">
                     {t.name}
                   </p>
-                  <p className="text-[10px] text-slate-400 font-medium">
+                  <p className="text-[10px] text-slate-500 font-medium">
                     {t.course} &bull; {t.location}
                   </p>
                 </div>

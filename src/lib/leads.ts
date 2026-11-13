@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import os from 'os';
+import { sendAdmissionsNotification } from './emailService';
 
 export interface Lead {
   id: string;
@@ -156,7 +157,30 @@ export async function updateLead(id: string, updates: {
 }
 
 async function notifyAdmissionsTeam(lead: Lead) {
-  // If webhook is provided (e.g., Slack, Discord, Zapier, Make, CRM)
+  // 1. Dispatch SMTP Email Notification to Admissions Team via Nodemailer
+  try {
+    const emailResult = await sendAdmissionsNotification({
+      name: lead.name,
+      phone: lead.phone,
+      email: lead.email,
+      course: lead.course,
+      learningMode: lead.learningMode,
+      preferredTime: lead.preferredTime,
+      message: lead.message,
+      type: lead.type,
+      pageUrl: lead.pageUrl,
+      createdAt: lead.createdAt,
+    });
+    if (emailResult.skipped) {
+      console.warn(`[AdmissionsDesk] Email not sent – SMTP credentials missing for lead: ${lead.id} (${lead.name})`);
+    } else if (!emailResult.success) {
+      console.error(`[AdmissionsDesk] Email delivery failed for lead ${lead.id}:`, emailResult.error);
+    }
+  } catch (emailErr) {
+    console.error('Error dispatching admissions email notification:', emailErr);
+  }
+
+  // 2. Optional Webhook dispatch (if configured by client)
   const webhookUrl = process.env.LEAD_NOTIFICATION_WEBHOOK;
   if (webhookUrl) {
     try {
@@ -170,37 +194,6 @@ async function notifyAdmissionsTeam(lead: Lead) {
       });
     } catch (e) {
       console.warn('Webhook notification dispatch failed:', e);
-    }
-  }
-
-  // If email configuration is set via SMTP or SendGrid/Resend
-  if (process.env.RESEND_API_KEY) {
-    try {
-      await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          from: process.env.NOTIFICATION_FROM || 'admissions@cambridgeacademyofenglish.com',
-          to: [process.env.NOTIFICATION_EMAIL || 'admissions@cambridgeacademyofenglish.com'],
-          subject: `New Student Enquiry: ${lead.name} - ${lead.course}`,
-          html: `
-            <h2>New Student Lead Received</h2>
-            <p><strong>Name:</strong> ${lead.name}</p>
-            <p><strong>Phone:</strong> <a href="tel:${lead.phone}">${lead.phone}</a> | <a href="https://wa.me/${lead.phone.replace(/[^0-9]/g, '')}">WhatsApp</a></p>
-            <p><strong>Email:</strong> ${lead.email || 'N/A'}</p>
-            <p><strong>Course:</strong> ${lead.course}</p>
-            <p><strong>Mode:</strong> ${lead.learningMode}</p>
-            <p><strong>Type:</strong> ${lead.type}</p>
-            <p><strong>Message:</strong> ${lead.message || 'N/A'}</p>
-            <p><strong>Received At:</strong> ${new Date(lead.createdAt).toLocaleString('en-IN')}</p>
-          `
-        })
-      });
-    } catch (e) {
-      console.warn('Resend email dispatch error:', e);
     }
   }
 }

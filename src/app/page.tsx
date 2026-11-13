@@ -1136,31 +1136,31 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
               {[
                 {
-                  name: 'Pooja Venkatesh',
-                  course: 'Spoken English & Professional Communication',
-                  loc: 'Kammanahalli, Bangalore',
-                  img: '/images/student-pooja.jpg',
+                  name: 'Soo Jung',
+                  course: 'Communicative English',
+                  loc: 'South Korea',
+                  img: '/images/t1.jpg',
                   rating: 5,
                   comment:
-                    'I used to hesitate in every team meeting. Cambridge Academy transformed my articulation completely. Within 2 months, I was promoted to Senior Product Consultant at an MNC!',
+                    'I studied Communicative English at Cambridge. Before I was able to speak English but not so fluently but now I gained a lot of skills in grammar and conversation which was a great advantage. Now I\'m able to give presentations and speak well.',
                 },
                 {
-                  name: 'Rohit Kulkarni',
-                  course: 'IELTS Academic Intensive',
-                  loc: 'Bangalore, India',
-                  img: '/images/student-rohit.jpg',
+                  name: 'Geunduk Jeon',
+                  course: 'Communicative English',
+                  loc: 'South Korea',
+                  img: '/images/t2.jpg',
                   rating: 5,
                   comment:
-                    'Scored 8.5 Band overall on IELTS! The writing evaluation clinics and 1-on-1 speaking interviews with British Council certified trainers gave me the exact edge I needed.',
+                    'Cambridge Academy of English had brought the best out of me .The ambience is amazing . The trainers and management are really supportive and friendly,One of the best decision I made in my life was joining a communicative English course at Cambridge.',
                 },
                 {
-                  name: 'Fatima Al-Zahra',
-                  course: 'Diploma in English for Foreign Nationals',
-                  loc: 'Yemen / Saudi Arabia',
-                  img: '/images/student-fatima.jpg',
+                  name: 'Omar',
+                  course: 'Diploma in English Language',
+                  loc: 'Yemen',
+                  img: '/images/t6.jpg',
                   rating: 5,
                   comment:
-                    'Coming from Yemen, I was worried about language in India. Cambridge Academy gave me a warm second home, great teachers, and complete English fluency for my university studies.',
+                    'I’m from Yemen. I finished Diploma in English language. I used to feel very hard to learn English before but I got a very good support which helped me to learn English in a correct way and now I can say that I know English.',
                 },
               ].map((t, idx) => (
                 <div key={idx} className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
@@ -1181,6 +1181,45 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Campus Video Highlight */}
+            <div className="mt-10 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm max-w-3xl mx-auto text-center">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#0a192f] px-3 py-1 rounded-full text-white inline-block mb-3">
+                Authentic Campus Life
+              </span>
+              <h3 className="text-xl sm:text-2xl font-black text-[#0a192f] mb-2">
+                Watch Cambridge Academy in Action
+              </h3>
+              <p className="text-slate-600 text-xs sm:text-sm mb-5 max-w-xl mx-auto">
+                Discover our interactive speech lab, group debates, and international student community in Kammanahalli, Bangalore.
+              </p>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-black aspect-video max-w-2xl mx-auto">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  poster="/images/hero-classroom.jpg"
+                  className="w-full h-full object-cover"
+                >
+                  <source src="/videos/campus-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="mt-4 flex flex-wrap justify-center items-center gap-4 text-xs font-bold">
+                <Link href="/testimonials" className="text-[#0a192f] hover:text-[#d4af37] underline">
+                  Read All 9+ Verified International Reviews &rarr;
+                </Link>
+                <span className="text-slate-300">&bull;</span>
+                <a
+                  href="https://www.youtube.com/channel/UCRdBd4JLtRcqKTkyHWZJMKQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-600 hover:text-[#d4af37]"
+                >
+                  📺 Official YouTube Channel &rarr;
+                </a>
+              </div>
             </div>
           </div>
         </section>

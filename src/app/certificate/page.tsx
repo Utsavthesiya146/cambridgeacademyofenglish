@@ -47,6 +47,29 @@ export default function CertificatePage() {
                 Facing issues? Contact support at <a href="mailto:info@cambridgeacademyofenglish.com" className="text-primary font-bold hover:text-accent break-all">info@cambridgeacademyofenglish.com</a>
               </p>
             </div>
+
+            {/* Authentic Diploma Sample Showcase */}
+            <div className="mt-10 pt-8 border-t border-slate-200 text-left">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#d4af37] bg-[#0a192f] px-3 py-1 rounded-full text-white inline-block mb-3">
+                Institutional Authenticity
+              </span>
+              <h3 className="text-lg font-bold text-[#0a192f] mb-2">
+                Official Cambridge Academy of English Diploma Sample
+              </h3>
+              <p className="text-xs text-slate-500 mb-4 leading-relaxed">
+                Authentic diplomas issued by Cambridge Academy of English feature unique serial registration numbers, institutional seal, and CEFR-aligned performance grading.
+              </p>
+              <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+                <img
+                  src="/images/certificates_11.jpg"
+                  alt="Official Diploma in English Language Teaching Sample - Cambridge Academy of English"
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+              <p className="text-[11px] text-slate-400 mt-2 italic text-center">
+                Sample Diploma in English Language Teaching awarded upon formal program completion.
+              </p>
+            </div>
           </div>
         </div>
       </section>
