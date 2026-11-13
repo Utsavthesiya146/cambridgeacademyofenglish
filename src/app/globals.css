@@ -87,12 +87,22 @@
 }
 
 /* Google Translate Widget Overrides */
+#google_translate_element {
+  display: flex !important;
+  align-items: center !important;
+}
 .goog-te-gadget {
   font-family: inherit !important;
   color: transparent !important;
   white-space: nowrap;
   font-size: 11px !important;
-  line-height: 1 !important;
+  line-height: normal !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+.goog-te-gadget > div {
+  display: inline-flex !important;
+  align-items: center !important;
 }
 .goog-te-gadget .goog-te-combo,
 select.goog-te-combo {
@@ -102,10 +112,13 @@ select.goog-te-combo {
   border-radius: 6px !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
   font-size: 11px !important;
+  line-height: 1.2 !important;
   outline: none !important;
   background-color: rgba(255, 255, 255, 0.08) !important;
   cursor: pointer !important;
   max-width: 150px !important;
+  vertical-align: middle !important;
+  transform: translateY(1.5px);
 }
 .goog-te-gadget .goog-te-combo option,
 select.goog-te-combo option,
