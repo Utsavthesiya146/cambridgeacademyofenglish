@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { trackPhoneCall } from '@/lib/analytics';
+import { trackPhoneCall, trackCounsellingBooking, trackWhatsAppClick } from '@/lib/analytics';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,6 +18,7 @@ export default function Header() {
   }, []);
 
   const openCounsellingModal = () => {
+    trackCounsellingBooking('Header Navigation');
     if (typeof window !== 'undefined') {
       window.dispatchEvent(
         new CustomEvent('open-counselling-modal', {
@@ -41,7 +42,7 @@ export default function Header() {
       <div className="bg-[#0a192f] text-slate-300 text-[11px] py-1.5 hidden lg:block border-b border-white/10">
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <div id="google_translate_element" className="scale-90 origin-left">
+            <div id="google_translate_element" className="flex items-center text-[11px]">
               Select Language
             </div>
             <div className="flex items-center gap-2 border-l border-white/20 pl-4 text-[#d4af37] font-semibold tracking-wide">
@@ -708,6 +709,7 @@ export default function Header() {
                   href="https://wa.me/918970506004"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('Mobile Navigation Menu')}
                   className="w-full py-3 bg-[#25D366] text-white font-bold rounded-xl text-xs text-center flex items-center justify-center gap-2"
                 >
                   <span>💬</span> WhatsApp Admissions

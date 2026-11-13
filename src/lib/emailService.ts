@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer';
 
 export interface EmailEnquiryPayload {
+  leadId?: string;
   name: string;
   phone: string;
   email?: string;
@@ -11,6 +12,29 @@ export interface EmailEnquiryPayload {
   type?: string;
   pageUrl?: string;
   createdAt?: string;
+}
+
+// In-memory deduplication set to prevent duplicate admissions notifications for the same lead
+const recentDispatches = new Map<string, number>();
+const DISPATCH_DEDUPE_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+
+function checkAndRecordDispatch(leadId?: string): boolean {
+  if (!leadId) return false;
+  const now = Date.now();
+  const lastTime = recentDispatches.get(leadId);
+  if (lastTime && now - lastTime < DISPATCH_DEDUPE_WINDOW_MS) {
+    return true; // Is duplicate
+  }
+  // Housekeeping: clean older entries if map grows large
+  if (recentDispatches.size > 500) {
+    for (const [id, time] of recentDispatches.entries()) {
+      if (now - time > DISPATCH_DEDUPE_WINDOW_MS) {
+        recentDispatches.delete(id);
+      }
+    }
+  }
+  recentDispatches.set(leadId, now);
+  return false;
 }
 
 export interface EmailSendResult {
@@ -62,17 +86,31 @@ function getSmtpConfig() {
 export async function sendAdmissionsNotification(
   payload: EmailEnquiryPayload
 ): Promise<EmailSendResult> {
+  // Prevent duplicate admissions emails for the same lead
+  if (checkAndRecordDispatch(payload.leadId)) {
+    console.info(`[EmailService] Duplicate notification suppressed for lead: ${payload.leadId || 'unknown'}`);
+    return {
+      success: true,
+      skipped: true,
+      reason: 'Duplicate notification suppressed',
+    };
+  }
+
   const config = getSmtpConfig();
 
   // If SMTP is not yet configured, log clearly and skip without throwing errors.
   if (!config) {
+    const missing: string[] = [];
+    if (!process.env.SMTP_HOST?.trim()) missing.push('SMTP_HOST');
+    if (!process.env.SMTP_USER?.trim()) missing.push('SMTP_USER');
+    if (!process.env.SMTP_PASS?.trim()) missing.push('SMTP_PASS');
     console.warn(
-      '[EmailService] Email not sent – SMTP credentials missing (SMTP_HOST, SMTP_USER, or SMTP_PASS not configured).'
+      `[EmailService] Email not sent – SMTP credentials missing (${missing.join(', ')} not configured).`
     );
     return {
       success: false,
       skipped: true,
-      reason: 'Email not sent – SMTP credentials missing',
+      reason: `Email not sent – SMTP credentials missing (${missing.join(', ')})`,
     };
   }
 

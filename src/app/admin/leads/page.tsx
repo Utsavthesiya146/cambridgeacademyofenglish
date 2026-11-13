@@ -36,7 +36,7 @@ export default function AdminDashboardPage() {
   const [adminKey, setAdminKey] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activeTab, setActiveTab] = useState<'leads' | 'certificates'>('leads');
-  const [storageMode, setStorageMode] = useState<'mysql' | 'json_fallback' | null>(null);
+  const [storageMode, setStorageMode] = useState<'mysql' | 'unconfigured' | string | null>(null);
   
   // Leads state
   const [leads, setLeads] = useState<Lead[]>([]);
@@ -374,9 +374,9 @@ export default function AdminDashboardPage() {
                     Live MySQL Database Connected
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
-                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-                    Storage Mode: Local JSON Fallback (Set DATABASE_URL in server environment for permanent MySQL database)
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-rose-100 text-rose-800 border border-rose-300">
+                    <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                    Database Not Configured (Set DATABASE_URL in environment for permanent MySQL storage)
                   </span>
                 )}
               </div>

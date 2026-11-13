@@ -29,6 +29,7 @@ export function OrganizationSchema() {
     },
     telephone: ['+91-80-40943580', '+91-8970506004', '+91-9620806004'],
     email: 'info@cambridgeacademyofenglish.com',
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=Cambridge+Academy+of+English+Kammanahalli+Bangalore',
     sameAs: [
       'https://www.facebook.com/cambridgeacademyofenglish/',
       'https://twitter.com/CAEIndia',

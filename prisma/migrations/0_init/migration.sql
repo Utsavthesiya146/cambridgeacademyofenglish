@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `leads` (
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
 
+    INDEX `leads_phone_idx`(`phone`),
     INDEX `leads_course_idx`(`course`),
     INDEX `leads_status_idx`(`status`),
     INDEX `leads_createdAt_idx`(`createdAt`),

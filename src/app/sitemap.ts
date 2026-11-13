@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy-policy',
     '/refund-policy',
     '/terms-conditions',
+    '/verification',
     '/sitemap',
   ].map((route) => ({
     url: `${baseUrl}${route}`,

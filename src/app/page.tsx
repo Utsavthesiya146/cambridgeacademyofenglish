@@ -5,12 +5,14 @@ import Link from 'next/link';
 import EnquiryForm from '@/components/EnquiryForm';
 import CallbackForm from '@/components/CallbackForm';
 import { FAQSchema } from '@/components/StructuredData';
+import { trackWhatsAppClick, trackCounsellingBooking } from '@/lib/analytics';
 
 export default function Home() {
   const [activeCourseTab, setActiveCourseTab] = useState<'spoken' | 'exam' | 'adults' | 'international' | 'teachers' | 'foreign' | 'kids'>('spoken');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const openCounsellingModal = (courseName?: string) => {
+    trackCounsellingBooking(courseName || 'General Enquiry / Free Counselling');
     if (typeof window !== 'undefined') {
       window.dispatchEvent(
         new CustomEvent('open-counselling-modal', {
@@ -108,6 +110,7 @@ export default function Home() {
                     href="https://wa.me/918970506004?text=Hello%20Cambridge%20Academy%20of%20English%2C%20I%20would%20like%20to%20get%20course%20details%20and%20batch%20timings."
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackWhatsAppClick('Homepage Hero')}
                     className="w-full sm:w-auto px-6 py-3 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-full transition-all duration-300 shadow-xl hover:-translate-y-0.5 text-center text-xs flex items-center justify-center gap-2"
                   >
                     <span>💬</span> WhatsApp Us for Course Details

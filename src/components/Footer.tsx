@@ -273,9 +273,10 @@ export default function Footer() {
             {/* Google Reviews Badge */}
             <div className="mt-6 pt-4 border-t border-white/10">
               <a
-                href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
+                href="https://search.google.com/local/writereview?placeid=ChIJ-ZTkoiYXrj4RKGNuprTxD7M"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Read and write verified Google reviews for Cambridge Academy of English"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-3.5 py-2 rounded-xl text-xs font-bold text-white transition-colors"
               >
                 <span className="text-amber-400">★★★★★</span>

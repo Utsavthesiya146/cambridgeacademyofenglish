@@ -91,22 +91,32 @@
   font-family: inherit !important;
   color: transparent !important;
   white-space: nowrap;
+  font-size: 11px !important;
+  line-height: 1 !important;
 }
 .goog-te-gadget .goog-te-combo {
-  color: #334155 !important;
+  color: #f8fafc !important;
   margin: 0 !important;
-  padding: 3px 6px !important;
+  padding: 3px 8px !important;
   border-radius: 6px !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   font-size: 11px !important;
   outline: none !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  cursor: pointer !important;
+  max-width: 150px !important;
+}
+.goog-te-gadget .goog-te-combo option {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+  font-size: 12px !important;
+  padding: 4px 8px !important;
 }
 .goog-te-gadget span {
   display: none !important;
 }
-.skiptranslate iframe {
+.goog-te-banner-frame,
+.skiptranslate iframe.goog-te-banner-frame {
   display: none !important;
 }
 body {

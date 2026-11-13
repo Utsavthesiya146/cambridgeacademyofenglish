@@ -60,14 +60,25 @@ export default function TestimonialsPage() {
                 <p className="text-xs text-slate-600">Verified by Google Reviews at our Kammanahalli, Bangalore Campus</p>
               </div>
             </div>
-            <a
-              href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-bold text-[#0a192f] hover:text-[#d4af37] underline"
-            >
-              View Location &amp; Ratings on Google Maps →
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-[#0a192f] hover:text-[#d4af37] underline"
+              >
+                View on Google Maps →
+              </a>
+              <span className="text-slate-300">•</span>
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJ-ZTkoiYXrj4RKGNuprTxD7M"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3.5 py-1.5 bg-[#0a192f] hover:bg-[#d4af37] hover:text-[#0a192f] text-white text-xs font-bold rounded-lg transition-colors"
+              >
+                Write a Review →
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 'use client';
 
-import { trackEvent } from '@/lib/analytics';
+import { trackWhatsAppClick } from '@/lib/analytics';
 
 interface FloatingWhatsAppProps {
   phoneNumber?: string;
@@ -15,10 +15,7 @@ export default function FloatingWhatsApp({
   const waUrl = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(defaultMessage)}`;
 
   const handleClick = () => {
-    trackEvent('whatsapp_click', {
-      action: 'floating_button_click',
-      phone: cleanNumber,
-    });
+    trackWhatsAppClick('Floating Button');
   };
 
   return (

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { trackFormSubmission } from '@/lib/analytics';
+import { trackFormSubmission, trackCallbackRequest } from '@/lib/analytics';
 
 interface CallbackFormProps {
   initialCourse?: string;
@@ -43,6 +43,7 @@ export default function CallbackForm({
       if (res.ok && data.success) {
         setStatus('success');
         trackFormSubmission(course, 'Callback Request');
+        trackCallbackRequest(course);
       } else {
         setStatus('error');
         setErrorMsg(data.error || 'Failed to request callback.');

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { trackFormSubmission } from '@/lib/analytics';
+import { trackFormSubmission, trackCourseEnquiry, trackWhatsAppClick } from '@/lib/analytics';
 
 interface EnquiryFormProps {
   initialCourse?: string;
@@ -76,6 +76,7 @@ export default function EnquiryForm({
       if (res.ok && data.success) {
         setStatus('success');
         trackFormSubmission(formData.course, 'Enquiry Form');
+        trackCourseEnquiry(formData.course, typeof window !== 'undefined' ? window.location.href : '');
       } else {
         setStatus('error');
         setErrorMessage(data.error || 'Failed to submit enquiry. Please try again.');
@@ -103,6 +104,7 @@ export default function EnquiryForm({
             )}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('Enquiry Success Screen')}
             className="inline-flex items-center justify-center px-6 py-2.5 bg-[#25D366] text-white font-bold rounded-xl text-xs hover:bg-[#20ba59] transition-colors"
           >
             💬 Fast-Track on WhatsApp

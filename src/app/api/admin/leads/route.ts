@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
   return jsonAdminResponse({
     success: true,
     count: leads.length,
-    storageMode: process.env.DATABASE_URL ? 'mysql' : 'json_fallback',
+    storageMode: process.env.DATABASE_URL ? 'mysql' : 'unconfigured',
     leads,
   });
 }
