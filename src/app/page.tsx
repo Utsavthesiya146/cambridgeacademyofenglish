@@ -24,7 +24,7 @@ export default function Home() {
     {
       question: 'Why is Cambridge Academy of English considered India’s No 1 Language Academy?',
       answer:
-        'With 21 years of proven excellence in Bangalore, Cambridge Academy of English has trained over 25,000 learners from across India and 18+ international countries. We are an authorized British Council and IDP registration partner, offering certified Cambridge and CELTA/TESOL faculty, modern speech labs, and an immersive communicative methodology that produces fluent, confident speakers.',
+        'With 21 years of proven excellence in Bangalore, Cambridge Academy of English has trained over 25,000 learners from across India and 18+ international countries. We provide comprehensive exam coaching aligned with British Council and IDP IELTS standards, offering certified Cambridge and CELTA/TESOL faculty, modern speech labs, and an immersive communicative methodology that produces fluent, confident speakers.',
     },
     {
       question: 'What courses are offered at Cambridge Academy of English?',
@@ -125,7 +125,7 @@ export default function Home() {
                 {/* Trust Badges */}
                 <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-300">
                   <div className="flex items-center gap-2">
-                    <span className="text-[#d4af37] font-bold">✓</span> British Council &amp; IDP Partner
+                    <span className="text-[#d4af37] font-bold">✓</span> British Council &amp; IDP IELTS Exam Prep
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-[#d4af37] font-bold">✓</span> 25,000+ Alumni
@@ -158,8 +158,8 @@ export default function Home() {
                           ★
                         </div>
                         <div>
-                          <p className="font-extrabold text-slate-900 text-xs sm:text-sm">4.9/5 Rating</p>
-                          <p className="text-[10px] text-slate-500 font-medium">1,000+ Google Reviews</p>
+                          <p className="font-extrabold text-slate-900 text-xs sm:text-sm">Verified Profile</p>
+                          <p className="text-[10px] text-slate-500 font-medium">Google Business Reviews</p>
                         </div>
                       </div>
                       <span className="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-full">
@@ -197,7 +197,7 @@ export default function Home() {
                     { title: 'Communicative Pedagogy', desc: 'Focus on active speaking drills rather than dry grammar rules.' },
                     { title: 'Certified Master Trainers', desc: 'Cambridge and CELTA/TESOL certified mentors with 10+ years experience.' },
                     { title: 'Personalized Learning', desc: 'Small batch sizes with individualized diagnostic evaluation.' },
-                    { title: 'Global Recognition', desc: 'Authorized British Council and IDP registration associate.' },
+                    { title: 'Global Standards', desc: 'Comprehensive candidate preparation aligned with British Council & IDP IELTS testing criteria.' },
                   ].map((feat, idx) => (
                     <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
                       <div>
@@ -452,7 +452,7 @@ export default function Home() {
                     title="IELTS Preparation (Academic & General)"
                     tag="Target Band 8.0+"
                     duration="4 to 8 Weeks"
-                    desc="Authorized British Council & IDP registration partner. Official past papers and individual writing assessments."
+                    desc="Comprehensive IELTS preparation with authentic Cambridge practice papers and individual writing assessments."
                     slug="ielts-preparation"
                     onEnquire={() => openCounsellingModal('IELTS Preparation')}
                   />
@@ -754,7 +754,7 @@ export default function Home() {
                 Examination Preparation Programmes
               </h2>
               <p className="text-slate-600 text-xs sm:text-sm mt-2">
-                Target high bands with official British Council, IDP, and Pearson certified trainers.
+                Target high bands with experienced IELTS, PTE, and Cambridge certified trainers.
               </p>
             </div>
 
@@ -992,12 +992,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 10. PROFESSIONAL TRAINERS */}
+        {/* 10. FACULTY CREDENTIALS & TEACHING METHODOLOGY */}
         <section id="trainers" className="py-10 md:py-14 bg-slate-50 border-t border-slate-200">
           <div className="container-custom">
             <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
               <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37] bg-[#0a192f] px-3.5 py-1.5 rounded-full text-white inline-block mb-2">
-                Expert Faculty
+                Faculty Standards
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0a192f] tracking-tight">
                 Learn from Certified Senior Instructors
@@ -1010,36 +1010,36 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {[
                 {
-                  name: 'Dr. Sarah Mathews',
-                  role: 'Senior IELTS & OET Master Coach',
-                  cred: 'CELTA, PhD in Applied Linguistics',
-                  exp: '14+ Years Experience',
-                  spec: 'Exam Preparation & Healthcare English',
-                  img: '/images/faculty-sarah.jpg',
+                  name: 'CELTA & TESOL Master Mentors',
+                  role: 'Spoken English & Speech Lab Faculty',
+                  cred: 'Cambridge CELTA & Trinity CertTESOL',
+                  exp: '10+ to 18+ Years Experience',
+                  spec: 'Hesitation Removal & Accent Neutralization',
+                  img: '/images/courses/course-advanced-spoken.jpg',
                 },
                 {
-                  name: 'Prof. Rajesh Nair',
-                  role: 'Head of Spoken English & Voice Coach',
-                  cred: 'MA English, Cambridge DELTA Certified',
-                  exp: '16+ Years Experience',
-                  spec: 'Accent Neutralization & Speech Labs',
-                  img: '/images/faculty-rajesh.jpg',
+                  name: 'International Exam Specialists',
+                  role: 'IELTS, PTE & OET Master Coaches',
+                  cred: 'Certified IELTS & Cambridge Assessment Faculty',
+                  exp: '12+ Years Exam Strategy',
+                  spec: 'Band 8.5+ Clinics & Diagnostic Interviews',
+                  img: '/images/courses/course-corporate-trainer.jpg',
                 },
                 {
-                  name: 'Madame Claire Dubois',
-                  role: 'Senior French & European Linguist',
-                  cred: 'DALF C2, Sorbonne University Alum',
-                  exp: '11+ Years Experience',
-                  spec: 'DELF & TEF Canada Preparation',
-                  img: '/images/faculty-claire.jpg',
+                  name: 'Foreign Language Linguists',
+                  role: 'German, French & Japanese Faculty',
+                  cred: 'Goethe C2, DALF C2, JLPT Accredited',
+                  exp: '10+ Years Immersive Teaching',
+                  spec: 'European & Asian Certification Prep',
+                  img: '/images/courses/course-japanese.jpg',
                 },
                 {
-                  name: 'Herr Klaus Weber',
-                  role: 'Lead German Language Instructor',
-                  cred: 'Goethe-Zertifikat C2 Großes Diplom',
-                  exp: '12+ Years Experience',
-                  spec: 'German A1-B2 & Chancenkarte Prep',
-                  img: '/images/faculty-klaus.jpg',
+                  name: 'Corporate Communication Coaches',
+                  role: 'Business English & Workplace Soft Skills',
+                  cred: 'Corporate Train-The-Trainer Certified',
+                  exp: '15+ Years Fortune 500 Coaching',
+                  spec: 'Executive Presentations & Negotiations',
+                  img: '/images/courses/course-business-communication.jpg',
                 },
               ].map((t, idx) => (
                 <div key={idx} className="bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-all">
@@ -1061,13 +1061,13 @@ export default function Home() {
                 href="/our-trainers"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a192f] hover:bg-[#162447] text-white text-xs font-black uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all"
               >
-                Meet All Certified Faculty Members &amp; Credentials →
+                View Full Faculty Credentials &amp; Methodology Standards →
               </Link>
             </div>
           </div>
         </section>
 
-        {/* 11. FOUNDER PROFILE */}
+        {/* 11. INSTITUTIONAL LEADERSHIP & ACADEMIC GOVERNANCE */}
         <section id="founder" className="py-10 md:py-14 bg-white border-t border-slate-200">
           <div className="container-custom">
             <div className="bg-[#0a192f] text-white rounded-2xl p-6 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
@@ -1075,25 +1075,25 @@ export default function Home() {
                 <div className="lg:col-span-4 text-center lg:text-left">
                   <div className="w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-2xl overflow-hidden border-2 border-[#d4af37]/40 shadow-xl bg-slate-800">
                     <img
-                      src="/images/faculty-director.jpg"
-                      alt="Founder & Academic Director of Cambridge Academy of English"
+                      src="/images/hero-classroom.jpg"
+                      alt="Academic Leadership at Cambridge Academy of English Bangalore"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <p className="text-[11px] uppercase tracking-widest text-[#d4af37] font-bold mt-3">
-                    Founder &amp; Academic Director
+                    Academic Governance
                   </p>
                   <h3 className="text-lg font-bold text-white mt-0.5">
-                    Director, Cambridge Academy of English
+                    Cambridge Academy of English
                   </h3>
                   <p className="text-[11px] text-slate-400 mt-0.5">
-                    21+ Years of Leadership in English Language Education
+                    21+ Years of Leadership in English Language Education (Est. 2005)
                   </p>
                 </div>
 
                 <div className="lg:col-span-8 space-y-3">
                   <span className="text-[11px] font-bold uppercase tracking-widest text-[#d4af37] bg-white/10 px-3 py-1 rounded-full inline-block">
-                    A Message from Our Leadership
+                    A Message from Academic Leadership
                   </span>
                   <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight">
                     &ldquo;Language is not merely grammar; it is the bridge to human opportunity.&rdquo;
@@ -1102,14 +1102,14 @@ export default function Home() {
                     When Cambridge Academy of English was established over 21 years ago in Kammanahalli, Bangalore, our founding vision was simple yet uncompromising: to provide world-class, internationally accredited language education that empowers every student to speak with unshakeable confidence.
                   </p>
                   <p className="text-slate-300 text-xs leading-relaxed">
-                    Over the last two decades, we have mentored thousands of Indian learners and international scholars from the Middle East, East Asia, and Africa. Today, Cambridge Academy stands as a testament to pedagogical excellence, personal mentorship, and transformative career growth.
+                    Over the last two decades, we have mentored over 25,000 Indian learners and international scholars from 18+ nations across the Middle East, East Asia, and Africa. Today, Cambridge Academy stands as a testament to pedagogical excellence, personal mentorship, and transformative career growth.
                   </p>
                   <div className="pt-1">
                     <button
                       onClick={() => openCounsellingModal('Academic Director Consultation')}
                       className="px-5 py-2.5 bg-[#d4af37] text-[#0a192f] font-bold rounded-full text-xs hover:bg-[#b89628] transition-all shadow-md"
                     >
-                      Schedule Personal Consultation with Director →
+                      Schedule Personal Diagnostic Consultation →
                     </button>
                   </div>
                 </div>
@@ -1303,32 +1303,32 @@ export default function Home() {
               <div className="max-w-xl">
                 <div className="flex items-center gap-2 mb-1.5">
                   <span className="text-xl text-amber-500 font-bold">★★★★★</span>
-                  <span className="text-sm font-extrabold text-slate-900">4.9 / 5 Rating on Google</span>
+                  <span className="text-sm font-extrabold text-slate-900">Verified Google Business Profile</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-black text-[#0a192f] mb-1.5">
-                  Trusted by 1,000+ Verified Google Reviews
+                  Read Authentic Student Reviews on Google
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Cambridge Academy of English is consistently rated as one of the highest-rated language academies in Bangalore for authentic student outcomes, supportive faculty, and communicative excellence.
+                  Discover genuine experiences, course feedback, and verified ratings directly on our official Google Business Profile from learners trained at our Kammanahalli campus in Bangalore.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
                 <a
-                  href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
+                  href="https://www.google.com/maps/search/?api=1&query=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-3 bg-[#0a192f] hover:bg-[#162447] text-white font-bold rounded-full text-xs shadow-md transition-all text-center"
                 >
-                  View All Google Reviews →
+                  Read Google Reviews →
                 </a>
                 <a
-                  href="https://maps.google.com/?q=Cambridge+Academy+of+English+Kammanahalli+Bangalore"
+                  href="https://search.google.com/local/writereview?placeid=ChIJ-ZTkoiYXrj4RKGNuprTxD7M"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-3 bg-white border border-slate-300 text-slate-800 font-bold rounded-full text-xs hover:bg-slate-50 transition-all text-center"
                 >
-                  Leave a Google Review ★
+                  Write a Google Review ★
                 </a>
               </div>
             </div>

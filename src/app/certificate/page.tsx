@@ -1,3 +1,5 @@
+import CertificateVerifier from '@/components/CertificateVerifier';
+
 export default function CertificatePage() {
   return (
     <div className="overflow-hidden">
@@ -25,22 +27,10 @@ export default function CertificatePage() {
                 </svg>
               </div>
               <h2 className="text-3xl font-extrabold text-primary mb-2">Certificate Verification</h2>
-              <p className="text-slate-500">Ensure the validity of your awarded certificate</p>
+              <p className="text-slate-500">Ensure the validity of your awarded certificate in our institutional database</p>
             </div>
             
-            <form action="/contact" method="GET" className="flex flex-col gap-6">
-              <div>
-                <label className="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Certificate Registration No.</label>
-                <input 
-                  type="text" 
-                  placeholder="e.g. CAE/2024/00123" 
-                  className="w-full px-4 py-4 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all font-medium text-slate-800"
-                />
-              </div>
-              <button type="submit" className="btn-premium w-full shadow-[0_4px_15px_rgba(212,175,55,0.3)]">
-                Verify Now
-              </button>
-            </form>
+            <CertificateVerifier />
             
             <div className="mt-8 pt-8 border-t border-slate-100 text-center">
               <p className="text-sm text-slate-500">

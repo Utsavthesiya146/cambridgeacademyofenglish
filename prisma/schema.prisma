@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id            String   @id @default(cuid())
+  name          String   @db.VarChar(191)
+  email         String?  @db.VarChar(191)
+  phone         String   @db.VarChar(50)
+  course        String   @db.VarChar(191)
+  learningMode  String?  @default("Offline") @db.VarChar(50)
+  preferredTime String?  @default("Anytime") @db.VarChar(50)
+  message       String?  @db.Text
+  type          String   @default("enquiry") @db.VarChar(50) // enquiry, callback, counselling
+  status        String   @default("New") @db.VarChar(50)     // New, Contacted, Follow-up, Converted
+  pageUrl       String?  @db.VarChar(500)
+  leadSource    String?  @default("Website") @db.VarChar(191)
+  notes         String?  @db.Text
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([course])
+  @@index([status])
+  @@index([createdAt])
+  @@map("leads")
+}
+
+model Certificate {
+  id                  String   @id @default(cuid())
+  certificateNumber   String   @unique @db.VarChar(100)
+  studentName         String   @db.VarChar(191)
+  courseName          String   @db.VarChar(191)
+  issueDate           DateTime
+  status              String   @default("VALID") @db.VarChar(50) // VALID, REVOKED, INVALID
+  issuingInstitution String   @default("Cambridge Academy of English") @db.VarChar(191)
+  notes               String?  @db.Text
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([certificateNumber])
+  @@index([status])
+  @@map("certificates")
+}
+
+model AdminSession {
+  id        String    @id @default(cuid())
+  jti       String    @unique @db.VarChar(100)
+  revokedAt DateTime?
+  expiresAt DateTime
+  createdAt DateTime  @default(now())
+
+  @@index([jti])
+  @@index([expiresAt])
+  @@map("admin_sessions")
+}
+
+

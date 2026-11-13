@@ -35,18 +35,18 @@ export default function Footer() {
               India’s premier English Language &amp; Foreign Language Training Academy located in Kammanahalli, Bangalore. Empowering over 25,000 students and professionals from India and 18+ international countries through communicative excellence.
             </p>
 
-            {/* Accreditations & Trust */}
+            {/* Exam Preparation Standards */}
             <div className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-6">
               <p className="text-[10px] font-bold text-[#d4af37] uppercase tracking-wider mb-2">
-                Official Examination Partnership
+                International Exam Preparation
               </p>
               <div className="flex items-center gap-3 text-xs text-slate-300 font-semibold">
                 <span className="flex items-center gap-1.5">
-                  <span className="text-[#d4af37]">✓</span> British Council Partner
+                  <span className="text-[#d4af37]">✓</span> British Council &amp; IDP IELTS Aligned
                 </span>
                 <span className="text-white/20">•</span>
                 <span className="flex items-center gap-1.5">
-                  <span className="text-[#d4af37]">✓</span> IDP IELTS Associate
+                  <span className="text-[#d4af37]">✓</span> CEFR International Standards
                 </span>
               </div>
             </div>

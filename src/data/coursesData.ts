@@ -350,10 +350,10 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     shortTitle: 'IELTS Preparation',
     category: 'exam-preparation',
     categoryName: 'Examination Courses',
-    tagline: 'Target 8.0+ Band Score with Official British Council & IDP Partner Support',
+    tagline: 'Target 8.0+ Band Score with Structured IELTS Exam Preparation',
     heroImage: '/images/courses/course-ielts.jpg',
     intro:
-      'Achieve your dream IELTS band score with Cambridge Academy of English, an authorized British Council and IDP registration partner in Bangalore. Our comprehensive IELTS coaching covers all four modules—Listening, Reading, Writing, and Speaking—with proven band 8+ strategies, genuine Cambridge practice materials, and individual writing assessment.',
+      'Achieve your dream IELTS band score with Cambridge Academy of English, South India’s premier IELTS coaching institute in Bangalore. Our comprehensive IELTS coaching covers all four modules—Listening, Reading, Writing, and Speaking—with proven band 8+ strategies, genuine Cambridge practice materials, and individual writing assessment.',
     whoShouldJoin: [
       'Study abroad aspirants applying to universities in UK, Canada, Australia, and USA',
       'Professionals applying for permanent residency (Canada Express Entry, Australia PR)',
@@ -401,7 +401,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     duration: '4 to 8 Weeks (Intensive & Regular options)',
     batchTimings: 'Weekday mornings, evenings, and weekend-only batches available',
     benefits: [
-      'Authorized British Council & IDP registration assistance',
+      'Official candidate registration assistance & test guidance',
       'Unlimited access to Cambridge IELTS official past papers (Books 1 to 19)',
       'Regular full-length computer-delivered and paper-based mock tests',
       'Individual doubt-clearing sessions and personalized score prediction',
@@ -432,7 +432,7 @@ export const COURSES_DATA: Record<string, CourseDetail> = {
     ],
     metaTitle: 'IELTS Coaching in Bangalore | Best IELTS Training Institute | Cambridge Academy',
     metaDescription:
-      'Premier IELTS coaching in Bangalore with British Council & IDP certified trainers. Proven Band 8.0+ strategies, authentic mock tests, and personalized essay evaluation.',
+      'Premier IELTS coaching in Bangalore with certified senior examination trainers. Proven Band 8.0+ strategies, authentic mock tests, and personalized essay evaluation.',
     keywords: [
       'ielts coaching in bangalore',
       'best ielts training institute bangalore',

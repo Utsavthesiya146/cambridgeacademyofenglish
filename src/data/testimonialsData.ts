@@ -163,7 +163,7 @@ export const RECENT_TESTIMONIALS: StudentTestimonial[] = [
     rating: 5,
     date: 'Verified Student',
     feedback:
-      'Scored 8.5 Band overall on IELTS! The writing evaluation clinics and 1-on-1 speaking interviews with British Council certified trainers gave me the exact edge I needed. Highly recommend their personalized strategy sessions.',
+      'Scored 8.5 Band overall on IELTS! The writing evaluation clinics and 1-on-1 speaking interviews with senior IELTS master trainers gave me the exact edge I needed. Highly recommend their personalized strategy sessions.',
     isOriginal: false,
   },
   {

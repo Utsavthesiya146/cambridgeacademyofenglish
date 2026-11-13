@@ -70,8 +70,8 @@ export default function AboutPage() {
           {[
             {
               icon: '🤝',
-              title: 'Authorized Partner',
-              desc: 'Official British Council & IDP partner for IELTS and Cambridge ELT examination preparations.',
+              title: 'Global Exam Standards',
+              desc: 'Specialized preparation programmes aligned with British Council and IDP IELTS testing criteria.',
             },
             {
               icon: '📈',

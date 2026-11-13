@@ -101,9 +101,9 @@ The client requested distinct, dedicated landing pages across 8 specific categor
 | **4. Course-Specific Pre-selection** | Pre-fills selected course in enquiry form | Live UI test on course routes | **PASS** | Clicking "Enquire Now" on `/courses/ielts` automatically pre-fills "IELTS" in the form modal. |
 | **5. Form Validation** | Real-time client-side and server-side checks | Tested empty & invalid inputs | **PASS** | Blocks submission if name < 2 chars, phone < 7 digits, or email invalid. Displays red error text inline. |
 | **6. Honeypot Spam Protection** | Prevent automated bot form spam | Tested POST with filled honeypot | **PASS** | Hidden input `website` (honeypot). If filled, `/api/enquiry` returns `{ success: true, status: 'filtered' }` without saving bot data. |
-| **7. Permanent Lead Storage** | Enquiries must persist permanently | Tested API retrieval on Vercel | **FAIL** | **CRITICAL:** Backend stores to local JSON file (`data/leads.json`). On Vercel serverless, filesystem is ephemeral. Leads vanish on instance recycling. Querying `/api/admin/leads?key=CambridgeAdmin2026` returns `{"count": 0, "leads": []}`. |
+| **7. Permanent Lead Storage** | Enquiries must persist permanently | Tested API retrieval on Vercel | **FAIL** | **CRITICAL:** Backend stores to local JSON file (`data/leads.json`). On Vercel serverless, filesystem is ephemeral. Leads vanish on instance recycling. Querying `/api/admin/leads` returns `{"count": 0, "leads": []}`. |
 | **8. Admissions Team Email Alert** | Automatic notification email on new lead | Inspected `leadStorage.ts` | **FAIL** | `notifyAdmissionsTeam()` uses Resend API and webhook, but `RESEND_API_KEY` is empty. No emails are dispatched to admissions. |
-| **9. Admin Lead Tracking** | Secure interface to view/manage leads | Inspected `/admin/leads` and API | **PARTIAL** | Password-protected admin route exists (`/admin/leads`) protected by `CambridgeAdmin2026`, but shows 0 records due to serverless storage defect. |
+| **9. Admin Lead Tracking** | Secure interface to view/manage leads | Inspected `/admin/leads` and API | **PARTIAL** | Password-protected admin route exists (`/admin/leads`) protected by `ADMIN_SECRET_KEY`, but shows 0 records due to serverless storage defect. |
 | **10. User Success/Error Messages** | Clear feedback upon submission | Tested live form submission | **PASS** | Form shows spinner during submission and replaces inputs with green confirmation checkmark and lead reference ID. |
 | **11. Mobile Usability** | Sticky CTAs and touch-friendly forms | Tested mobile viewport (375px) | **PASS** | Floating WhatsApp button and sticky footer CTA bar provide one-tap access on mobile devices. |
 | **12. Error Logging** | Server logs on failure | Code inspection | **PASS** | `console.error` logs failed operations in API route. |
@@ -220,7 +220,7 @@ Below is the complete audit of all 30 course landing pages defined in `src/data/
 - **Consequence:**  
   When running on Vercel Serverless (or AWS Lambda), local container disk storage is ephemeral and read-only. Fallback to `/tmp` is wiped on every lambda cold-start.  
   **Real student leads submitted via the enquiry form are silently lost.**  
-  Testing verified: When querying `GET /api/admin/leads?key=CambridgeAdmin2026`, it returned `{"count": 0, "leads": []}` because instances do not persist state across requests.
+  Testing verified: When querying `GET /api/admin/leads`, it returned `{"count": 0, "leads": []}` because instances do not persist state across requests.
 - **Required Solution:**  
   Migrate storage to a persistent database (Hostinger MySQL or PostgreSQL via Prisma ORM).
 
