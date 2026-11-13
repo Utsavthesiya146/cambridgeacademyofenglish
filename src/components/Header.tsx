@@ -65,9 +65,7 @@ export default function Header() {
       <div className="bg-[#0a192f] text-slate-300 text-[11px] py-1.5 hidden lg:block border-b border-white/10">
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <div id="google_translate_element" className="flex items-center text-[11px]">
-              Select Language
-            </div>
+            <div id="google_translate_element" className="flex items-center text-[11px] min-h-[24px]" />
             <div className="flex items-center gap-2 border-l border-white/20 pl-4 text-[#d4af37] font-semibold tracking-wide">
               <span>★</span>
               <span>21 Years of Excellence in English Language Training</span>
