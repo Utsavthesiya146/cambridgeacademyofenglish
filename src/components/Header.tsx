@@ -17,6 +17,29 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const initTranslate = () => {
+      if (
+        typeof window !== 'undefined' &&
+        (window as any).google?.translate?.TranslateElement &&
+        !document.querySelector('.goog-te-combo')
+      ) {
+        try {
+          new (window as any).google.translate.TranslateElement(
+            { pageLanguage: 'en' },
+            'google_translate_element'
+          );
+        } catch (e) {
+          // ignore
+        }
+      }
+    };
+
+    initTranslate();
+    const timer = setTimeout(initTranslate, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
   const openCounsellingModal = () => {
     trackCounsellingBooking('Header Navigation');
     if (typeof window !== 'undefined') {

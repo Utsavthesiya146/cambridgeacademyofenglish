@@ -122,11 +122,11 @@ select.goog-te-combo option,
 }
 
 /* Completely suppress all Google Translate banner frames, tooltips, and top bars */
-iframe.skiptranslate,
-iframe.goog-te-banner-frame,
 .goog-te-banner-frame,
-iframe[class*="VIpgJd"],
-iframe[id*=":"] {
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+body > .skiptranslate,
+body > iframe.skiptranslate {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
